@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSO-dO-a8C" customClass="RoundRectButton" customModule="ProjectPrototypeOne" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSO-dO-a8C" customClass="RoundRectButton" customModule="DonggukGraduation" customModuleProvider="target">
                                                     <rect key="frame" x="76" y="189" width="223" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,7 +60,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="519"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhF-Aq-yXK" customClass="RoundRectButton" customModule="ProjectPrototypeOne" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhF-Aq-yXK" customClass="RoundRectButton" customModule="DonggukGraduation" customModuleProvider="target">
                                                     <rect key="frame" x="76" y="4" width="223" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,7 +78,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-RW-Hg5" customClass="RoundRectButton" customModule="ProjectPrototypeOne" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-RW-Hg5" customClass="RoundRectButton" customModule="DonggukGraduation" customModuleProvider="target">
                                                     <rect key="frame" x="77" y="131" width="223" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,7 +96,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7i-Zo-y9a" customClass="RoundRectButton" customModule="ProjectPrototypeOne" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7i-Zo-y9a" customClass="RoundRectButton" customModule="DonggukGraduation" customModuleProvider="target">
                                                     <rect key="frame" x="76" y="67" width="223" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -186,7 +186,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-user_filled" translatesAutoresizingMaskIntoConstraints="NO" id="WkA-5i-99K" customClass="CirclarMaskImageView" customModule="ProjectPrototypeOne" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-person_male-1" translatesAutoresizingMaskIntoConstraints="NO" id="WkA-5i-99K" customClass="CirclarMaskImageView" customModule="DonggukGraduation" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="13" width="74" height="71"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <userDefinedRuntimeAttributes>
@@ -221,7 +221,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.92272506480000005" green="0.62683743790000002" blue="0.1117382006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRx-uR-qux" customClass="RoundRectButton" customModule="ProjectPrototypeOne" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRx-uR-qux" customClass="RoundRectButton" customModule="DonggukGraduation" customModuleProvider="target">
                                                     <rect key="frame" x="37" y="99" width="312" height="11"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.92272506480000005" green="0.62683743790000002" blue="0.1117382006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -431,9 +431,7 @@
                             <outlet property="delegate" destination="BMt-Ed-dS0" id="EyR-fn-LKF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="마이페이지" id="pgl-cI-vW6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="rD7-Zj-Mbb"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="마이페이지" id="pgl-cI-vW6"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRg-pi-2os" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -536,7 +534,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="494.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRH-AW-DSE" customClass="RoundRectButton" customModule="ProjectPrototypeOne" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRH-AW-DSE" customClass="RoundRectButton" customModule="DonggukGraduation" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="11" width="343" height="473"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -4531,7 +4529,7 @@
         <!--Web Scene-->
         <scene sceneID="0pr-sU-egt">
             <objects>
-                <viewController id="UV1-Hb-nsg" customClass="WebScene" customModule="ProjectPrototypeOne" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UV1-Hb-nsg" customClass="WebScene" customModule="DonggukGraduation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2km-Au-bkT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4556,7 +4554,7 @@
         <!--Web Scene-->
         <scene sceneID="cEF-7k-AcE">
             <objects>
-                <viewController id="G5A-H7-MuI" customClass="WebScene" customModule="ProjectPrototypeOne" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="G5A-H7-MuI" customClass="WebScene" customModule="DonggukGraduation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uyN-Gf-Ri7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4591,11 +4589,10 @@
         <image name="icons8-person_male-2" width="32" height="32"/>
         <image name="icons8-right_4" width="25" height="25"/>
         <image name="icons8-terms_and_conditions-1" width="32" height="32"/>
-        <image name="icons8-user_filled" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DdI-Bo-VPM"/>
-        <segue reference="VlE-LY-mtZ"/>
+        <segue reference="S4y-Dx-pPH"/>
+        <segue reference="0dO-mw-KWF"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.92272506480000005" green="0.62683743790000002" blue="0.1117382006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
