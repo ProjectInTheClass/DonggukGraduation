@@ -266,11 +266,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkF-ql-RJp">
-                                                    <rect key="frame" x="348" y="16" width="21" height="18"/>
+                                                    <rect key="frame" x="251" y="16" width="118" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="icons8-forward-50"/>
                                                     <connections>
-                                                        <action selector="UIalert:" destination="vRg-pi-2os" eventType="touchUpInside" id="gbb-lI-U0Z"/>
+                                                        <action selector="alert:" destination="BMt-Ed-dS0" eventType="touchUpInside" id="IcP-xN-6uR"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -432,6 +432,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="마이페이지" id="pgl-cI-vW6"/>
+                    <connections>
+                        <outlet property="view" destination="gkF-ql-RJp" id="Ux8-Th-D1C"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRg-pi-2os" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
