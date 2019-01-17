@@ -5634,6 +5634,76 @@
             </objects>
             <point key="canvasLocation" x="4151" y="107"/>
         </scene>
+        <!--졸업계획-->
+        <scene sceneID="l6h-Xj-9NB">
+            <objects>
+                <tableViewController id="XjA-Kr-mFj" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kiX-c5-R1f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection headerTitle="" id="Zk6-IK-V4d">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection id="pLf-e6-82e">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="Cew-Wi-TF0">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cew-Wi-TF0" id="7Hj-9A-rwC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wrk-Aj-j1i">
+                                                    <rect key="frame" x="16" y="15" width="343" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <segments>
+                                                        <segment title="1학년 1학기"/>
+                                                        <segment title="1학년 2학기"/>
+                                                        <segment title="2학년 1학기"/>
+                                                        <segment title="2학년 2학기"/>
+                                                    </segments>
+                                                </segmentedControl>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="495" id="zVt-ia-2uE">
+                                        <rect key="frame" x="0.0" y="60" width="375" height="495"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zVt-ia-2uE" id="QoU-mt-qkX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="494.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N65-fU-h5s" customClass="RoundRectButton" customModule="DonggukGraduation" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="11" width="343" height="473"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="이 학기에 들을 과목을 담아주세요">
+                                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="XjA-Kr-mFj" id="Fqx-WS-Wt9"/>
+                            <outlet property="delegate" destination="XjA-Kr-mFj" id="r3Y-yK-IFX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="졸업계획" id="BGY-rc-iwE">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icons8-list" id="0a4-Wq-Ne1"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Q5i-an-UXz"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sWm-nr-Kh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7362" y="-1370"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icons8-collapse2-1" width="25" height="25"/>
