@@ -25,6 +25,23 @@
 		3F7E3A1321EC5CD800496FDC /* CHModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E3A0621EC5CD800496FDC /* CHModalViewController.swift */; };
 		3F7E3A1421EC5CD800496FDC /* CHControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E3A0721EC5CD800496FDC /* CHControls.swift */; };
 		3F7E3A1521EC5CD800496FDC /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E3A0821EC5CD800496FDC /* RecordButton.swift */; };
+		3FD3EB4A21F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3EB4921F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift */; };
+		3FD3EB4C21F59CD500E9EB20 /* EditLectureChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3EB4B21F59CD500E9EB20 /* EditLectureChoiceViewController.swift */; };
+		3FD3EB4E21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3EB4D21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift */; };
+		3FD3EB5021F5A62400E9EB20 /* EditPlanCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3EB4F21F5A62400E9EB20 /* EditPlanCategoryTableViewCell.swift */; };
+		3FD3EB5221F5A63200E9EB20 /* EditPlanLectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3EB5121F5A63200E9EB20 /* EditPlanLectureTableViewCell.swift */; };
+		4A1FA06721F454AB00D05246 /* PlanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA06621F454AB00D05246 /* PlanDetailViewController.swift */; };
+		4A1FA06921F4571600D05246 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA06821F4571600D05246 /* Lecture.swift */; };
+		4A1FA06B21F45CA800D05246 /* DetailLectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA06A21F45CA800D05246 /* DetailLectureTableViewCell.swift */; };
+		4A1FA06D21F45F6B00D05246 /* CategoryLectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA06C21F45F6B00D05246 /* CategoryLectureTableViewCell.swift */; };
+		4A1FA07121F46BB900D05246 /* PlanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA07021F46BB900D05246 /* PlanCollectionViewCell.swift */; };
+		4A1FA07321F4BB5700D05246 /* EditDetailLectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA07221F4BB5700D05246 /* EditDetailLectureTableViewCell.swift */; };
+		4A1FA07721F4C12900D05246 /* EditCategoryLectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA07621F4C12900D05246 /* EditCategoryLectureTableViewCell.swift */; };
+		4A1FA07921F4C1C100D05246 /* EditPlanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA07821F4C1C100D05246 /* EditPlanDetailViewController.swift */; };
+		4A1FA07D21F4D0CB00D05246 /* EditFirstChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA07C21F4D0CB00D05246 /* EditFirstChoiceViewController.swift */; };
+		4A1FA07F21F4E50F00D05246 /* DirectAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA07E21F4E50F00D05246 /* DirectAddViewController.swift */; };
+		4A1FA08121F4E83F00D05246 /* DirectInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA08021F4E83F00D05246 /* DirectInputTableViewCell.swift */; };
+		4A1FA08321F4F03800D05246 /* DirectAddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA08221F4F03800D05246 /* DirectAddTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +65,23 @@
 		3F7E3A0621EC5CD800496FDC /* CHModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHModalViewController.swift; sourceTree = "<group>"; };
 		3F7E3A0721EC5CD800496FDC /* CHControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHControls.swift; sourceTree = "<group>"; };
 		3F7E3A0821EC5CD800496FDC /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		3FD3EB4921F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryChoiceViewController.swift; sourceTree = "<group>"; };
+		3FD3EB4B21F59CD500E9EB20 /* EditLectureChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLectureChoiceViewController.swift; sourceTree = "<group>"; };
+		3FD3EB4D21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLectureItemTableViewCell.swift; sourceTree = "<group>"; };
+		3FD3EB4F21F5A62400E9EB20 /* EditPlanCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlanCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		3FD3EB5121F5A63200E9EB20 /* EditPlanLectureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlanLectureTableViewCell.swift; sourceTree = "<group>"; };
+		4A1FA06621F454AB00D05246 /* PlanDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDetailViewController.swift; sourceTree = "<group>"; };
+		4A1FA06821F4571600D05246 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
+		4A1FA06A21F45CA800D05246 /* DetailLectureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLectureTableViewCell.swift; sourceTree = "<group>"; };
+		4A1FA06C21F45F6B00D05246 /* CategoryLectureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLectureTableViewCell.swift; sourceTree = "<group>"; };
+		4A1FA07021F46BB900D05246 /* PlanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCell.swift; sourceTree = "<group>"; };
+		4A1FA07221F4BB5700D05246 /* EditDetailLectureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDetailLectureTableViewCell.swift; sourceTree = "<group>"; };
+		4A1FA07621F4C12900D05246 /* EditCategoryLectureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryLectureTableViewCell.swift; sourceTree = "<group>"; };
+		4A1FA07821F4C1C100D05246 /* EditPlanDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlanDetailViewController.swift; sourceTree = "<group>"; };
+		4A1FA07C21F4D0CB00D05246 /* EditFirstChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFirstChoiceViewController.swift; sourceTree = "<group>"; };
+		4A1FA07E21F4E50F00D05246 /* DirectAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectAddViewController.swift; sourceTree = "<group>"; };
+		4A1FA08021F4E83F00D05246 /* DirectInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectInputTableViewCell.swift; sourceTree = "<group>"; };
+		4A1FA08221F4F03800D05246 /* DirectAddTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectAddTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +114,12 @@
 		3F7E39E821EC5C1B00496FDC /* DonggukGraduation */ = {
 			isa = PBXGroup;
 			children = (
+				3FD3EB5421F5BD8800E9EB20 /* EditLectureChoiceScene */,
+				3FD3EB5321F5BD6100E9EB20 /* DirectAddScene */,
+				4A1FA07521F4C09F00D05246 /* EditGraduationPlanScene */,
+				4A1FA07421F4C04200D05246 /* MainGraduationPlanScene */,
+				4A1FA06521F437DC00D05246 /* Plist */,
+				4A1FA06421F437C600D05246 /* Model */,
 				3F7E39FB21EC5CD800496FDC /* PilotPlant */,
 				3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */,
 				3F7E39EB21EC5C1B00496FDC /* ViewController.swift */,
@@ -87,6 +127,7 @@
 				3F7E39F021EC5C1D00496FDC /* Assets.xcassets */,
 				3F7E39F221EC5C1D00496FDC /* LaunchScreen.storyboard */,
 				3F7E39F521EC5C1D00496FDC /* Info.plist */,
+				4A1FA07C21F4D0CB00D05246 /* EditFirstChoiceViewController.swift */,
 			);
 			path = DonggukGraduation;
 			sourceTree = "<group>";
@@ -109,6 +150,64 @@
 				3F7E3A0821EC5CD800496FDC /* RecordButton.swift */,
 			);
 			path = PilotPlant;
+			sourceTree = "<group>";
+		};
+		3FD3EB5321F5BD6100E9EB20 /* DirectAddScene */ = {
+			isa = PBXGroup;
+			children = (
+				4A1FA07E21F4E50F00D05246 /* DirectAddViewController.swift */,
+				4A1FA08021F4E83F00D05246 /* DirectInputTableViewCell.swift */,
+				4A1FA08221F4F03800D05246 /* DirectAddTableViewCell.swift */,
+			);
+			path = DirectAddScene;
+			sourceTree = "<group>";
+		};
+		3FD3EB5421F5BD8800E9EB20 /* EditLectureChoiceScene */ = {
+			isa = PBXGroup;
+			children = (
+				3FD3EB4921F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift */,
+				3FD3EB4B21F59CD500E9EB20 /* EditLectureChoiceViewController.swift */,
+				3FD3EB4D21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift */,
+				3FD3EB4F21F5A62400E9EB20 /* EditPlanCategoryTableViewCell.swift */,
+				3FD3EB5121F5A63200E9EB20 /* EditPlanLectureTableViewCell.swift */,
+			);
+			path = EditLectureChoiceScene;
+			sourceTree = "<group>";
+		};
+		4A1FA06421F437C600D05246 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A1FA06821F4571600D05246 /* Lecture.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A1FA06521F437DC00D05246 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		4A1FA07421F4C04200D05246 /* MainGraduationPlanScene */ = {
+			isa = PBXGroup;
+			children = (
+				4A1FA06621F454AB00D05246 /* PlanDetailViewController.swift */,
+				4A1FA06A21F45CA800D05246 /* DetailLectureTableViewCell.swift */,
+				4A1FA06C21F45F6B00D05246 /* CategoryLectureTableViewCell.swift */,
+				4A1FA07021F46BB900D05246 /* PlanCollectionViewCell.swift */,
+			);
+			path = MainGraduationPlanScene;
+			sourceTree = "<group>";
+		};
+		4A1FA07521F4C09F00D05246 /* EditGraduationPlanScene */ = {
+			isa = PBXGroup;
+			children = (
+				4A1FA07221F4BB5700D05246 /* EditDetailLectureTableViewCell.swift */,
+				4A1FA07621F4C12900D05246 /* EditCategoryLectureTableViewCell.swift */,
+				4A1FA07821F4C1C100D05246 /* EditPlanDetailViewController.swift */,
+			);
+			path = EditGraduationPlanScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,19 +281,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A1FA06B21F45CA800D05246 /* DetailLectureTableViewCell.swift in Sources */,
 				3F7E3A1221EC5CD800496FDC /* CHTableViewControllers.swift in Sources */,
 				3F7E3A0D21EC5CD800496FDC /* CHPagingScrollViewController.swift in Sources */,
+				4A1FA08321F4F03800D05246 /* DirectAddTableViewCell.swift in Sources */,
 				3F7E3A0E21EC5CD800496FDC /* CHViews.swift in Sources */,
 				3F7E3A1121EC5CD800496FDC /* FIlters.swift in Sources */,
+				4A1FA07121F46BB900D05246 /* PlanCollectionViewCell.swift in Sources */,
+				4A1FA07921F4C1C100D05246 /* EditPlanDetailViewController.swift in Sources */,
 				3F7E39EC21EC5C1B00496FDC /* ViewController.swift in Sources */,
 				3F7E3A0F21EC5CD800496FDC /* CHPickerViewController.swift in Sources */,
+				4A1FA06721F454AB00D05246 /* PlanDetailViewController.swift in Sources */,
 				3F7E3A1021EC5CD800496FDC /* SwipeActionTableViewCell.swift in Sources */,
 				3F7E3A1321EC5CD800496FDC /* CHModalViewController.swift in Sources */,
+				3FD3EB4E21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift in Sources */,
 				3F7E3A1421EC5CD800496FDC /* CHControls.swift in Sources */,
+				4A1FA06D21F45F6B00D05246 /* CategoryLectureTableViewCell.swift in Sources */,
+				4A1FA07D21F4D0CB00D05246 /* EditFirstChoiceViewController.swift in Sources */,
+				3FD3EB4C21F59CD500E9EB20 /* EditLectureChoiceViewController.swift in Sources */,
+				4A1FA07F21F4E50F00D05246 /* DirectAddViewController.swift in Sources */,
 				3F7E3A0C21EC5CD800496FDC /* NavigationControllers.swift in Sources */,
+				4A1FA07321F4BB5700D05246 /* EditDetailLectureTableViewCell.swift in Sources */,
 				3F7E3A0B21EC5CD800496FDC /* UIViewController+Navigation.swift in Sources */,
 				3F7E3A0A21EC5CD800496FDC /* CHContentViewController.swift in Sources */,
+				4A1FA06921F4571600D05246 /* Lecture.swift in Sources */,
+				3FD3EB5021F5A62400E9EB20 /* EditPlanCategoryTableViewCell.swift in Sources */,
+				3FD3EB5221F5A63200E9EB20 /* EditPlanLectureTableViewCell.swift in Sources */,
+				4A1FA07721F4C12900D05246 /* EditCategoryLectureTableViewCell.swift in Sources */,
+				3FD3EB4A21F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift in Sources */,
 				3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */,
+				4A1FA08121F4E83F00D05246 /* DirectInputTableViewCell.swift in Sources */,
 				3F7E3A0921EC5CD800496FDC /* DrawingCanvasView.swift in Sources */,
 				3F7E3A1521EC5CD800496FDC /* RecordButton.swift in Sources */,
 			);
