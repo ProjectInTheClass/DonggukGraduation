@@ -43,6 +43,9 @@
 		4A1FA07F21F4E50F00D05246 /* DirectAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA07E21F4E50F00D05246 /* DirectAddViewController.swift */; };
 		4A1FA08121F4E83F00D05246 /* DirectInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA08021F4E83F00D05246 /* DirectInputTableViewCell.swift */; };
 		4A1FA08321F4F03800D05246 /* DirectAddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA08221F4F03800D05246 /* DirectAddTableViewCell.swift */; };
+		4A2D3E7C21F7492200756524 /* MyPlan.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D3E7B21F7492200756524 /* MyPlan.plist */; };
+		4A2D3E7E21F7493300756524 /* MyPlanMajor.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D3E7D21F7493300756524 /* MyPlanMajor.plist */; };
+		4A2D3E8021F7494400756524 /* MyPlanGeneral.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D3E7F21F7494400756524 /* MyPlanGeneral.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +87,9 @@
 		4A1FA07E21F4E50F00D05246 /* DirectAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectAddViewController.swift; sourceTree = "<group>"; };
 		4A1FA08021F4E83F00D05246 /* DirectInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectInputTableViewCell.swift; sourceTree = "<group>"; };
 		4A1FA08221F4F03800D05246 /* DirectAddTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectAddTableViewCell.swift; sourceTree = "<group>"; };
+		4A2D3E7B21F7492200756524 /* MyPlan.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyPlan.plist; sourceTree = "<group>"; };
+		4A2D3E7D21F7493300756524 /* MyPlanMajor.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyPlanMajor.plist; sourceTree = "<group>"; };
+		4A2D3E7F21F7494400756524 /* MyPlanGeneral.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyPlanGeneral.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +204,9 @@
 			isa = PBXGroup;
 			children = (
 				4A08339B21F6340300F7512B /* User.plist */,
+				4A2D3E7B21F7492200756524 /* MyPlan.plist */,
+				4A2D3E7D21F7493300756524 /* MyPlanMajor.plist */,
+				4A2D3E7F21F7494400756524 /* MyPlanGeneral.plist */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -272,9 +281,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7E39F421EC5C1D00496FDC /* LaunchScreen.storyboard in Resources */,
+				4A2D3E7C21F7492200756524 /* MyPlan.plist in Resources */,
 				3F7E39F121EC5C1D00496FDC /* Assets.xcassets in Resources */,
 				3F7E39EF21EC5C1B00496FDC /* Main.storyboard in Resources */,
+				4A2D3E8021F7494400756524 /* MyPlanGeneral.plist in Resources */,
 				4A08339C21F6340300F7512B /* User.plist in Resources */,
+				4A2D3E7E21F7493300756524 /* MyPlanMajor.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
