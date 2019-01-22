@@ -27,9 +27,11 @@ class PlanDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "졸업계획"
         
         tableView.dataSource = self
         tableView.delegate = self
+        
         tableView.layer.cornerRadius = 10
         tableView.layer.borderWidth = 1
         tableView.layer.borderColor = UIColor.groupTableViewBackground.cgColor
@@ -53,12 +55,17 @@ extension PlanDetailViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlanCollectionViewCell", for: indexPath) as! PlanCollectionViewCell
         
         cell.planLabel.text = planList[indexPath.row]
-
-//        테두리
-        cell.layer.borderWidth = 1
-        cell.layer.borderColor = UIColor.lightGray.cgColor
+        
+        cell.planLabel.textColor = UIColor.orange
+        
+        cell.planLabel.layer.borderWidth = 1
+        cell.planLabel.layer.borderColor = UIColor.orange.cgColor
 
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
     
     

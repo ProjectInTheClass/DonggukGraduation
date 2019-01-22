@@ -30,6 +30,8 @@
 		3FD3EB4E21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3EB4D21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift */; };
 		3FD3EB5021F5A62400E9EB20 /* EditPlanCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3EB4F21F5A62400E9EB20 /* EditPlanCategoryTableViewCell.swift */; };
 		3FD3EB5221F5A63200E9EB20 /* EditPlanLectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3EB5121F5A63200E9EB20 /* EditPlanLectureTableViewCell.swift */; };
+		4A08339C21F6340300F7512B /* User.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A08339B21F6340300F7512B /* User.plist */; };
+		4A08339E21F645F000F7512B /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A08339D21F645F000F7512B /* Plan.swift */; };
 		4A1FA06721F454AB00D05246 /* PlanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA06621F454AB00D05246 /* PlanDetailViewController.swift */; };
 		4A1FA06921F4571600D05246 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA06821F4571600D05246 /* Lecture.swift */; };
 		4A1FA06B21F45CA800D05246 /* DetailLectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA06A21F45CA800D05246 /* DetailLectureTableViewCell.swift */; };
@@ -70,6 +72,8 @@
 		3FD3EB4D21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLectureItemTableViewCell.swift; sourceTree = "<group>"; };
 		3FD3EB4F21F5A62400E9EB20 /* EditPlanCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlanCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		3FD3EB5121F5A63200E9EB20 /* EditPlanLectureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlanLectureTableViewCell.swift; sourceTree = "<group>"; };
+		4A08339B21F6340300F7512B /* User.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = User.plist; sourceTree = "<group>"; };
+		4A08339D21F645F000F7512B /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		4A1FA06621F454AB00D05246 /* PlanDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDetailViewController.swift; sourceTree = "<group>"; };
 		4A1FA06821F4571600D05246 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
 		4A1FA06A21F45CA800D05246 /* DetailLectureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLectureTableViewCell.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				4A1FA06821F4571600D05246 /* Lecture.swift */,
+				4A08339D21F645F000F7512B /* Plan.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 		4A1FA06521F437DC00D05246 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
+				4A08339B21F6340300F7512B /* User.plist */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -271,6 +277,7 @@
 				3F7E39F421EC5C1D00496FDC /* LaunchScreen.storyboard in Resources */,
 				3F7E39F121EC5C1D00496FDC /* Assets.xcassets in Resources */,
 				3F7E39EF21EC5C1B00496FDC /* Main.storyboard in Resources */,
+				4A08339C21F6340300F7512B /* User.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +314,7 @@
 				4A1FA06921F4571600D05246 /* Lecture.swift in Sources */,
 				3FD3EB5021F5A62400E9EB20 /* EditPlanCategoryTableViewCell.swift in Sources */,
 				3FD3EB5221F5A63200E9EB20 /* EditPlanLectureTableViewCell.swift in Sources */,
+				4A08339E21F645F000F7512B /* Plan.swift in Sources */,
 				4A1FA07721F4C12900D05246 /* EditCategoryLectureTableViewCell.swift in Sources */,
 				3FD3EB4A21F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift in Sources */,
 				3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */,
