@@ -6,7 +6,7 @@ class EditLectureChoiceViewController: UIViewController {
     @IBOutlet weak var lectureTable: UITableView!
     @IBOutlet weak var myPlanTable: UITableView!
     
-    var lectureList = [[],["자아와명상","교양",3], ["불인","교양",2]]
+    var lectureList = [["자아와명상","교양",3], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2]]
     var categoryColors:[UIColor] = [UIColor.red, UIColor.blue]
     var categoryList = ["전공", "교양"]
     var majorList = [[],["운영체제",3], ["불인",3]]
@@ -34,18 +34,20 @@ class EditLectureChoiceViewController: UIViewController {
 extension EditLectureChoiceViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if tableView == lectureTable {
-            return "수업목록"
+            if section == 1 { return "수업목록" }
+            return nil
         }
         return nil
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        if tableView == lectureTable { return 1 }
+        if tableView == lectureTable { return 2 }
         else { return 2 }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == lectureTable {
+            if section == 0 { return 1 }
             return lectureList.count
         } else {
             if section == 0 { return majorList.count }
@@ -55,18 +57,20 @@ extension EditLectureChoiceViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == lectureTable {
+            if indexPath.section == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "FilterCell", for: indexPath)
+                cell.textLabel?.text = "필터"
+                cell.accessoryType = .disclosureIndicator
+                cell.detailTextLabel?.text = ""
+                
+                return cell
+            }
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "EditLectureItemTableViewCell", for: indexPath) as! EditLectureItemTableViewCell
             
-            if indexPath.row == 0 {
-                cell.nameLabel.text = "교과목명"
-                cell.detailLabel.text = "이수구분"
-                cell.creditLabel.text = "학점"
-            }
-            else {
-                cell.nameLabel.text = lectureList[indexPath.row][0] as! String
-                cell.detailLabel.text = lectureList[indexPath.row][1] as! String
-                cell.creditLabel.text = "\(lectureList[indexPath.row][2])학점"
-            }
+            cell.nameLabel.text = lectureList[indexPath.row][0] as! String
+            cell.detailLabel.text = lectureList[indexPath.row][1] as! String
+            cell.creditLabel.text = "\(lectureList[indexPath.row][2])학점"
             
             return cell
         } else {

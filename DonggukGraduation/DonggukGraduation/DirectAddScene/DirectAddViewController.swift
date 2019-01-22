@@ -36,8 +36,8 @@ extension DirectAddViewController: UITableViewDataSource {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DirectInputTableViewCell", for: indexPath) as! DirectInputTableViewCell
             
-            cell.textField.text = inputList[indexPath.row]
-            
+            cell.textField.placeholder = inputList[indexPath.row]
+
             return cell
         }
         else if indexPath.section == 1 {
