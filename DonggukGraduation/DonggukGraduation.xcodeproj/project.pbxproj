@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F10D13221F7122400796C17 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F10D12C21F7122400796C17 /* MainTableViewController.swift */; };
+		3F10D13321F7122400796C17 /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F10D12D21F7122400796C17 /* InformationTableViewCell.swift */; };
+		3F10D13421F7122400796C17 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F10D12E21F7122400796C17 /* MessageTableViewController.swift */; };
+		3F10D13521F7122400796C17 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F10D12F21F7122400796C17 /* EditTableViewController.swift */; };
+		3F10D13621F7122400796C17 /* AllLectureListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F10D13021F7122400796C17 /* AllLectureListTableViewController.swift */; };
+		3F10D13721F7122400796C17 /* LectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F10D13121F7122400796C17 /* LectureTableViewCell.swift */; };
 		3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */; };
 		3F7E39EC21EC5C1B00496FDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E39EB21EC5C1B00496FDC /* ViewController.swift */; };
 		3F7E39EF21EC5C1B00496FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E39ED21EC5C1B00496FDC /* Main.storyboard */; };
@@ -28,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F10D12C21F7122400796C17 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		3F10D12D21F7122400796C17 /* InformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
+		3F10D12E21F7122400796C17 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		3F10D12F21F7122400796C17 /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
+		3F10D13021F7122400796C17 /* AllLectureListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllLectureListTableViewController.swift; sourceTree = "<group>"; };
+		3F10D13121F7122400796C17 /* LectureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureTableViewCell.swift; sourceTree = "<group>"; };
 		3F7E39E621EC5C1B00496FDC /* DonggukGraduation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonggukGraduation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7E39EB21EC5C1B00496FDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +73,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F10D12B21F7122400796C17 /* GraduationCondition */ = {
+			isa = PBXGroup;
+			children = (
+				3F10D12C21F7122400796C17 /* MainTableViewController.swift */,
+				3F10D12D21F7122400796C17 /* InformationTableViewCell.swift */,
+				3F10D12E21F7122400796C17 /* MessageTableViewController.swift */,
+				3F10D12F21F7122400796C17 /* EditTableViewController.swift */,
+				3F10D13021F7122400796C17 /* AllLectureListTableViewController.swift */,
+				3F10D13121F7122400796C17 /* LectureTableViewCell.swift */,
+			);
+			path = GraduationCondition;
+			sourceTree = "<group>";
+		};
 		3F7E39DD21EC5C1B00496FDC = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +105,7 @@
 		3F7E39E821EC5C1B00496FDC /* DonggukGraduation */ = {
 			isa = PBXGroup;
 			children = (
+				3F10D12B21F7122400796C17 /* GraduationCondition */,
 				3F7E39FB21EC5CD800496FDC /* PilotPlant */,
 				3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */,
 				3F7E39EB21EC5C1B00496FDC /* ViewController.swift */,
@@ -183,19 +209,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7E3A1221EC5CD800496FDC /* CHTableViewControllers.swift in Sources */,
+				3F10D13721F7122400796C17 /* LectureTableViewCell.swift in Sources */,
 				3F7E3A0D21EC5CD800496FDC /* CHPagingScrollViewController.swift in Sources */,
 				3F7E3A0E21EC5CD800496FDC /* CHViews.swift in Sources */,
 				3F7E3A1121EC5CD800496FDC /* FIlters.swift in Sources */,
+				3F10D13221F7122400796C17 /* MainTableViewController.swift in Sources */,
 				3F7E39EC21EC5C1B00496FDC /* ViewController.swift in Sources */,
+				3F10D13621F7122400796C17 /* AllLectureListTableViewController.swift in Sources */,
 				3F7E3A0F21EC5CD800496FDC /* CHPickerViewController.swift in Sources */,
 				3F7E3A1021EC5CD800496FDC /* SwipeActionTableViewCell.swift in Sources */,
 				3F7E3A1321EC5CD800496FDC /* CHModalViewController.swift in Sources */,
 				3F7E3A1421EC5CD800496FDC /* CHControls.swift in Sources */,
 				3F7E3A0C21EC5CD800496FDC /* NavigationControllers.swift in Sources */,
 				3F7E3A0B21EC5CD800496FDC /* UIViewController+Navigation.swift in Sources */,
+				3F10D13521F7122400796C17 /* EditTableViewController.swift in Sources */,
 				3F7E3A0A21EC5CD800496FDC /* CHContentViewController.swift in Sources */,
+				3F10D13321F7122400796C17 /* InformationTableViewCell.swift in Sources */,
 				3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */,
 				3F7E3A0921EC5CD800496FDC /* DrawingCanvasView.swift in Sources */,
+				3F10D13421F7122400796C17 /* MessageTableViewController.swift in Sources */,
 				3F7E3A1521EC5CD800496FDC /* RecordButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
