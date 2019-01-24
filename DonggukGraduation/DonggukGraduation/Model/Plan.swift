@@ -12,4 +12,11 @@ class Plan {
         self.generList = generList
     }
     
+    init?(dict: [String: Any]) {
+        guard let semesterValue = dict["semester"] as? String else { return nil }
+        
+        semester =  semesterValue
+        
+    }
+    
 }

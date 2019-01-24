@@ -28,10 +28,10 @@ class EditFirstChoiceViewController: UIViewController {
 extension EditFirstChoiceViewController: UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CATEGORY_SEGUE" {
-            if let detailVC = segue.destination as? EditCategoryChoiceViewController, let cell = sender as? UITableViewCell {
+            if let editCategoryVC = segue.destination as? EditCategoryChoiceViewController, let cell = sender as? UITableViewCell {
                 let indexPath = tableView.indexPath(for: cell)!
                 let firstCategory = categoryList[indexPath.row]
-                detailVC.firstCategory = firstCategory
+                editCategoryVC.firstCategory = firstCategory
             }
         }
     }

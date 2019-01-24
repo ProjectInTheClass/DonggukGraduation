@@ -12,15 +12,18 @@ class Lecture {
         self.credit = credit
     }
     
-//    init?(dict: [String: Any]){
-//        guard let nameValue = dict["name"] as? String else { return nil }
-//        guard let categoryValue = dict["name"] as? String else { return nil }
-//        guard let nameValue = dict["name"] as? String else { return nil }
-//    }
-//
-//    func toDict() -> [String: Any] {
-//        return ["name": name, "capacity": capacity]
-//    }
+    init?(dict: [String: Any], category: String){
+        guard let nameValue = dict["name"] as? String else { return nil }
+        guard let creditValue = dict["credit"] as? Int else { return nil }
+        
+        name = nameValue
+        self.category = category
+        credit = creditValue
+    }
+
+    func toDict() -> [String: Any] {
+        return ["name": name, "capacity": capacity]
+    }
 }
 
 extension Lecture: CustomStringConvertible {

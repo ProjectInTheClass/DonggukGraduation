@@ -25,6 +25,7 @@
 		3F7E3A1321EC5CD800496FDC /* CHModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E3A0621EC5CD800496FDC /* CHModalViewController.swift */; };
 		3F7E3A1421EC5CD800496FDC /* CHControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E3A0721EC5CD800496FDC /* CHControls.swift */; };
 		3F7E3A1521EC5CD800496FDC /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E3A0821EC5CD800496FDC /* RecordButton.swift */; };
+		3F91A0BB21F97E8B0077F89D /* GlobalValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91A0BA21F97E8B0077F89D /* GlobalValue.swift */; };
 		3FD3EB4A21F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3EB4921F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift */; };
 		3FD3EB4C21F59CD500E9EB20 /* EditLectureChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3EB4B21F59CD500E9EB20 /* EditLectureChoiceViewController.swift */; };
 		3FD3EB4E21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3EB4D21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift */; };
@@ -69,6 +70,7 @@
 		3F7E3A0621EC5CD800496FDC /* CHModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHModalViewController.swift; sourceTree = "<group>"; };
 		3F7E3A0721EC5CD800496FDC /* CHControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHControls.swift; sourceTree = "<group>"; };
 		3F7E3A0821EC5CD800496FDC /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		3F91A0BA21F97E8B0077F89D /* GlobalValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalValue.swift; sourceTree = "<group>"; };
 		3FD3EB4921F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryChoiceViewController.swift; sourceTree = "<group>"; };
 		3FD3EB4B21F59CD500E9EB20 /* EditLectureChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLectureChoiceViewController.swift; sourceTree = "<group>"; };
 		3FD3EB4D21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLectureItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				3F7E39F021EC5C1D00496FDC /* Assets.xcassets */,
 				3F7E39F221EC5C1D00496FDC /* LaunchScreen.storyboard */,
 				3F7E39F521EC5C1D00496FDC /* Info.plist */,
+				3F91A0BA21F97E8B0077F89D /* GlobalValue.swift */,
 			);
 			path = DonggukGraduation;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				3F7E3A1121EC5CD800496FDC /* FIlters.swift in Sources */,
 				4A1FA07121F46BB900D05246 /* PlanCollectionViewCell.swift in Sources */,
 				3F7E39EC21EC5C1B00496FDC /* ViewController.swift in Sources */,
+				3F91A0BB21F97E8B0077F89D /* GlobalValue.swift in Sources */,
 				3F7E3A0F21EC5CD800496FDC /* CHPickerViewController.swift in Sources */,
 				4A1FA06721F454AB00D05246 /* PlanDetailViewController.swift in Sources */,
 				3F7E3A1021EC5CD800496FDC /* SwipeActionTableViewCell.swift in Sources */,

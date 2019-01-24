@@ -8,32 +8,25 @@ class PlanDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var plans: [Plan] = []
+    var planList = [ "1학년 1학기", "1학년 2학기", "2학년 1학기", "2학년 2학기", "3학년 1학기", "3학년 2학기", "4학년 1학기", "4학년 2학기"]
     
-    var planList = [ "1학년 1학기", "1학년 2학기", "2학년 1학기",
-                     "2학년 2학기", "3학년 1학기", "3학년 2학기", "4학년 1학기", "4학년 2학기"]
-    
-    
-//    var majorLectures = [
-//        Lecture(name: "교양", category: "교양", credit: 56),
-//        Lecture(name: "자아와 명상", category: "공통교양", credit: 1),
-//        Lecture(name: "불교와 인간", category: "기본교양", credit: 3),
-//        Lecture(name: "자아와 명상", category: "공통교양", credit: 1),
-//        Lecture(name: "불교와 인간", category: "기본교양", credit: 3),
-//    ]
-//
-//    var generalLectures = [
-//        Lecture(name: "전공", category: "전공", credit: 84),
-//        Lecture(name: "자아와 명상", category: "공통교양", credit: 1),
-//        Lecture(name: "불교와 인간", category: "기본교양", credit: 3),
-//    ]
+    var majorLectures = [
+        Lecture(name: "교양", category: "교양", credit: 56),
+        Lecture(name: "자아와 명상", category: "공통교양", credit: 1),
+        Lecture(name: "불교와 인간", category: "기본교양", credit: 3),
+        Lecture(name: "자아와 명상", category: "공통교양", credit: 1),
+        Lecture(name: "불교와 인간", category: "기본교양", credit: 3),
+    ]
+
+    var generalLectures = [
+        Lecture(name: "전공", category: "전공", credit: 84),
+        Lecture(name: "자아와 명상", category: "공통교양", credit: 1),
+        Lecture(name: "불교와 인간", category: "기본교양", credit: 3),
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "졸업계획"
-        
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        print(documentsPath)
         
         let filePath = documentsPath + "/myPlan.plist"
         

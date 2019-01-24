@@ -2698,7 +2698,7 @@
                         <viewLayoutGuide key="safeArea" id="5Zy-rG-fgG"/>
                     </view>
                     <navigationItem key="navigationItem" id="dgt-Ag-O2b">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Vf1-9a-O6c">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Vf1-9a-O6c">
                             <connections>
                                 <action selector="modalDismiss:" destination="JD4-8Z-nZa" id="Y4i-J2-FNX"/>
                             </connections>
@@ -4278,7 +4278,7 @@
         <!--Navigation Controller-->
         <scene sceneID="pa3-eS-QiS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QBC-uc-e1l" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="QBC-uc-e1l" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cx4-VO-FUA">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -4286,6 +4286,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bsv-Jg-Aek">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -4495,6 +4496,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eq7-CW-3Ya"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xE3-cJ-EgA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="ryJ-Qc-JaA"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="XUf-F8-HSs" id="Txh-D3-Enr"/>
                     </connections>

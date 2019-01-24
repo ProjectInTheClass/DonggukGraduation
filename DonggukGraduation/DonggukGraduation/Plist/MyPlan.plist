@@ -10,5 +10,61 @@
 		<key>generalCredit</key>
 		<integer>3</integer>
 	</dict>
+	<dict>
+		<key>semester</key>
+		<string>1학년2학기</string>
+		<key>majorCredit</key>
+		<integer>9</integer>
+		<key>generalCredit</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>2학년1학기</string>
+		<key>majorCredit</key>
+		<integer>9</integer>
+		<key>generalCredit</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>2학년2학기</string>
+		<key>majorCredit</key>
+		<integer>9</integer>
+		<key>generalCredit</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>3학년1학기</string>
+		<key>majorCredit</key>
+		<integer>9</integer>
+		<key>generalCredit</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>3학년2학기</string>
+		<key>majorCredit</key>
+		<integer>9</integer>
+		<key>generalCredit</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>4학년1학기</string>
+		<key>majorCredit</key>
+		<integer>9</integer>
+		<key>generalCredit</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>4학년2학기</string>
+		<key>majorCredit</key>
+		<integer>9</integer>
+		<key>generalCredit</key>
+		<integer>3</integer>
+	</dict>
 </array>
 </plist>
