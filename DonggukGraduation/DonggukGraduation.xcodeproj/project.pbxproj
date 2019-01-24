@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F00E65721F70A2B006BB5A3 /* MyClassTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F00E65621F70A2B006BB5A3 /* MyClassTableViewCell1.swift */; };
 		3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */; };
-		3F7E39EC21EC5C1B00496FDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E39EB21EC5C1B00496FDC /* ViewController.swift */; };
 		3F7E39EF21EC5C1B00496FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E39ED21EC5C1B00496FDC /* Main.storyboard */; };
 		3F7E39F121EC5C1D00496FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E39F021EC5C1D00496FDC /* Assets.xcassets */; };
 		3F7E39F421EC5C1D00496FDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E39F221EC5C1D00496FDC /* LaunchScreen.storyboard */; };
@@ -25,12 +25,19 @@
 		3F7E3A1321EC5CD800496FDC /* CHModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E3A0621EC5CD800496FDC /* CHModalViewController.swift */; };
 		3F7E3A1421EC5CD800496FDC /* CHControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E3A0721EC5CD800496FDC /* CHControls.swift */; };
 		3F7E3A1521EC5CD800496FDC /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E3A0821EC5CD800496FDC /* RecordButton.swift */; };
+		3FC798FD21F865AD009CABCC /* MyClassTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC798FC21F865AD009CABCC /* MyClassTableViewCell2.swift */; };
+		3FCA003021F98E6C003F68CD /* MyClassTableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA002F21F98E6C003F68CD /* MyClassTableViewCell3.swift */; };
+		3FCA005221F9ADA7003F68CD /* MyClassTableViewCell5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA005121F9ADA7003F68CD /* MyClassTableViewCell5.swift */; };
+		3FCA005421F9BB8D003F68CD /* MyClassTableViewCell4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA005321F9BB8D003F68CD /* MyClassTableViewCell4.swift */; };
+		3FE4BD7B21F58FC000FA7A75 /* MyClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4BD7A21F58FC000FA7A75 /* MyClassViewController.swift */; };
+		3FE4BD7D21F5C0BC00FA7A75 /* MyClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4BD7C21F5C0BC00FA7A75 /* MyClassTableViewController.swift */; };
+		3FE4BD7F21F5C50C00FA7A75 /* OrangeBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4BD7E21F5C50C00FA7A75 /* OrangeBarTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F00E65621F70A2B006BB5A3 /* MyClassTableViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell1.swift; sourceTree = "<group>"; };
 		3F7E39E621EC5C1B00496FDC /* DonggukGraduation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonggukGraduation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F7E39EB21EC5C1B00496FDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F7E39EE21EC5C1B00496FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F7E39F021EC5C1D00496FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F7E39F321EC5C1D00496FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +55,13 @@
 		3F7E3A0621EC5CD800496FDC /* CHModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHModalViewController.swift; sourceTree = "<group>"; };
 		3F7E3A0721EC5CD800496FDC /* CHControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHControls.swift; sourceTree = "<group>"; };
 		3F7E3A0821EC5CD800496FDC /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		3FC798FC21F865AD009CABCC /* MyClassTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell2.swift; sourceTree = "<group>"; };
+		3FCA002F21F98E6C003F68CD /* MyClassTableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell3.swift; sourceTree = "<group>"; };
+		3FCA005121F9ADA7003F68CD /* MyClassTableViewCell5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell5.swift; sourceTree = "<group>"; };
+		3FCA005321F9BB8D003F68CD /* MyClassTableViewCell4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell4.swift; sourceTree = "<group>"; };
+		3FE4BD7A21F58FC000FA7A75 /* MyClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassViewController.swift; sourceTree = "<group>"; };
+		3FE4BD7C21F5C0BC00FA7A75 /* MyClassTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassTableViewController.swift; sourceTree = "<group>"; };
+		3FE4BD7E21F5C50C00FA7A75 /* OrangeBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeBarTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +96,18 @@
 			children = (
 				3F7E39FB21EC5CD800496FDC /* PilotPlant */,
 				3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */,
-				3F7E39EB21EC5C1B00496FDC /* ViewController.swift */,
 				3F7E39ED21EC5C1B00496FDC /* Main.storyboard */,
 				3F7E39F021EC5C1D00496FDC /* Assets.xcassets */,
 				3F7E39F221EC5C1D00496FDC /* LaunchScreen.storyboard */,
 				3F7E39F521EC5C1D00496FDC /* Info.plist */,
+				3FE4BD7A21F58FC000FA7A75 /* MyClassViewController.swift */,
+				3FE4BD7C21F5C0BC00FA7A75 /* MyClassTableViewController.swift */,
+				3FE4BD7E21F5C50C00FA7A75 /* OrangeBarTableViewCell.swift */,
+				3F00E65621F70A2B006BB5A3 /* MyClassTableViewCell1.swift */,
+				3FC798FC21F865AD009CABCC /* MyClassTableViewCell2.swift */,
+				3FCA002F21F98E6C003F68CD /* MyClassTableViewCell3.swift */,
+				3FCA005121F9ADA7003F68CD /* MyClassTableViewCell5.swift */,
+				3FCA005321F9BB8D003F68CD /* MyClassTableViewCell4.swift */,
 			);
 			path = DonggukGraduation;
 			sourceTree = "<group>";
@@ -183,17 +204,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7E3A1221EC5CD800496FDC /* CHTableViewControllers.swift in Sources */,
+				3FCA005421F9BB8D003F68CD /* MyClassTableViewCell4.swift in Sources */,
+				3FE4BD7B21F58FC000FA7A75 /* MyClassViewController.swift in Sources */,
 				3F7E3A0D21EC5CD800496FDC /* CHPagingScrollViewController.swift in Sources */,
 				3F7E3A0E21EC5CD800496FDC /* CHViews.swift in Sources */,
 				3F7E3A1121EC5CD800496FDC /* FIlters.swift in Sources */,
-				3F7E39EC21EC5C1B00496FDC /* ViewController.swift in Sources */,
+				3FC798FD21F865AD009CABCC /* MyClassTableViewCell2.swift in Sources */,
 				3F7E3A0F21EC5CD800496FDC /* CHPickerViewController.swift in Sources */,
+				3F00E65721F70A2B006BB5A3 /* MyClassTableViewCell1.swift in Sources */,
+				3FE4BD7F21F5C50C00FA7A75 /* OrangeBarTableViewCell.swift in Sources */,
 				3F7E3A1021EC5CD800496FDC /* SwipeActionTableViewCell.swift in Sources */,
 				3F7E3A1321EC5CD800496FDC /* CHModalViewController.swift in Sources */,
 				3F7E3A1421EC5CD800496FDC /* CHControls.swift in Sources */,
 				3F7E3A0C21EC5CD800496FDC /* NavigationControllers.swift in Sources */,
+				3FCA005221F9ADA7003F68CD /* MyClassTableViewCell5.swift in Sources */,
 				3F7E3A0B21EC5CD800496FDC /* UIViewController+Navigation.swift in Sources */,
 				3F7E3A0A21EC5CD800496FDC /* CHContentViewController.swift in Sources */,
+				3FE4BD7D21F5C0BC00FA7A75 /* MyClassTableViewController.swift in Sources */,
+				3FCA003021F98E6C003F68CD /* MyClassTableViewCell3.swift in Sources */,
 				3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */,
 				3F7E3A0921EC5CD800496FDC /* DrawingCanvasView.swift in Sources */,
 				3F7E3A1521EC5CD800496FDC /* RecordButton.swift in Sources */,
