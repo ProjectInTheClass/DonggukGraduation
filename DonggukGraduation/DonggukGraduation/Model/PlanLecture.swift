@@ -7,11 +7,11 @@ class PlanLecture {
     var credit: Int
     var semester: String
     
-    init(name: String, category: String, credit: Int){
+    init(name: String, category: String, credit: Int, semester: String){
         self.name = name
         self.category = category
         self.credit = credit
-        semester = ""
+        self.semester = semester
     }
     
     init?(dict: [String: Any], category: String){
@@ -30,8 +30,8 @@ class PlanLecture {
     }
 }
 
-extension Lecture: CustomStringConvertible {
+extension PlanLecture: CustomStringConvertible {
     var description: String {
-        return "<Lecture: \(name), \(category), \(credit), \(semester)>"
+        return "<PlanLecture: \(name), \(category), \(credit), \(semester)>"
     }
 }

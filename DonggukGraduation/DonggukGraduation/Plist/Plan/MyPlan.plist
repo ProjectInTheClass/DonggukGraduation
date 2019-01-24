@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>semester</key>
+		<string>1학년 1학기</string>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>1학년 2학기</string>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>2학년 1학기</string>
+    </dict>
+	<dict>
+		<key>semester</key>
+		<string>2학년 2학기</string>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>3학년 1학기</string>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>3학년 2학기</string>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>4학년 1학기</string>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>4학년 2학기</string>
+	</dict>
+    <dict>
+        <key>semester</key>
+        <string>5학년 1학기</string>
+    </dict>
+</array>
+</plist>

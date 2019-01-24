@@ -25,7 +25,7 @@
 		3F7E3A1321EC5CD800496FDC /* CHModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E3A0621EC5CD800496FDC /* CHModalViewController.swift */; };
 		3F7E3A1421EC5CD800496FDC /* CHControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E3A0721EC5CD800496FDC /* CHControls.swift */; };
 		3F7E3A1521EC5CD800496FDC /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E3A0821EC5CD800496FDC /* RecordButton.swift */; };
-		3F91A0BB21F97E8B0077F89D /* GlobalValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91A0BA21F97E8B0077F89D /* GlobalValue.swift */; };
+		3F91A0BB21F97E8B0077F89D /* PlanValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91A0BA21F97E8B0077F89D /* PlanValue.swift */; };
 		3FD3EB4A21F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3EB4921F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift */; };
 		3FD3EB4C21F59CD500E9EB20 /* EditLectureChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3EB4B21F59CD500E9EB20 /* EditLectureChoiceViewController.swift */; };
 		3FD3EB4E21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3EB4D21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift */; };
@@ -34,9 +34,8 @@
 		3FD95A1321F6DCBB00EE1800 /* EditKeywordSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD95A1221F6DCBB00EE1800 /* EditKeywordSearchViewController.swift */; };
 		3FD95A1521F6DFCE00EE1800 /* EditKeywordSarchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD95A1421F6DFCE00EE1800 /* EditKeywordSarchTableViewCell.swift */; };
 		4A08339C21F6340300F7512B /* User.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A08339B21F6340300F7512B /* User.plist */; };
-		4A08339E21F645F000F7512B /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A08339D21F645F000F7512B /* Plan.swift */; };
 		4A1FA06721F454AB00D05246 /* PlanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA06621F454AB00D05246 /* PlanDetailViewController.swift */; };
-		4A1FA06921F4571600D05246 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA06821F4571600D05246 /* Lecture.swift */; };
+		4A1FA06921F4571600D05246 /* PlanLecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA06821F4571600D05246 /* PlanLecture.swift */; };
 		4A1FA06B21F45CA800D05246 /* DetailLectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA06A21F45CA800D05246 /* DetailLectureTableViewCell.swift */; };
 		4A1FA06D21F45F6B00D05246 /* CategoryLectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA06C21F45F6B00D05246 /* CategoryLectureTableViewCell.swift */; };
 		4A1FA07121F46BB900D05246 /* PlanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FA07021F46BB900D05246 /* PlanCollectionViewCell.swift */; };
@@ -47,6 +46,16 @@
 		4A2D3E7C21F7492200756524 /* MyPlan.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D3E7B21F7492200756524 /* MyPlan.plist */; };
 		4A2D3E7E21F7493300756524 /* MyPlanMajor.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D3E7D21F7493300756524 /* MyPlanMajor.plist */; };
 		4A2D3E8021F7494400756524 /* MyPlanGeneral.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D3E7F21F7494400756524 /* MyPlanGeneral.plist */; };
+		4A35C2EA21F9DC41006AEB80 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35C2E921F9DC41006AEB80 /* Lecture.swift */; };
+		4A35C2EC21FA312C006AEB80 /* Curriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35C2EB21FA312C006AEB80 /* Curriculum.swift */; };
+		4A35C2EE21FA37DE006AEB80 /* Department.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2ED21FA37DE006AEB80 /* Department.plist */; };
+		4A35C2F021FA3D60006AEB80 /* College.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2EF21FA3D60006AEB80 /* College.plist */; };
+		4A35C2F221FA3E2E006AEB80 /* GeneralBigCategory.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2F121FA3E2E006AEB80 /* GeneralBigCategory.plist */; };
+		4A35C2F421FA3EAA006AEB80 /* GeneralSmallCategory.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2F321FA3EAA006AEB80 /* GeneralSmallCategory.plist */; };
+		4A35C2F621FA3FAA006AEB80 /* CSELecture.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2F521FA3FAA006AEB80 /* CSELecture.plist */; };
+		4A35C2F921FA454C006AEB80 /* CSECurriculum.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2F821FA454C006AEB80 /* CSECurriculum.plist */; };
+		4A35C2FD21FA48C7006AEB80 /* CurriValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35C2FC21FA48C7006AEB80 /* CurriValue.swift */; };
+		4A35C2FF21FA4964006AEB80 /* MyCurriculum.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2FE21FA4964006AEB80 /* MyCurriculum.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,7 +79,7 @@
 		3F7E3A0621EC5CD800496FDC /* CHModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHModalViewController.swift; sourceTree = "<group>"; };
 		3F7E3A0721EC5CD800496FDC /* CHControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHControls.swift; sourceTree = "<group>"; };
 		3F7E3A0821EC5CD800496FDC /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
-		3F91A0BA21F97E8B0077F89D /* GlobalValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalValue.swift; sourceTree = "<group>"; };
+		3F91A0BA21F97E8B0077F89D /* PlanValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanValue.swift; sourceTree = "<group>"; };
 		3FD3EB4921F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryChoiceViewController.swift; sourceTree = "<group>"; };
 		3FD3EB4B21F59CD500E9EB20 /* EditLectureChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLectureChoiceViewController.swift; sourceTree = "<group>"; };
 		3FD3EB4D21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLectureItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -79,9 +88,8 @@
 		3FD95A1221F6DCBB00EE1800 /* EditKeywordSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKeywordSearchViewController.swift; sourceTree = "<group>"; };
 		3FD95A1421F6DFCE00EE1800 /* EditKeywordSarchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKeywordSarchTableViewCell.swift; sourceTree = "<group>"; };
 		4A08339B21F6340300F7512B /* User.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = User.plist; sourceTree = "<group>"; };
-		4A08339D21F645F000F7512B /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		4A1FA06621F454AB00D05246 /* PlanDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDetailViewController.swift; sourceTree = "<group>"; };
-		4A1FA06821F4571600D05246 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
+		4A1FA06821F4571600D05246 /* PlanLecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanLecture.swift; sourceTree = "<group>"; };
 		4A1FA06A21F45CA800D05246 /* DetailLectureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLectureTableViewCell.swift; sourceTree = "<group>"; };
 		4A1FA06C21F45F6B00D05246 /* CategoryLectureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLectureTableViewCell.swift; sourceTree = "<group>"; };
 		4A1FA07021F46BB900D05246 /* PlanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -92,6 +100,16 @@
 		4A2D3E7B21F7492200756524 /* MyPlan.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyPlan.plist; sourceTree = "<group>"; };
 		4A2D3E7D21F7493300756524 /* MyPlanMajor.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyPlanMajor.plist; sourceTree = "<group>"; };
 		4A2D3E7F21F7494400756524 /* MyPlanGeneral.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyPlanGeneral.plist; sourceTree = "<group>"; };
+		4A35C2E921F9DC41006AEB80 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
+		4A35C2EB21FA312C006AEB80 /* Curriculum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curriculum.swift; sourceTree = "<group>"; };
+		4A35C2ED21FA37DE006AEB80 /* Department.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Department.plist; sourceTree = "<group>"; };
+		4A35C2EF21FA3D60006AEB80 /* College.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = College.plist; sourceTree = "<group>"; };
+		4A35C2F121FA3E2E006AEB80 /* GeneralBigCategory.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeneralBigCategory.plist; sourceTree = "<group>"; };
+		4A35C2F321FA3EAA006AEB80 /* GeneralSmallCategory.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeneralSmallCategory.plist; sourceTree = "<group>"; };
+		4A35C2F521FA3FAA006AEB80 /* CSELecture.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CSELecture.plist; sourceTree = "<group>"; };
+		4A35C2F821FA454C006AEB80 /* CSECurriculum.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CSECurriculum.plist; sourceTree = "<group>"; };
+		4A35C2FC21FA48C7006AEB80 /* CurriValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriValue.swift; sourceTree = "<group>"; };
+		4A35C2FE21FA4964006AEB80 /* MyCurriculum.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyCurriculum.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +164,8 @@
 				3F7E39F021EC5C1D00496FDC /* Assets.xcassets */,
 				3F7E39F221EC5C1D00496FDC /* LaunchScreen.storyboard */,
 				3F7E39F521EC5C1D00496FDC /* Info.plist */,
-				3F91A0BA21F97E8B0077F89D /* GlobalValue.swift */,
+				3F91A0BA21F97E8B0077F89D /* PlanValue.swift */,
+				4A35C2FC21FA48C7006AEB80 /* CurriValue.swift */,
 			);
 			path = DonggukGraduation;
 			sourceTree = "<group>";
@@ -197,8 +216,9 @@
 		4A1FA06421F437C600D05246 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4A1FA06821F4571600D05246 /* Lecture.swift */,
-				4A08339D21F645F000F7512B /* Plan.swift */,
+				4A1FA06821F4571600D05246 /* PlanLecture.swift */,
+				4A35C2E921F9DC41006AEB80 /* Lecture.swift */,
+				4A35C2EB21FA312C006AEB80 /* Curriculum.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,10 +226,16 @@
 		4A1FA06521F437DC00D05246 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
+				4A35C30021FA4BCF006AEB80 /* Plan */,
+				4A35C2FB21FA486D006AEB80 /* GeneralLectures */,
+				4A35C2FA21FA457D006AEB80 /* Curriculums */,
+				4A35C2F721FA41C5006AEB80 /* MajorLectures */,
 				4A08339B21F6340300F7512B /* User.plist */,
-				4A2D3E7B21F7492200756524 /* MyPlan.plist */,
-				4A2D3E7D21F7493300756524 /* MyPlanMajor.plist */,
-				4A2D3E7F21F7494400756524 /* MyPlanGeneral.plist */,
+				4A35C2ED21FA37DE006AEB80 /* Department.plist */,
+				4A35C2EF21FA3D60006AEB80 /* College.plist */,
+				4A35C2F121FA3E2E006AEB80 /* GeneralBigCategory.plist */,
+				4A35C2F321FA3EAA006AEB80 /* GeneralSmallCategory.plist */,
+				4A35C2FE21FA4964006AEB80 /* MyCurriculum.plist */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -223,6 +249,39 @@
 				4A1FA07021F46BB900D05246 /* PlanCollectionViewCell.swift */,
 			);
 			path = MainGraduationPlanScene;
+			sourceTree = "<group>";
+		};
+		4A35C2F721FA41C5006AEB80 /* MajorLectures */ = {
+			isa = PBXGroup;
+			children = (
+				4A35C2F521FA3FAA006AEB80 /* CSELecture.plist */,
+			);
+			path = MajorLectures;
+			sourceTree = "<group>";
+		};
+		4A35C2FA21FA457D006AEB80 /* Curriculums */ = {
+			isa = PBXGroup;
+			children = (
+				4A35C2F821FA454C006AEB80 /* CSECurriculum.plist */,
+			);
+			path = Curriculums;
+			sourceTree = "<group>";
+		};
+		4A35C2FB21FA486D006AEB80 /* GeneralLectures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GeneralLectures;
+			sourceTree = "<group>";
+		};
+		4A35C30021FA4BCF006AEB80 /* Plan */ = {
+			isa = PBXGroup;
+			children = (
+				4A2D3E7B21F7492200756524 /* MyPlan.plist */,
+				4A2D3E7D21F7493300756524 /* MyPlanMajor.plist */,
+				4A2D3E7F21F7494400756524 /* MyPlanGeneral.plist */,
+			);
+			path = Plan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,12 +343,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7E39F421EC5C1D00496FDC /* LaunchScreen.storyboard in Resources */,
+				4A35C2F621FA3FAA006AEB80 /* CSELecture.plist in Resources */,
 				4A2D3E7C21F7492200756524 /* MyPlan.plist in Resources */,
+				4A35C2F921FA454C006AEB80 /* CSECurriculum.plist in Resources */,
+				4A35C2F021FA3D60006AEB80 /* College.plist in Resources */,
 				3F7E39F121EC5C1D00496FDC /* Assets.xcassets in Resources */,
+				4A35C2F221FA3E2E006AEB80 /* GeneralBigCategory.plist in Resources */,
+				4A35C2FF21FA4964006AEB80 /* MyCurriculum.plist in Resources */,
 				3F7E39EF21EC5C1B00496FDC /* Main.storyboard in Resources */,
 				4A2D3E8021F7494400756524 /* MyPlanGeneral.plist in Resources */,
 				4A08339C21F6340300F7512B /* User.plist in Resources */,
+				4A35C2EE21FA37DE006AEB80 /* Department.plist in Resources */,
 				4A2D3E7E21F7493300756524 /* MyPlanMajor.plist in Resources */,
+				4A35C2F421FA3EAA006AEB80 /* GeneralSmallCategory.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +368,7 @@
 			files = (
 				4A1FA06B21F45CA800D05246 /* DetailLectureTableViewCell.swift in Sources */,
 				3F7E3A1221EC5CD800496FDC /* CHTableViewControllers.swift in Sources */,
+				4A35C2FD21FA48C7006AEB80 /* CurriValue.swift in Sources */,
 				3F7E3A0D21EC5CD800496FDC /* CHPagingScrollViewController.swift in Sources */,
 				4A1FA08321F4F03800D05246 /* DirectAddTableViewCell.swift in Sources */,
 				3FD95A1521F6DFCE00EE1800 /* EditKeywordSarchTableViewCell.swift in Sources */,
@@ -309,7 +376,7 @@
 				3F7E3A1121EC5CD800496FDC /* FIlters.swift in Sources */,
 				4A1FA07121F46BB900D05246 /* PlanCollectionViewCell.swift in Sources */,
 				3F7E39EC21EC5C1B00496FDC /* ViewController.swift in Sources */,
-				3F91A0BB21F97E8B0077F89D /* GlobalValue.swift in Sources */,
+				3F91A0BB21F97E8B0077F89D /* PlanValue.swift in Sources */,
 				3F7E3A0F21EC5CD800496FDC /* CHPickerViewController.swift in Sources */,
 				4A1FA06721F454AB00D05246 /* PlanDetailViewController.swift in Sources */,
 				3F7E3A1021EC5CD800496FDC /* SwipeActionTableViewCell.swift in Sources */,
@@ -318,19 +385,20 @@
 				3F7E3A1421EC5CD800496FDC /* CHControls.swift in Sources */,
 				4A1FA06D21F45F6B00D05246 /* CategoryLectureTableViewCell.swift in Sources */,
 				4A1FA07D21F4D0CB00D05246 /* EditFirstChoiceViewController.swift in Sources */,
+				4A35C2EC21FA312C006AEB80 /* Curriculum.swift in Sources */,
 				3FD3EB4C21F59CD500E9EB20 /* EditLectureChoiceViewController.swift in Sources */,
 				4A1FA07F21F4E50F00D05246 /* DirectAddViewController.swift in Sources */,
 				3F7E3A0C21EC5CD800496FDC /* NavigationControllers.swift in Sources */,
 				3F7E3A0B21EC5CD800496FDC /* UIViewController+Navigation.swift in Sources */,
 				3F7E3A0A21EC5CD800496FDC /* CHContentViewController.swift in Sources */,
-				4A1FA06921F4571600D05246 /* Lecture.swift in Sources */,
+				4A1FA06921F4571600D05246 /* PlanLecture.swift in Sources */,
 				3FD3EB5021F5A62400E9EB20 /* EditPlanCategoryTableViewCell.swift in Sources */,
 				3FD3EB5221F5A63200E9EB20 /* EditPlanLectureTableViewCell.swift in Sources */,
-				4A08339E21F645F000F7512B /* Plan.swift in Sources */,
 				3FD95A1321F6DCBB00EE1800 /* EditKeywordSearchViewController.swift in Sources */,
 				3FD3EB4A21F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift in Sources */,
 				3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */,
 				4A1FA08121F4E83F00D05246 /* DirectInputTableViewCell.swift in Sources */,
+				4A35C2EA21F9DC41006AEB80 /* Lecture.swift in Sources */,
 				3F7E3A0921EC5CD800496FDC /* DrawingCanvasView.swift in Sources */,
 				3F7E3A1521EC5CD800496FDC /* RecordButton.swift in Sources */,
 			);

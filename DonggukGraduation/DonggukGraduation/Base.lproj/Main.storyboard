@@ -2606,7 +2606,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RJ3-hC-8Pt">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -2721,7 +2721,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aFP-a0-394">
-                                <rect key="frame" x="0.0" y="64" width="375" height="293"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="267"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -2788,7 +2788,7 @@
                                 </prototypes>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cef-MR-rCh">
-                                <rect key="frame" x="7" y="395" width="360" height="262"/>
+                                <rect key="frame" x="7" y="363" width="360" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="14" minY="0.0" maxX="14" maxY="0.0"/>
@@ -2856,7 +2856,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="31o-4y-yM5">
-                                <rect key="frame" x="0.0" y="356" width="375" height="26"/>
+                                <rect key="frame" x="0.0" y="329" width="375" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내 수업계획" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBR-2Z-C6Y">
@@ -2873,6 +2873,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nW9-jR-Zb4"/>
                     </view>
+                    <navigationItem key="navigationItem" id="MbD-h9-MyE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Poo-wD-yKi"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="lectureTable" destination="aFP-a0-394" id="Tmm-Nf-Nc5"/>
                         <outlet property="myPlanTable" destination="cef-MR-rCh" id="wss-cD-SeL"/>
@@ -2937,7 +2940,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-53-gQB">
-                                                    <rect key="frame" x="56" y="0.0" width="67" height="44"/>
+                                                    <rect key="frame" x="56" y="0.0" width="163" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -4306,7 +4309,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="4gv-7J-iNj">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
@@ -4373,13 +4376,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hc7-W0-UfG"/>
                     </view>
+                    <navigationItem key="navigationItem" id="DQw-z9-mAh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="qd2-8Q-TS4"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="4gv-7J-iNj" id="2YP-HP-jWY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUc-vp-xsU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10188" y="-1299"/>
+            <point key="canvasLocation" x="10188" y="-1299.400299850075"/>
         </scene>
         <!--Edit Keyword Search View Controller-->
         <scene sceneID="BNm-fF-CBP">
@@ -4390,7 +4396,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="efG-PK-8fb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="xJx-me-M7f">
@@ -4441,6 +4447,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0ak-10-V0S"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nPL-Ko-GQn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="pOD-gV-CM4"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="xJx-me-M7f" id="399-Tv-52Y"/>
                         <outlet property="tableView" destination="efG-PK-8fb" id="kkW-gc-YiY"/>
@@ -4448,7 +4457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zI-pr-0kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10102" y="-2866"/>
+            <point key="canvasLocation" x="10101.6" y="-2866.4167916041979"/>
         </scene>
         <!--Edit Category Choice View Controller-->
         <scene sceneID="pFs-f5-asB">
@@ -4459,7 +4468,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XUf-F8-HSs">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -4505,7 +4514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHV-A9-r6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10102" y="-2104"/>
+            <point key="canvasLocation" x="10101.6" y="-2104.4977511244379"/>
         </scene>
     </scenes>
     <resources>
@@ -4519,7 +4528,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DdI-Bo-VPM"/>
-        <segue reference="JnP-c9-WM4"/>
+        <segue reference="0dO-mw-KWF"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.92272506480000005" green="0.62683743790000002" blue="0.1117382006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

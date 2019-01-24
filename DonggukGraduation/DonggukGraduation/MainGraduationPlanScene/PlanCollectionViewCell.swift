@@ -19,8 +19,6 @@ class PlanCollectionViewCell: UICollectionViewCell {
             }
             else {
                 planLabel.textColor = UIColor.orange
-//                planLabel.layer.borderWidth = 1
-//                planLabel.layer.borderColor = UIColor.groupTableViewBackground.cgColor
                 planLabel.backgroundColor = UIColor.white
             }
         }

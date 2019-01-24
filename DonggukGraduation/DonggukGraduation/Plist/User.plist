@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<array>
-	<dict/>
-</array>
+<dict>
+	<key>name</key>
+	<string>육지수</string>
+	<key>college</key>
+	<string>공과대학</string>
+	<key>department</key>
+	<string>컴퓨터공학과</string>
+	<key>admissionYear</key>
+	<integer>13</integer>
+</dict>
 </plist>
