@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		3F0A2C3C21FAD2E30038EDFB /* GlobalValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C3B21FAD2E30038EDFB /* GlobalValue.swift */; };
 		3F0A2C3E21FAD34E0038EDFB /* UserValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C3D21FAD34E0038EDFB /* UserValue.swift */; };
+		3F0A2C4721FAFECA0038EDFB /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C4021FAFEB70038EDFB /* MainTableViewController.swift */; };
+		3F0A2C4821FAFECA0038EDFB /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C4121FAFEB70038EDFB /* InformationTableViewCell.swift */; };
+		3F0A2C4921FAFECA0038EDFB /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C4221FAFEB70038EDFB /* SaveData.swift */; };
+		3F0A2C4A21FAFECA0038EDFB /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C4321FAFEB70038EDFB /* MessageTableViewController.swift */; };
+		3F0A2C4B21FAFECA0038EDFB /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C4421FAFEB70038EDFB /* EditTableViewController.swift */; };
+		3F0A2C4C21FAFECA0038EDFB /* AllLectureListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C4521FAFEB70038EDFB /* AllLectureListTableViewController.swift */; };
+		3F0A2C4D21FAFECA0038EDFB /* LectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C4621FAFEB70038EDFB /* LectureTableViewCell.swift */; };
 		3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */; };
 		3F7E39EC21EC5C1B00496FDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E39EB21EC5C1B00496FDC /* ViewController.swift */; };
 		3F7E39EF21EC5C1B00496FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E39ED21EC5C1B00496FDC /* Main.storyboard */; };
@@ -63,6 +70,13 @@
 /* Begin PBXFileReference section */
 		3F0A2C3B21FAD2E30038EDFB /* GlobalValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalValue.swift; sourceTree = "<group>"; };
 		3F0A2C3D21FAD34E0038EDFB /* UserValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValue.swift; sourceTree = "<group>"; };
+		3F0A2C4021FAFEB70038EDFB /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		3F0A2C4121FAFEB70038EDFB /* InformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
+		3F0A2C4221FAFEB70038EDFB /* SaveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
+		3F0A2C4321FAFEB70038EDFB /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		3F0A2C4421FAFEB70038EDFB /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
+		3F0A2C4521FAFEB70038EDFB /* AllLectureListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllLectureListTableViewController.swift; sourceTree = "<group>"; };
+		3F0A2C4621FAFEB70038EDFB /* LectureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureTableViewCell.swift; sourceTree = "<group>"; };
 		3F7E39E621EC5C1B00496FDC /* DonggukGraduation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonggukGraduation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7E39EB21EC5C1B00496FDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +141,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F0A2C3F21FAFEB70038EDFB /* GraduationCondition */ = {
+			isa = PBXGroup;
+			children = (
+				3F0A2C4021FAFEB70038EDFB /* MainTableViewController.swift */,
+				3F0A2C4121FAFEB70038EDFB /* InformationTableViewCell.swift */,
+				3F0A2C4221FAFEB70038EDFB /* SaveData.swift */,
+				3F0A2C4321FAFEB70038EDFB /* MessageTableViewController.swift */,
+				3F0A2C4421FAFEB70038EDFB /* EditTableViewController.swift */,
+				3F0A2C4521FAFEB70038EDFB /* AllLectureListTableViewController.swift */,
+				3F0A2C4621FAFEB70038EDFB /* LectureTableViewCell.swift */,
+			);
+			path = GraduationCondition;
+			sourceTree = "<group>";
+		};
 		3F7ADD3D21F6FFE9003030CE /* EditKeywordSearchScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +183,7 @@
 		3F7E39E821EC5C1B00496FDC /* DonggukGraduation */ = {
 			isa = PBXGroup;
 			children = (
+				3F0A2C3F21FAFEB70038EDFB /* GraduationCondition */,
 				3F7ADD3D21F6FFE9003030CE /* EditKeywordSearchScene */,
 				3FD3EB5421F5BD8800E9EB20 /* EditLectureChoiceScene */,
 				3FD3EB5321F5BD6100E9EB20 /* DirectAddScene */,
@@ -380,6 +409,7 @@
 				4A1FA08321F4F03800D05246 /* DirectAddTableViewCell.swift in Sources */,
 				3FD95A1521F6DFCE00EE1800 /* EditKeywordSarchTableViewCell.swift in Sources */,
 				3F7E3A0E21EC5CD800496FDC /* CHViews.swift in Sources */,
+				3F0A2C4721FAFECA0038EDFB /* MainTableViewController.swift in Sources */,
 				3F7E3A1121EC5CD800496FDC /* FIlters.swift in Sources */,
 				4A1FA07121F46BB900D05246 /* PlanCollectionViewCell.swift in Sources */,
 				3F7E39EC21EC5C1B00496FDC /* ViewController.swift in Sources */,
@@ -387,6 +417,7 @@
 				3F7E3A0F21EC5CD800496FDC /* CHPickerViewController.swift in Sources */,
 				4A1FA06721F454AB00D05246 /* PlanDetailViewController.swift in Sources */,
 				3F7E3A1021EC5CD800496FDC /* SwipeActionTableViewCell.swift in Sources */,
+				3F0A2C4D21FAFECA0038EDFB /* LectureTableViewCell.swift in Sources */,
 				3F7E3A1321EC5CD800496FDC /* CHModalViewController.swift in Sources */,
 				3FD3EB4E21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift in Sources */,
 				3F7E3A1421EC5CD800496FDC /* CHControls.swift in Sources */,
@@ -394,19 +425,24 @@
 				3F0A2C3C21FAD2E30038EDFB /* GlobalValue.swift in Sources */,
 				4A1FA07D21F4D0CB00D05246 /* EditFirstChoiceViewController.swift in Sources */,
 				4A35C2EC21FA312C006AEB80 /* Curriculum.swift in Sources */,
+				3F0A2C4A21FAFECA0038EDFB /* MessageTableViewController.swift in Sources */,
 				3FD3EB4C21F59CD500E9EB20 /* EditLectureChoiceViewController.swift in Sources */,
 				4A1FA07F21F4E50F00D05246 /* DirectAddViewController.swift in Sources */,
+				3F0A2C4C21FAFECA0038EDFB /* AllLectureListTableViewController.swift in Sources */,
 				3F7E3A0C21EC5CD800496FDC /* NavigationControllers.swift in Sources */,
 				3F7E3A0B21EC5CD800496FDC /* UIViewController+Navigation.swift in Sources */,
 				3F7E3A0A21EC5CD800496FDC /* CHContentViewController.swift in Sources */,
 				4A1FA06921F4571600D05246 /* PlanLecture.swift in Sources */,
 				3FD3EB5021F5A62400E9EB20 /* EditPlanCategoryTableViewCell.swift in Sources */,
+				3F0A2C4B21FAFECA0038EDFB /* EditTableViewController.swift in Sources */,
 				3FD3EB5221F5A63200E9EB20 /* EditPlanLectureTableViewCell.swift in Sources */,
 				3FD95A1321F6DCBB00EE1800 /* EditKeywordSearchViewController.swift in Sources */,
 				3FD3EB4A21F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift in Sources */,
 				3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */,
+				3F0A2C4921FAFECA0038EDFB /* SaveData.swift in Sources */,
 				4A1FA08121F4E83F00D05246 /* DirectInputTableViewCell.swift in Sources */,
 				4A35C2EA21F9DC41006AEB80 /* Lecture.swift in Sources */,
+				3F0A2C4821FAFECA0038EDFB /* InformationTableViewCell.swift in Sources */,
 				3F7E3A0921EC5CD800496FDC /* DrawingCanvasView.swift in Sources */,
 				3F7E3A1521EC5CD800496FDC /* RecordButton.swift in Sources */,
 			);
