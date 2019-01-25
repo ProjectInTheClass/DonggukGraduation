@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0A2C3C21FAD2E30038EDFB /* GlobalValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C3B21FAD2E30038EDFB /* GlobalValue.swift */; };
+		3F0A2C3E21FAD34E0038EDFB /* UserValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C3D21FAD34E0038EDFB /* UserValue.swift */; };
 		3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */; };
 		3F7E39EC21EC5C1B00496FDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E39EB21EC5C1B00496FDC /* ViewController.swift */; };
 		3F7E39EF21EC5C1B00496FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E39ED21EC5C1B00496FDC /* Main.storyboard */; };
@@ -59,6 +61,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F0A2C3B21FAD2E30038EDFB /* GlobalValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalValue.swift; sourceTree = "<group>"; };
+		3F0A2C3D21FAD34E0038EDFB /* UserValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValue.swift; sourceTree = "<group>"; };
 		3F7E39E621EC5C1B00496FDC /* DonggukGraduation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonggukGraduation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7E39EB21EC5C1B00496FDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 				3F7E39F521EC5C1D00496FDC /* Info.plist */,
 				3F91A0BA21F97E8B0077F89D /* PlanValue.swift */,
 				4A35C2FC21FA48C7006AEB80 /* CurriValue.swift */,
+				3F0A2C3B21FAD2E30038EDFB /* GlobalValue.swift */,
+				3F0A2C3D21FAD34E0038EDFB /* UserValue.swift */,
 			);
 			path = DonggukGraduation;
 			sourceTree = "<group>";
@@ -370,6 +376,7 @@
 				3F7E3A1221EC5CD800496FDC /* CHTableViewControllers.swift in Sources */,
 				4A35C2FD21FA48C7006AEB80 /* CurriValue.swift in Sources */,
 				3F7E3A0D21EC5CD800496FDC /* CHPagingScrollViewController.swift in Sources */,
+				3F0A2C3E21FAD34E0038EDFB /* UserValue.swift in Sources */,
 				4A1FA08321F4F03800D05246 /* DirectAddTableViewCell.swift in Sources */,
 				3FD95A1521F6DFCE00EE1800 /* EditKeywordSarchTableViewCell.swift in Sources */,
 				3F7E3A0E21EC5CD800496FDC /* CHViews.swift in Sources */,
@@ -384,6 +391,7 @@
 				3FD3EB4E21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift in Sources */,
 				3F7E3A1421EC5CD800496FDC /* CHControls.swift in Sources */,
 				4A1FA06D21F45F6B00D05246 /* CategoryLectureTableViewCell.swift in Sources */,
+				3F0A2C3C21FAD2E30038EDFB /* GlobalValue.swift in Sources */,
 				4A1FA07D21F4D0CB00D05246 /* EditFirstChoiceViewController.swift in Sources */,
 				4A35C2EC21FA312C006AEB80 /* Curriculum.swift in Sources */,
 				3FD3EB4C21F59CD500E9EB20 /* EditLectureChoiceViewController.swift in Sources */,

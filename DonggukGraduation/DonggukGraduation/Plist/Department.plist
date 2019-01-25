@@ -7,6 +7,8 @@
 		<string>공과대학</string>
 		<key>name</key>
 		<string>컴퓨터공학과</string>
+		<key>englishName</key>
+		<string>CSE</string>
 	</dict>
 </array>
 </plist>

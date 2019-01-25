@@ -11,8 +11,6 @@
 		<integer>700</integer>
 		<key>serviceTime</key>
 		<integer>0</integer>
-		<key>serviceNeed</key>
-		<false/>
 		<key>allCredit</key>
 		<integer>140</integer>
 		<key>majorCredit</key>

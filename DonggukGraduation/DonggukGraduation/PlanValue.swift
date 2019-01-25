@@ -1,8 +1,6 @@
 
 import Foundation
 
-let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-
 var planList:[String] = [ "이수체계도" ]
 
 var selectedPlan: String = planList[0]
