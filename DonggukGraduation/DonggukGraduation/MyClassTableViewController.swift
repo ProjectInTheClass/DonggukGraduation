@@ -38,11 +38,14 @@ class MyClassTableViewController: UITableViewController {
                 return 57
             }
         }
+        else if indexPath.section == 5 {
+            return 90
+        }
         return 50
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 6
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -126,6 +129,10 @@ class MyClassTableViewController: UITableViewController {
             return cell
             
             
+        }
+        else if indexPath.section == 5 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyClassTableViewCell4", for: indexPath) as! MyClassTableViewCell4
+            return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyClassTableViewCell5", for: indexPath) as! MyClassTableViewCell5
         return cell

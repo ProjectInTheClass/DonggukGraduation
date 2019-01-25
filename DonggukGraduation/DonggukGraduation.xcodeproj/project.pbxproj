@@ -29,6 +29,9 @@
 		3FCA003021F98E6C003F68CD /* MyClassTableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA002F21F98E6C003F68CD /* MyClassTableViewCell3.swift */; };
 		3FCA005221F9ADA7003F68CD /* MyClassTableViewCell5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA005121F9ADA7003F68CD /* MyClassTableViewCell5.swift */; };
 		3FCA005421F9BB8D003F68CD /* MyClassTableViewCell4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA005321F9BB8D003F68CD /* MyClassTableViewCell4.swift */; };
+		3FD428D221FAD6FA00E66B7F /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD428D121FAD6FA00E66B7F /* MyPageTableViewController.swift */; };
+		3FD428D421FADD2500E66B7F /* MyPageTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD428D321FADD2500E66B7F /* MyPageTableViewCell1.swift */; };
+		3FD428D621FADD3900E66B7F /* MyPageTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD428D521FADD3900E66B7F /* MyPageTableViewCell2.swift */; };
 		3FE4BD7B21F58FC000FA7A75 /* MyClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4BD7A21F58FC000FA7A75 /* MyClassViewController.swift */; };
 		3FE4BD7D21F5C0BC00FA7A75 /* MyClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4BD7C21F5C0BC00FA7A75 /* MyClassTableViewController.swift */; };
 		3FE4BD7F21F5C50C00FA7A75 /* OrangeBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4BD7E21F5C50C00FA7A75 /* OrangeBarTableViewCell.swift */; };
@@ -59,6 +62,9 @@
 		3FCA002F21F98E6C003F68CD /* MyClassTableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell3.swift; sourceTree = "<group>"; };
 		3FCA005121F9ADA7003F68CD /* MyClassTableViewCell5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell5.swift; sourceTree = "<group>"; };
 		3FCA005321F9BB8D003F68CD /* MyClassTableViewCell4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell4.swift; sourceTree = "<group>"; };
+		3FD428D121FAD6FA00E66B7F /* MyPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewController.swift; sourceTree = "<group>"; };
+		3FD428D321FADD2500E66B7F /* MyPageTableViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell1.swift; sourceTree = "<group>"; };
+		3FD428D521FADD3900E66B7F /* MyPageTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell2.swift; sourceTree = "<group>"; };
 		3FE4BD7A21F58FC000FA7A75 /* MyClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassViewController.swift; sourceTree = "<group>"; };
 		3FE4BD7C21F5C0BC00FA7A75 /* MyClassTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassTableViewController.swift; sourceTree = "<group>"; };
 		3FE4BD7E21F5C50C00FA7A75 /* OrangeBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeBarTableViewCell.swift; sourceTree = "<group>"; };
@@ -108,6 +114,9 @@
 				3FCA002F21F98E6C003F68CD /* MyClassTableViewCell3.swift */,
 				3FCA005121F9ADA7003F68CD /* MyClassTableViewCell5.swift */,
 				3FCA005321F9BB8D003F68CD /* MyClassTableViewCell4.swift */,
+				3FD428D121FAD6FA00E66B7F /* MyPageTableViewController.swift */,
+				3FD428D321FADD2500E66B7F /* MyPageTableViewCell1.swift */,
+				3FD428D521FADD3900E66B7F /* MyPageTableViewCell2.swift */,
 			);
 			path = DonggukGraduation;
 			sourceTree = "<group>";
@@ -205,7 +214,9 @@
 			files = (
 				3F7E3A1221EC5CD800496FDC /* CHTableViewControllers.swift in Sources */,
 				3FCA005421F9BB8D003F68CD /* MyClassTableViewCell4.swift in Sources */,
+				3FD428D221FAD6FA00E66B7F /* MyPageTableViewController.swift in Sources */,
 				3FE4BD7B21F58FC000FA7A75 /* MyClassViewController.swift in Sources */,
+				3FD428D421FADD2500E66B7F /* MyPageTableViewCell1.swift in Sources */,
 				3F7E3A0D21EC5CD800496FDC /* CHPagingScrollViewController.swift in Sources */,
 				3F7E3A0E21EC5CD800496FDC /* CHViews.swift in Sources */,
 				3F7E3A1121EC5CD800496FDC /* FIlters.swift in Sources */,
@@ -222,6 +233,7 @@
 				3F7E3A0A21EC5CD800496FDC /* CHContentViewController.swift in Sources */,
 				3FE4BD7D21F5C0BC00FA7A75 /* MyClassTableViewController.swift in Sources */,
 				3FCA003021F98E6C003F68CD /* MyClassTableViewCell3.swift in Sources */,
+				3FD428D621FADD3900E66B7F /* MyPageTableViewCell2.swift in Sources */,
 				3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */,
 				3F7E3A0921EC5CD800496FDC /* DrawingCanvasView.swift in Sources */,
 				3F7E3A1521EC5CD800496FDC /* RecordButton.swift in Sources */,
