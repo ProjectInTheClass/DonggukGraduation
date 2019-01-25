@@ -61,6 +61,34 @@ class AllLectureListTableViewController: UITableViewController {
         
     }
     
+/*
+
+     if indexPath.section == 0 {
+     
+     let cell1  = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath) as! LectureTableViewCell
+     cell1.lectureLabel.text = "신호및시스템"
+     cell1.pointLabel.text = "3학점"
+     cell1.pointLabel.textColor = UIColor.lightGray
+     cell1.symbolview.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+     return cell1
+     
+     }
+     
+     else if indexPath.section == 1 {
+     let cell1  = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath) as! LectureTableViewCell
+     cell1.lectureLabel.text = "회로이론"
+     cell1.pointLabel.text = "3학점"
+     cell1.pointLabel.textColor = UIColor.lightGray
+     cell1.symbolview.backgroundColor = .blue
+     cell1.symbolview.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+     return cell1
+     }
+     
+*/
+    
+    
+    
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
             return "전공기초"

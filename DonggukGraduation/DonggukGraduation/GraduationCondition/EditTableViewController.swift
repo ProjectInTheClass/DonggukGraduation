@@ -284,11 +284,11 @@ class EditTableViewController: UITableViewController {
     
     //셀을 버튼처럼 선택하여 확장 및 축소한다.
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+
         if indexPath.section == 1 {
             if indexPath.row == 0 {
-                if majorexpanded {
-                    majorexpanded = false
-                }
+                if majorexpanded { majorexpanded = false }
                 else { majorexpanded = true }
                 tableView.reloadData()
             }
@@ -322,8 +322,6 @@ class EditTableViewController: UITableViewController {
             }
         }
     }
-    
-
 
 
     /*
@@ -382,3 +380,5 @@ class EditTableViewController: UITableViewController {
     */
 
 }
+
+

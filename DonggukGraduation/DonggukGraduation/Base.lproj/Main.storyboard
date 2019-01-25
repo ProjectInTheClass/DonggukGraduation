@@ -642,9 +642,10 @@
                                                     <rect key="frame" x="333" y="9" width="26" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFj-dy-bOu">
-                                                    <rect key="frame" x="331" y="9" width="30" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFj-dy-bOu">
+                                                    <rect key="frame" x="316" y="-6" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="icons8-collapse2-2"/>
                                                     <connections>
                                                         <segue destination="DmL-wg-LTH" kind="show" animates="NO" id="S4y-Dx-pPH"/>
                                                     </connections>
@@ -5912,6 +5913,7 @@
     </scenes>
     <resources>
         <image name="icons8-collapse2-1" width="25" height="25"/>
+        <image name="icons8-collapse2-2" width="60" height="60"/>
         <image name="icons8-education-1" width="32" height="32"/>
         <image name="icons8-expand2-1" width="25" height="25"/>
         <image name="icons8-expand2-2" width="60" height="60"/>
@@ -5925,8 +5927,8 @@
         <image name="icons8-terms_and_conditions-1" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gxF-Dt-Ndu"/>
-        <segue reference="mCF-44-pCQ"/>
+        <segue reference="S4y-Dx-pPH"/>
+        <segue reference="0dO-mw-KWF"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.92272506480000005" green="0.62683743790000002" blue="0.1117382006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

@@ -13,23 +13,6 @@ class InformationTableViewCell: UITableViewCell {
         
 
     }
-    
-        var majorexpanded = false
-    
-    
-/*    @IBAction func arrowButton(_ sender: Any) {
-        
-        if majorexpanded {
-            majorexpanded = false
-        }
-        else { majorexpanded = true }
-        UITableView.reloadData()
-        
-        
-    }
-    
-  */
-    
    
     @IBAction func conditionCheckAction(_ sender: UISwitch) {
         UserDefaults.standard.set(conditionCheck.isOn, forKey: "switchState")
@@ -46,8 +29,6 @@ class InformationTableViewCell: UITableViewCell {
             pointLabel.textColor = UIColor.orange
             
         }
-
-        
     }
     
 
