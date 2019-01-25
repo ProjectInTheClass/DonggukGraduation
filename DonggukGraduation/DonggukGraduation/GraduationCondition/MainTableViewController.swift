@@ -8,7 +8,18 @@ class MainTableViewController: UITableViewController {
     
     }
 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DETAIL_LECTURE_SEGUE" {
+            if let allLectureVC = segue.destination as? AllLectureListTableViewController, let cell = sender as? UITableViewCell {
+                let indexPath = self.tableView.indexPath(for: cell)!
+                var category: String = ""
+                if indexPath.row == 1 { category = "전공영역" }
+                else { category = "교양영역" }
+                
+                allLectureVC.category = category
+            }
+        }
+    }
     
     // MARK: - Table view data source
 
@@ -16,14 +27,14 @@ class MainTableViewController: UITableViewController {
 
         return 4
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if section == 0 {
             return 3
         }
         else if section == 1 {
-            return 1
+            return 2
         }
         else if section == 2 {
             return 1
@@ -77,6 +88,17 @@ class MainTableViewController: UITableViewController {
         
         else if indexPath.section == 1 {
             if indexPath.row == 0
+            {
+                cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
+                cell.textLabel?.text = "영어강의"
+                cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 30)
+                cell.detailTextLabel?.text = "0/4(과목)"
+                cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 30)
+                
+                return cell
+            }
+            
+            else if indexPath.row == 1
             {
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
                 cell.textLabel?.text = "영어성적"

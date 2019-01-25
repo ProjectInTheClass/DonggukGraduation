@@ -1,10 +1,22 @@
 import UIKit
 
 class AllLectureListTableViewController: UITableViewController {
-
+    var category : String?
+    var lecture : [String] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let category = category {
+            if category == "전공영역" {
+                
+            }
+            else if category == "교양영역" {
+                
+            }
+            print(category)
+        }
 
     }
 
@@ -29,7 +41,7 @@ class AllLectureListTableViewController: UITableViewController {
             cell1.lectureLabel.text = "신호및시스템"
             cell1.pointLabel.text = "3학점"
             cell1.pointLabel.textColor = UIColor.lightGray
-            cell1.symbolview.backgroundColor = .red
+            cell1.symbolview.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
             return cell1
             
         }
@@ -40,6 +52,7 @@ class AllLectureListTableViewController: UITableViewController {
             cell1.pointLabel.text = "3학점"
             cell1.pointLabel.textColor = UIColor.lightGray
             cell1.symbolview.backgroundColor = .blue
+            cell1.symbolview.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
             return cell1
         }
 
@@ -57,6 +70,8 @@ class AllLectureListTableViewController: UITableViewController {
         }
         return nil
     }
+    
+
     
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

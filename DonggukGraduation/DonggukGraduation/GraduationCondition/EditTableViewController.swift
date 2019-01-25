@@ -5,7 +5,8 @@ class EditTableViewController: UITableViewController {
      
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        arrSaveData.append( SaveData(Point : 0 , Time : 0 , Turn_in  : false ))
+
     }
 
     // MARK: - Table view data source
@@ -21,6 +22,7 @@ class EditTableViewController: UITableViewController {
             if indexPath.row == 1
             {
                 return 80
+                // 내용길이에 따라 달라지게 바꾸기
             }
         }
         else if indexPath.section == 2 {
@@ -35,7 +37,7 @@ class EditTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
 
-        return 7
+        return 8
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,7 +62,7 @@ class EditTableViewController: UITableViewController {
             }
         }
         else if section == 3 {
-            if !langexpanded {
+            if !subjectexpanded {
                 return 1
             }
             else {
@@ -68,7 +70,7 @@ class EditTableViewController: UITableViewController {
             }
         }
         else if section == 4 {
-            if !thesisexpanded {
+            if !langexpanded {
                 return 1
             }
             else {
@@ -76,9 +78,17 @@ class EditTableViewController: UITableViewController {
             }
         }
         else if section == 5 {
+            if !thesisexpanded {
+                return 1
+            }
+            else {
+                return 2
+            }
+        }
+        else if section == 6 {
             return 1
         }
-        else if section == 6{
+        else if section == 7{
             return 1
         }
         
@@ -153,8 +163,28 @@ class EditTableViewController: UITableViewController {
                 return cell
             }
         }
-        
+            
         else if indexPath.section == 3 {
+            if indexPath.row == 0
+            {
+                let cell4 = tableView.dequeueReusableCell(withIdentifier: "CELL4", for: indexPath) as! InformationTableViewCell
+                cell4.subjectLabel.text = "영어강의"
+                cell4.subjectLabel.font.withSize(19)
+                cell4.pointLabel.text = "/4 과목"
+                cell4.pointLabel.font.withSize(19)
+                return cell4
+            }
+            else if indexPath.row == 1
+            {
+                cell = tableView.dequeueReusableCell(withIdentifier: "CELL3", for: indexPath)
+                cell.textLabel?.text = "- 영어강의 : 4과목 중 전공과목에서 2과목 이상 이수"
+                cell.textLabel?.font = UIFont.italicSystemFont(ofSize: 14)
+                cell.backgroundColor = UIColor.groupTableViewBackground
+                return cell
+            }
+        }
+        
+        else if indexPath.section == 4 {
             if indexPath.row == 0
             {
                 let cell4  = tableView.dequeueReusableCell(withIdentifier: "CELL5", for: indexPath) as! InformationTableViewCell
@@ -168,7 +198,7 @@ class EditTableViewController: UITableViewController {
             else if indexPath.row == 1
             {
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL3", for: indexPath)
-                cell.textLabel?.text = "- 외국어시험(TOEIC) 700 - 영어강의 : 4과목 중 전공과목에서 2과목 이상 이수 "
+                cell.textLabel?.text = "- 외국어시험(TOEIC) 700"
                 cell.textLabel?.font = UIFont.italicSystemFont(ofSize: 14)
                 cell.backgroundColor = UIColor.groupTableViewBackground
                 
@@ -177,7 +207,7 @@ class EditTableViewController: UITableViewController {
 
         }
         
-        else if indexPath.section == 4 {
+        else if indexPath.section == 5 {
             if indexPath.row == 0
             {
                 let cell4  = tableView.dequeueReusableCell(withIdentifier: "CELL5", for: indexPath) as! InformationTableViewCell
@@ -200,7 +230,7 @@ class EditTableViewController: UITableViewController {
  
         }
         
-        else if indexPath.section == 5 {
+        else if indexPath.section == 6 {
             if indexPath.row == 0
             {
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
@@ -213,7 +243,7 @@ class EditTableViewController: UITableViewController {
             }
         }
         
-        else if indexPath.section == 6 {
+        else if indexPath.section == 7 {
             if indexPath.row == 0
             {
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL6", for: indexPath)
@@ -232,13 +262,13 @@ class EditTableViewController: UITableViewController {
         else if section == 3 {
             return "언어영역"
         }
-        else if section == 4 {
+        else if section == 5 {
             return "졸업논문"
         }
-        else if section == 5 {
+        else if section == 6 {
             return "봉사시간"
         }
-        else if section == 6 {
+        else if section == 7 {
             return "추가 졸업요건사항"
         }
         
@@ -247,10 +277,12 @@ class EditTableViewController: UITableViewController {
     
     var majorexpanded = false
     var cultureexpanded = false
+    var subjectexpanded = false
     var langexpanded = false
     var thesisexpanded = false
     
     
+    //셀을 버튼처럼 선택하여 확장 및 축소한다.
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
             if indexPath.row == 0 {
@@ -270,12 +302,19 @@ class EditTableViewController: UITableViewController {
         }
         else if indexPath.section == 3 {
             if indexPath.row == 0 {
+                if subjectexpanded { subjectexpanded = false }
+                else { subjectexpanded = true }
+                tableView.reloadData()
+            }
+        }
+        else if indexPath.section == 4 {
+            if indexPath.row == 0 {
                 if langexpanded { langexpanded = false }
                 else { langexpanded = true }
                 tableView.reloadData()
             }
         }
-        else if indexPath.section == 4 {
+        else if indexPath.section == 5 {
             if indexPath.row == 0 {
                 if thesisexpanded { thesisexpanded = false }
                 else { thesisexpanded = true }

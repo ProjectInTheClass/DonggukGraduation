@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F10BD7421F99B2A00673018 /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F10BD7321F99B2A00673018 /* SaveData.swift */; };
 		3F10D13221F7122400796C17 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F10D12C21F7122400796C17 /* MainTableViewController.swift */; };
 		3F10D13321F7122400796C17 /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F10D12D21F7122400796C17 /* InformationTableViewCell.swift */; };
 		3F10D13421F7122400796C17 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F10D12E21F7122400796C17 /* MessageTableViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F10BD7321F99B2A00673018 /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
 		3F10D12C21F7122400796C17 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		3F10D12D21F7122400796C17 /* InformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
 		3F10D12E21F7122400796C17 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				3F10D12F21F7122400796C17 /* EditTableViewController.swift */,
 				3F10D13021F7122400796C17 /* AllLectureListTableViewController.swift */,
 				3F10D13121F7122400796C17 /* LectureTableViewCell.swift */,
+				3F10BD7321F99B2A00673018 /* SaveData.swift */,
 			);
 			path = GraduationCondition;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				3F7E3A1421EC5CD800496FDC /* CHControls.swift in Sources */,
 				3F7E3A0C21EC5CD800496FDC /* NavigationControllers.swift in Sources */,
 				3F7E3A0B21EC5CD800496FDC /* UIViewController+Navigation.swift in Sources */,
+				3F10BD7421F99B2A00673018 /* SaveData.swift in Sources */,
 				3F10D13521F7122400796C17 /* EditTableViewController.swift in Sources */,
 				3F7E3A0A21EC5CD800496FDC /* CHContentViewController.swift in Sources */,
 				3F10D13321F7122400796C17 /* InformationTableViewCell.swift in Sources */,

@@ -5540,7 +5540,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="3br-wL-a0X" kind="show" id="ogP-EJ-J2O"/>
+                                    <segue destination="3br-wL-a0X" kind="show" identifier="DETAIL_LECTURE_SEGUE" id="ogP-EJ-J2O"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -5560,7 +5560,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4m6-az-Uy7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8313" y="125"/>
+            <point key="canvasLocation" x="8313" y="122"/>
         </scene>
         <!--잘못된 정보 전송-->
         <scene sceneID="szB-od-B0Z">
@@ -5627,7 +5627,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6PA-3o-5Xe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9180" y="876"/>
+            <point key="canvasLocation" x="9180" y="905"/>
         </scene>
         <!--전체 수강한 과목조회-->
         <scene sceneID="SdL-IR-MWP">
@@ -5714,7 +5714,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JiO-NN-rfk">
-                                            <rect key="frame" x="235" y="9" width="41" height="30"/>
+                                            <rect key="frame" x="230" y="9" width="41" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -5740,7 +5740,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="20C-zY-OnO" kind="show" id="BkG-Vl-njH"/>
+                                    <segue destination="20C-zY-OnO" kind="presentation" id="BkG-Vl-njH"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CELL3" textLabel="hHq-gv-y6v" style="IBUITableViewCellStyleDefault" id="G0T-ZL-PRr">
@@ -5774,15 +5774,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wp-8S-u4c">
-                                            <rect key="frame" x="265" y="13" width="66" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M3I-tz-0hh">
-                                            <rect key="frame" x="216" y="9" width="41" height="30"/>
+                                            <rect key="frame" x="228" y="9" width="41" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -5791,8 +5784,18 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dos-gj-9vn">
                                             <rect key="frame" x="339" y="14" width="20" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="icons8-expand2"/>
+                                            <state key="normal" image="icons8-expand2-2"/>
+                                            <connections>
+                                                <action selector="arrowButton:" destination="Jft-t2-zwY" eventType="touchUpInside" id="vgw-r6-fkV"/>
+                                            </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wp-8S-u4c">
+                                            <rect key="frame" x="270" y="14" width="60" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -5817,7 +5820,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mic-Sf-SDt">
                                             <rect key="frame" x="339" y="14" width="20" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="icons8-expand2"/>
+                                            <state key="normal" image="icons8-expand2-2"/>
                                         </button>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3X1-x7-FsO">
                                             <rect key="frame" x="282" y="8" width="49" height="31"/>
@@ -5877,20 +5880,18 @@
                         <barButtonItem key="rightBarButtonItem" title="저장" id="LmJ-4J-1Ce">
                             <color key="tintColor" red="0.92272506480000005" green="0.62683743790000002" blue="0.1117382006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <action selector="modalDismiss:" destination="92K-df-M6u" id="Kby-wy-gGD"/>
-                                <segue destination="7h4-35-7pL" kind="presentation" id="hc7-je-Ed7"/>
+                                <action selector="navigationBack:" destination="92K-df-M6u" id="lW9-BW-98e"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="27b-4h-Vl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9180" y="122"/>
+            <point key="canvasLocation" x="9180" y="121.88905547226388"/>
         </scene>
         <!--졸업요건-->
         <scene sceneID="W75-6V-Ngn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="54v-kg-xtY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7h4-35-7pL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="졸업요건" image="icons8-terms_and_conditions-1" id="pg0-qb-Q3g"/>
                     <toolbarItems/>
@@ -5904,6 +5905,7 @@
                         <segue destination="Zr7-h4-hn6" kind="relationship" relationship="rootViewController" id="clS-wE-Gg3"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="54v-kg-xtY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7449" y="119"/>
         </scene>
@@ -5911,8 +5913,8 @@
     <resources>
         <image name="icons8-collapse2-1" width="25" height="25"/>
         <image name="icons8-education-1" width="32" height="32"/>
-        <image name="icons8-expand2" width="25" height="25"/>
         <image name="icons8-expand2-1" width="25" height="25"/>
+        <image name="icons8-expand2-2" width="60" height="60"/>
         <image name="icons8-filled_circle" width="32" height="32"/>
         <image name="icons8-filled_circle-1" width="32" height="32"/>
         <image name="icons8-forward-50" width="37.5" height="37.5"/>
@@ -5923,9 +5925,8 @@
         <image name="icons8-terms_and_conditions-1" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hc7-je-Ed7"/>
-        <segue reference="DdI-Bo-VPM"/>
-        <segue reference="JnP-c9-WM4"/>
+        <segue reference="gxF-Dt-Ndu"/>
+        <segue reference="mCF-44-pCQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.92272506480000005" green="0.62683743790000002" blue="0.1117382006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

@@ -14,8 +14,23 @@ class InformationTableViewCell: UITableViewCell {
 
     }
     
+        var majorexpanded = false
+    
+    
+/*    @IBAction func arrowButton(_ sender: Any) {
+        
+        if majorexpanded {
+            majorexpanded = false
+        }
+        else { majorexpanded = true }
+        UITableView.reloadData()
+        
+        
+    }
+    
+  */
+    
    
-
     @IBAction func conditionCheckAction(_ sender: UISwitch) {
         UserDefaults.standard.set(conditionCheck.isOn, forKey: "switchState")
         
@@ -35,9 +50,7 @@ class InformationTableViewCell: UITableViewCell {
         
     }
     
-    
-    
-    
+
     // override func setSelected(_ selected: Bool, animated: Bool) {
     //    super.setSelected(selected, animated: animated)
 
