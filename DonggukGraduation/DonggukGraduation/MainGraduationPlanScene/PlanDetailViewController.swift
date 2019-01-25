@@ -27,6 +27,8 @@ class PlanDetailViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.showsHorizontalScrollIndicator = false
+        // 아이템 선택되게 하는 함수
+        collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .top)
         
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
@@ -44,12 +46,6 @@ extension PlanDetailViewController: UICollectionViewDataSource {
         
         cell.planLabel.text = planList[indexPath.row]
         
-        if indexPath.row == 0, selectedPlan == "이수체계도" {
-            cell.isSelected = true
-        }
-        else {
-            cell.planLabel.textColor = UIColor.orange
-        }
         
         cell.planLabel.layer.borderWidth = 1
         cell.planLabel.layer.borderColor = UIColor.orange.cgColor
