@@ -233,13 +233,13 @@ class EditTableViewController: UITableViewController {
         else if indexPath.section == 6 {
             if indexPath.row == 0
             {
-                cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
-                cell.textLabel?.text = "채운시간"
-                cell.textLabel?.font.withSize(19)
-                cell.detailTextLabel?.text = "/90 (시간)"
-                cell.detailTextLabel?.font.withSize(15)
-                
-                return cell
+                let cell1 = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath) as! InformationTableViewCell
+                cell1.TimeLabel.text = "채운시간"
+                cell1.TimeLabel.font.withSize(19)
+                cell1.TimeInputLabel.text = "/90 (시간)"
+                cell1.TimeInputLabel.font.withSize(15)
+            
+                return cell1
             }
         }
         

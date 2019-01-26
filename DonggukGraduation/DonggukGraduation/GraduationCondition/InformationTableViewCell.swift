@@ -6,7 +6,9 @@ class InformationTableViewCell: UITableViewCell {
     @IBOutlet weak var arrowButton: UIButton!
     @IBOutlet weak var pointLabel: UILabel!
     @IBOutlet weak var conditionCheck: UISwitch!
-    //@IBOutlet weak var Arrow: UIImageView!
+    @IBOutlet weak var TimeLabel: UILabel!
+    @IBOutlet weak var TimeInputLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

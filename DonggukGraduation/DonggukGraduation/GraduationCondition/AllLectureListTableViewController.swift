@@ -84,10 +84,38 @@ class AllLectureListTableViewController: UITableViewController {
      return cell1
      }
      
+     else if indexPath.section == 2 {
+     let cell1  = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath) as! LectureTableViewCell
+     cell1.lectureLabel.text = "회로이론"
+     cell1.pointLabel.text = "3학점"
+     cell1.pointLabel.textColor = UIColor.lightGray
+     cell1.symbolview.backgroundColor = .blue
+     cell1.symbolview.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+     return cell1
+     }
+     
+     else if indexPath.section == 3 {
+     let cell1  = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath) as! LectureTableViewCell
+     cell1.lectureLabel.text = "회로이론"
+     cell1.pointLabel.text = "3학점"
+     cell1.pointLabel.textColor = UIColor.lightGray
+     cell1.symbolview.backgroundColor = .blue
+     cell1.symbolview.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+     return cell1
+     }
+     
+     else if indexPath.section == 4 {
+     let cell1  = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath) as! LectureTableViewCell
+     cell1.lectureLabel.text = "회로이론"
+     cell1.pointLabel.text = "3학점"
+     cell1.pointLabel.textColor = UIColor.lightGray
+     cell1.symbolview.backgroundColor = .blue
+     cell1.symbolview.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+     return cell1
+     }
+     
+     
 */
-    
-    
-    
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
@@ -99,6 +127,29 @@ class AllLectureListTableViewController: UITableViewController {
         return nil
     }
     
+    /*
+ override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+ if section == 0 {
+ return "학문기초 (0/30)"
+ }
+ else if section == 1 {
+return "기본소양 (0/6)"
+ }
+     else if section == 2 {
+     return "공통교양 (0/9)"
+     }
+     
+     else if section == 3 {
+     return "핵심교양 (0/9)"
+     }
+     else if section == 4 {
+     return "일반교양 (0/9)"
+     }
+ return nil
+ }
+ 
+ */
+
 
     
     /*
