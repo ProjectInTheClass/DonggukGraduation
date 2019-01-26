@@ -16,19 +16,6 @@
 		3F0A2C4B21FAFECA0038EDFB /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C4421FAFEB70038EDFB /* EditTableViewController.swift */; };
 		3F0A2C4C21FAFECA0038EDFB /* AllLectureListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C4521FAFEB70038EDFB /* AllLectureListTableViewController.swift */; };
 		3F0A2C4D21FAFECA0038EDFB /* LectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C4621FAFEB70038EDFB /* LectureTableViewCell.swift */; };
-		3F0A2C5C21FB05160038EDFB /* OrangeBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C4F21FB05150038EDFB /* OrangeBarTableViewCell.swift */; };
-		3F0A2C5D21FB05160038EDFB /* MyClassTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5021FB05150038EDFB /* MyClassTableViewCell1.swift */; };
-		3F0A2C5E21FB05160038EDFB /* MyClassTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5121FB05150038EDFB /* MyClassTableViewCell2.swift */; };
-		3F0A2C5F21FB05160038EDFB /* MyPageTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5221FB05150038EDFB /* MyPageTableViewCell1.swift */; };
-		3F0A2C6021FB05160038EDFB /* MyClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5321FB05150038EDFB /* MyClassViewController.swift */; };
-		3F0A2C6121FB05160038EDFB /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5421FB05150038EDFB /* MyPageTableViewController.swift */; };
-		3F0A2C6221FB05160038EDFB /* MyClassTableViewCell4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5521FB05160038EDFB /* MyClassTableViewCell4.swift */; };
-		3F0A2C6321FB05160038EDFB /* MyPageTableViewCell4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5621FB05160038EDFB /* MyPageTableViewCell4.swift */; };
-		3F0A2C6421FB05160038EDFB /* MyClassTableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5721FB05160038EDFB /* MyClassTableViewCell3.swift */; };
-		3F0A2C6521FB05160038EDFB /* MyPageTableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5821FB05160038EDFB /* MyPageTableViewCell3.swift */; };
-		3F0A2C6621FB05160038EDFB /* MyClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5921FB05160038EDFB /* MyClassTableViewController.swift */; };
-		3F0A2C6721FB05160038EDFB /* MyClassTableViewCell5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5A21FB05160038EDFB /* MyClassTableViewCell5.swift */; };
-		3F0A2C6821FB05160038EDFB /* MyPageTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5B21FB05160038EDFB /* MyPageTableViewCell2.swift */; };
 		3F0FD08A21FC345E00262271 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0FD08921FC345E00262271 /* ImageTableViewCell.swift */; };
 		3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */; };
 		3F7E39EC21EC5C1B00496FDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E39EB21EC5C1B00496FDC /* ViewController.swift */; };
@@ -79,6 +66,22 @@
 		4A35C2F921FA454C006AEB80 /* CSECurriculum.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2F821FA454C006AEB80 /* CSECurriculum.plist */; };
 		4A35C2FD21FA48C7006AEB80 /* CurriValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35C2FC21FA48C7006AEB80 /* CurriValue.swift */; };
 		4A35C2FF21FA4964006AEB80 /* MyCurriculum.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2FE21FA4964006AEB80 /* MyCurriculum.plist */; };
+		4A541CC821FC55400017DF7C /* MyClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CB821FC553F0017DF7C /* MyClassTableViewController.swift */; };
+		4A541CC921FC55400017DF7C /* MyClassTableViewCell5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CB921FC553F0017DF7C /* MyClassTableViewCell5.swift */; };
+		4A541CCA21FC55400017DF7C /* MyClassTableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CBA21FC553F0017DF7C /* MyClassTableViewCell3.swift */; };
+		4A541CCB21FC55400017DF7C /* MyPageTableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CBB21FC553F0017DF7C /* MyPageTableViewCell3.swift */; };
+		4A541CCC21FC55400017DF7C /* EditProfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CBC21FC553F0017DF7C /* EditProfilTableViewController.swift */; };
+		4A541CCD21FC55400017DF7C /* MyPageTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CBD21FC553F0017DF7C /* MyPageTableViewCell2.swift */; };
+		4A541CCE21FC55400017DF7C /* MyClassTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CBE21FC553F0017DF7C /* MyClassTableViewCell1.swift */; };
+		4A541CCF21FC55400017DF7C /* MyClassTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CBF21FC553F0017DF7C /* MyClassTableViewCell2.swift */; };
+		4A541CD021FC55400017DF7C /* EditProfilTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CC021FC553F0017DF7C /* EditProfilTableViewCell2.swift */; };
+		4A541CD121FC55400017DF7C /* MyClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CC121FC553F0017DF7C /* MyClassViewController.swift */; };
+		4A541CD221FC55400017DF7C /* OrangeBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CC221FC553F0017DF7C /* OrangeBarTableViewCell.swift */; };
+		4A541CD321FC55400017DF7C /* MyPageTableViewCell4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CC321FC553F0017DF7C /* MyPageTableViewCell4.swift */; };
+		4A541CD421FC55400017DF7C /* MyPageTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CC421FC553F0017DF7C /* MyPageTableViewCell1.swift */; };
+		4A541CD521FC55400017DF7C /* EditProfilTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CC521FC55400017DF7C /* EditProfilTableViewCell.swift */; };
+		4A541CD621FC55400017DF7C /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CC621FC55400017DF7C /* MyPageTableViewController.swift */; };
+		4A541CD721FC55400017DF7C /* MyClassTableViewCell4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CC721FC55400017DF7C /* MyClassTableViewCell4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,19 +94,6 @@
 		3F0A2C4421FAFEB70038EDFB /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		3F0A2C4521FAFEB70038EDFB /* AllLectureListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllLectureListTableViewController.swift; sourceTree = "<group>"; };
 		3F0A2C4621FAFEB70038EDFB /* LectureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureTableViewCell.swift; sourceTree = "<group>"; };
-		3F0A2C4F21FB05150038EDFB /* OrangeBarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrangeBarTableViewCell.swift; sourceTree = "<group>"; };
-		3F0A2C5021FB05150038EDFB /* MyClassTableViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell1.swift; sourceTree = "<group>"; };
-		3F0A2C5121FB05150038EDFB /* MyClassTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell2.swift; sourceTree = "<group>"; };
-		3F0A2C5221FB05150038EDFB /* MyPageTableViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell1.swift; sourceTree = "<group>"; };
-		3F0A2C5321FB05150038EDFB /* MyClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassViewController.swift; sourceTree = "<group>"; };
-		3F0A2C5421FB05150038EDFB /* MyPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableViewController.swift; sourceTree = "<group>"; };
-		3F0A2C5521FB05160038EDFB /* MyClassTableViewCell4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell4.swift; sourceTree = "<group>"; };
-		3F0A2C5621FB05160038EDFB /* MyPageTableViewCell4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell4.swift; sourceTree = "<group>"; };
-		3F0A2C5721FB05160038EDFB /* MyClassTableViewCell3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell3.swift; sourceTree = "<group>"; };
-		3F0A2C5821FB05160038EDFB /* MyPageTableViewCell3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell3.swift; sourceTree = "<group>"; };
-		3F0A2C5921FB05160038EDFB /* MyClassTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassTableViewController.swift; sourceTree = "<group>"; };
-		3F0A2C5A21FB05160038EDFB /* MyClassTableViewCell5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell5.swift; sourceTree = "<group>"; };
-		3F0A2C5B21FB05160038EDFB /* MyPageTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell2.swift; sourceTree = "<group>"; };
 		3F0FD08921FC345E00262271 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		3F7E39E621EC5C1B00496FDC /* DonggukGraduation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonggukGraduation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +146,22 @@
 		4A35C2F821FA454C006AEB80 /* CSECurriculum.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CSECurriculum.plist; sourceTree = "<group>"; };
 		4A35C2FC21FA48C7006AEB80 /* CurriValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriValue.swift; sourceTree = "<group>"; };
 		4A35C2FE21FA4964006AEB80 /* MyCurriculum.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyCurriculum.plist; sourceTree = "<group>"; };
+		4A541CB821FC553F0017DF7C /* MyClassTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyClassTableViewController.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/MyClassTableViewController.swift"; sourceTree = "<group>"; };
+		4A541CB921FC553F0017DF7C /* MyClassTableViewCell5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyClassTableViewCell5.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/MyClassTableViewCell5.swift"; sourceTree = "<group>"; };
+		4A541CBA21FC553F0017DF7C /* MyClassTableViewCell3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyClassTableViewCell3.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/MyClassTableViewCell3.swift"; sourceTree = "<group>"; };
+		4A541CBB21FC553F0017DF7C /* MyPageTableViewCell3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPageTableViewCell3.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/MyPageTableViewCell3.swift"; sourceTree = "<group>"; };
+		4A541CBC21FC553F0017DF7C /* EditProfilTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditProfilTableViewController.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/EditProfilTableViewController.swift"; sourceTree = "<group>"; };
+		4A541CBD21FC553F0017DF7C /* MyPageTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPageTableViewCell2.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/MyPageTableViewCell2.swift"; sourceTree = "<group>"; };
+		4A541CBE21FC553F0017DF7C /* MyClassTableViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyClassTableViewCell1.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/MyClassTableViewCell1.swift"; sourceTree = "<group>"; };
+		4A541CBF21FC553F0017DF7C /* MyClassTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyClassTableViewCell2.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/MyClassTableViewCell2.swift"; sourceTree = "<group>"; };
+		4A541CC021FC553F0017DF7C /* EditProfilTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditProfilTableViewCell2.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/EditProfilTableViewCell2.swift"; sourceTree = "<group>"; };
+		4A541CC121FC553F0017DF7C /* MyClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyClassViewController.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/MyClassViewController.swift"; sourceTree = "<group>"; };
+		4A541CC221FC553F0017DF7C /* OrangeBarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrangeBarTableViewCell.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/OrangeBarTableViewCell.swift"; sourceTree = "<group>"; };
+		4A541CC321FC553F0017DF7C /* MyPageTableViewCell4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPageTableViewCell4.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/MyPageTableViewCell4.swift"; sourceTree = "<group>"; };
+		4A541CC421FC553F0017DF7C /* MyPageTableViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPageTableViewCell1.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/MyPageTableViewCell1.swift"; sourceTree = "<group>"; };
+		4A541CC521FC55400017DF7C /* EditProfilTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditProfilTableViewCell.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/EditProfilTableViewCell.swift"; sourceTree = "<group>"; };
+		4A541CC621FC55400017DF7C /* MyPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPageTableViewController.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/MyPageTableViewController.swift"; sourceTree = "<group>"; };
+		4A541CC721FC55400017DF7C /* MyClassTableViewCell4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyClassTableViewCell4.swift; path = "../../../../Downloads/DonggukGraduation-my-one/DonggukGraduation/DonggukGraduation/MyPage/MyClassTableViewCell4.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,19 +192,22 @@
 		3F0A2C4E21FB04FF0038EDFB /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
-				3F0A2C5021FB05150038EDFB /* MyClassTableViewCell1.swift */,
-				3F0A2C5121FB05150038EDFB /* MyClassTableViewCell2.swift */,
-				3F0A2C5721FB05160038EDFB /* MyClassTableViewCell3.swift */,
-				3F0A2C5521FB05160038EDFB /* MyClassTableViewCell4.swift */,
-				3F0A2C5A21FB05160038EDFB /* MyClassTableViewCell5.swift */,
-				3F0A2C5921FB05160038EDFB /* MyClassTableViewController.swift */,
-				3F0A2C5321FB05150038EDFB /* MyClassViewController.swift */,
-				3F0A2C5221FB05150038EDFB /* MyPageTableViewCell1.swift */,
-				3F0A2C5B21FB05160038EDFB /* MyPageTableViewCell2.swift */,
-				3F0A2C5821FB05160038EDFB /* MyPageTableViewCell3.swift */,
-				3F0A2C5621FB05160038EDFB /* MyPageTableViewCell4.swift */,
-				3F0A2C5421FB05150038EDFB /* MyPageTableViewController.swift */,
-				3F0A2C4F21FB05150038EDFB /* OrangeBarTableViewCell.swift */,
+				4A541CC521FC55400017DF7C /* EditProfilTableViewCell.swift */,
+				4A541CC021FC553F0017DF7C /* EditProfilTableViewCell2.swift */,
+				4A541CBC21FC553F0017DF7C /* EditProfilTableViewController.swift */,
+				4A541CBE21FC553F0017DF7C /* MyClassTableViewCell1.swift */,
+				4A541CBF21FC553F0017DF7C /* MyClassTableViewCell2.swift */,
+				4A541CBA21FC553F0017DF7C /* MyClassTableViewCell3.swift */,
+				4A541CC721FC55400017DF7C /* MyClassTableViewCell4.swift */,
+				4A541CB921FC553F0017DF7C /* MyClassTableViewCell5.swift */,
+				4A541CB821FC553F0017DF7C /* MyClassTableViewController.swift */,
+				4A541CC121FC553F0017DF7C /* MyClassViewController.swift */,
+				4A541CC421FC553F0017DF7C /* MyPageTableViewCell1.swift */,
+				4A541CBD21FC553F0017DF7C /* MyPageTableViewCell2.swift */,
+				4A541CBB21FC553F0017DF7C /* MyPageTableViewCell3.swift */,
+				4A541CC321FC553F0017DF7C /* MyPageTableViewCell4.swift */,
+				4A541CC621FC55400017DF7C /* MyPageTableViewController.swift */,
+				4A541CC221FC553F0017DF7C /* OrangeBarTableViewCell.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -452,61 +461,64 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A1FA06B21F45CA800D05246 /* DetailLectureTableViewCell.swift in Sources */,
+				4A541CD321FC55400017DF7C /* MyPageTableViewCell4.swift in Sources */,
 				3F7E3A1221EC5CD800496FDC /* CHTableViewControllers.swift in Sources */,
-				3F0A2C6721FB05160038EDFB /* MyClassTableViewCell5.swift in Sources */,
+				4A541CD021FC55400017DF7C /* EditProfilTableViewCell2.swift in Sources */,
 				4A35C2FD21FA48C7006AEB80 /* CurriValue.swift in Sources */,
+				4A541CD121FC55400017DF7C /* MyClassViewController.swift in Sources */,
+				4A541CCD21FC55400017DF7C /* MyPageTableViewCell2.swift in Sources */,
 				3F7E3A0D21EC5CD800496FDC /* CHPagingScrollViewController.swift in Sources */,
-				3F0A2C5E21FB05160038EDFB /* MyClassTableViewCell2.swift in Sources */,
 				3F0A2C3E21FAD34E0038EDFB /* UserValue.swift in Sources */,
+				4A541CCC21FC55400017DF7C /* EditProfilTableViewController.swift in Sources */,
 				4A1FA08321F4F03800D05246 /* DirectAddTableViewCell.swift in Sources */,
 				3FD95A1521F6DFCE00EE1800 /* EditKeywordSarchTableViewCell.swift in Sources */,
 				3F7E3A0E21EC5CD800496FDC /* CHViews.swift in Sources */,
 				3F0A2C4721FAFECA0038EDFB /* MainTableViewController.swift in Sources */,
-				3F0A2C6121FB05160038EDFB /* MyPageTableViewController.swift in Sources */,
 				3F7E3A1121EC5CD800496FDC /* FIlters.swift in Sources */,
 				4A1FA07121F46BB900D05246 /* PlanCollectionViewCell.swift in Sources */,
 				3F7E39EC21EC5C1B00496FDC /* ViewController.swift in Sources */,
-				3F0A2C6521FB05160038EDFB /* MyPageTableViewCell3.swift in Sources */,
 				3F91A0BB21F97E8B0077F89D /* PlanValue.swift in Sources */,
 				3F7E3A0F21EC5CD800496FDC /* CHPickerViewController.swift in Sources */,
 				4A1FA06721F454AB00D05246 /* PlanDetailViewController.swift in Sources */,
+				4A541CD621FC55400017DF7C /* MyPageTableViewController.swift in Sources */,
+				4A541CD421FC55400017DF7C /* MyPageTableViewCell1.swift in Sources */,
 				3F7E3A1021EC5CD800496FDC /* SwipeActionTableViewCell.swift in Sources */,
-				3F0A2C5D21FB05160038EDFB /* MyClassTableViewCell1.swift in Sources */,
 				3F0A2C4D21FAFECA0038EDFB /* LectureTableViewCell.swift in Sources */,
 				3F7E3A1321EC5CD800496FDC /* CHModalViewController.swift in Sources */,
+				4A541CD721FC55400017DF7C /* MyClassTableViewCell4.swift in Sources */,
 				3FD3EB4E21F5A13600E9EB20 /* EditLectureItemTableViewCell.swift in Sources */,
+				4A541CC921FC55400017DF7C /* MyClassTableViewCell5.swift in Sources */,
+				4A541CCB21FC55400017DF7C /* MyPageTableViewCell3.swift in Sources */,
 				3F7E3A1421EC5CD800496FDC /* CHControls.swift in Sources */,
-				3F0A2C6321FB05160038EDFB /* MyPageTableViewCell4.swift in Sources */,
-				3F0A2C6621FB05160038EDFB /* MyClassTableViewController.swift in Sources */,
+				4A541CD521FC55400017DF7C /* EditProfilTableViewCell.swift in Sources */,
+				4A541CC821FC55400017DF7C /* MyClassTableViewController.swift in Sources */,
+				4A541CD221FC55400017DF7C /* OrangeBarTableViewCell.swift in Sources */,
 				4A1FA06D21F45F6B00D05246 /* CategoryLectureTableViewCell.swift in Sources */,
-				3F0A2C5C21FB05160038EDFB /* OrangeBarTableViewCell.swift in Sources */,
+				4A541CCE21FC55400017DF7C /* MyClassTableViewCell1.swift in Sources */,
 				3F0A2C3C21FAD2E30038EDFB /* GlobalValue.swift in Sources */,
 				4A1FA07D21F4D0CB00D05246 /* EditFirstChoiceViewController.swift in Sources */,
 				4A35C2EC21FA312C006AEB80 /* Curriculum.swift in Sources */,
 				3F0A2C4A21FAFECA0038EDFB /* MessageTableViewController.swift in Sources */,
-				3F0A2C5F21FB05160038EDFB /* MyPageTableViewCell1.swift in Sources */,
 				3FD3EB4C21F59CD500E9EB20 /* EditLectureChoiceViewController.swift in Sources */,
 				4A1FA07F21F4E50F00D05246 /* DirectAddViewController.swift in Sources */,
-				3F0A2C6421FB05160038EDFB /* MyClassTableViewCell3.swift in Sources */,
 				3F0A2C4C21FAFECA0038EDFB /* AllLectureListTableViewController.swift in Sources */,
 				3F7E3A0C21EC5CD800496FDC /* NavigationControllers.swift in Sources */,
 				3F7E3A0B21EC5CD800496FDC /* UIViewController+Navigation.swift in Sources */,
 				3F7E3A0A21EC5CD800496FDC /* CHContentViewController.swift in Sources */,
 				4A1FA06921F4571600D05246 /* PlanLecture.swift in Sources */,
-				3F0A2C6221FB05160038EDFB /* MyClassTableViewCell4.swift in Sources */,
 				3FD3EB5021F5A62400E9EB20 /* EditPlanCategoryTableViewCell.swift in Sources */,
 				3F0A2C4B21FAFECA0038EDFB /* EditTableViewController.swift in Sources */,
 				3F0FD08A21FC345E00262271 /* ImageTableViewCell.swift in Sources */,
 				3FD3EB5221F5A63200E9EB20 /* EditPlanLectureTableViewCell.swift in Sources */,
 				3FD95A1321F6DCBB00EE1800 /* EditKeywordSearchViewController.swift in Sources */,
 				3FD3EB4A21F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift in Sources */,
+				4A541CCA21FC55400017DF7C /* MyClassTableViewCell3.swift in Sources */,
 				3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */,
-				3F0A2C6021FB05160038EDFB /* MyClassViewController.swift in Sources */,
 				3F0A2C4921FAFECA0038EDFB /* SaveData.swift in Sources */,
-				3F0A2C6821FB05160038EDFB /* MyPageTableViewCell2.swift in Sources */,
 				4A1FA08121F4E83F00D05246 /* DirectInputTableViewCell.swift in Sources */,
 				4A35C2EA21F9DC41006AEB80 /* Lecture.swift in Sources */,
 				3F0A2C4821FAFECA0038EDFB /* InformationTableViewCell.swift in Sources */,
+				4A541CCF21FC55400017DF7C /* MyClassTableViewCell2.swift in Sources */,
 				3F7E3A0921EC5CD800496FDC /* DrawingCanvasView.swift in Sources */,
 				3F7E3A1521EC5CD800496FDC /* RecordButton.swift in Sources */,
 			);

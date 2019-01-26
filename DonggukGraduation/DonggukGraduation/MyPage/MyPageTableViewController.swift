@@ -14,11 +14,12 @@ class MyPageTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
+   
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             if indexPath.row == 0
             {
-                return 150
+                return 210
             }
         }
         else if indexPath.section == 1 {
@@ -38,15 +39,14 @@ class MyPageTableViewController: UITableViewController {
         }
         return 50
     }
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 4
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-        if section == 2 {
+        if section == 1 {
             return 2
         }
         return 1
@@ -56,16 +56,11 @@ class MyPageTableViewController: UITableViewController {
         if section == 0 {
             return "나의 프로필"
         }
+       
         else if section == 1 {
-            return "정보 재등록"
-        }
-        else if section == 2 {
             return "바로가기 링크"
         }
-        else if section == 3 {
-            return " "
-        }
-       
+     
         return nil
     }
 
@@ -80,14 +75,8 @@ class MyPageTableViewController: UITableViewController {
             
             return cell
         }
+
         else if indexPath.section == 1 {
-          
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageCell", for: indexPath)
-                cell.textLabel?.text = "프로필 변경"
-            cell.textLabel?.font.withSize(19)
-    return cell
-        }
-        else if indexPath.section == 2 {
             if indexPath.row == 0 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageTableViewCell3", for: indexPath) as! MyPageTableViewCell3
@@ -98,7 +87,7 @@ class MyPageTableViewController: UITableViewController {
             }
         
         }
-        else if indexPath.section == 3 {
+        else if indexPath.section == 2 {
             let cell =  tableView.dequeueReusableCell(withIdentifier: "MyPageTableViewCell2", for: indexPath) as! MyPageTableViewCell2
             return cell
         }
