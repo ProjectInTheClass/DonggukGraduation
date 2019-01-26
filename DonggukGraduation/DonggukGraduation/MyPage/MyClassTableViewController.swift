@@ -38,7 +38,7 @@ class MyClassTableViewController: UITableViewController {
                 return 57
             }
         }
-        else if indexPath.section == 5 {
+        else if indexPath.section == 6 {
             return 90
         }
         return 50
