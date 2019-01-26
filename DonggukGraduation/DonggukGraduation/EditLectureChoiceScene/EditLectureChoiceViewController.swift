@@ -55,6 +55,13 @@ extension EditLectureChoiceViewController: UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if tableView == lectureTable, indexPath.section != 0 {
+            return 80
+        }
+        return 44
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == lectureTable {
             if indexPath.section == 0 {

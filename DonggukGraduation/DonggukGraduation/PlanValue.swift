@@ -1,9 +1,9 @@
 
 import Foundation
 
-var planList:[String] = [ "이수체계도" ]
+var planList:[String] = [ ]
 
-var selectedPlan: String = planList[0]
+var selectedPlan: String = "이수체계도"
 
 var majorList:[PlanLecture] = []
 var generalList:[PlanLecture] = []
@@ -75,7 +75,7 @@ func loadPlanData() -> Bool{
     }
     
     
-    let planDicts:[[String:Any]] = planList.filter{ $0 != "이수체계도"}.map{ ["semester" : $0] }
+    let planDicts:[[String:Any]] = planList.map{ ["semester" : $0] }
     let majorPlanDicts:[[String:Any]] = majorList.map{$0.toDict()}
     let generalPlanDicts:[[String:Any]] = generalList.map{$0.toDict()}
     

@@ -37,14 +37,21 @@ class PlanDetailViewController: UIViewController {
 
 extension PlanDetailViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return planList.count
+        return planList.count + 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlanCollectionViewCell", for: indexPath) as! PlanCollectionViewCell
         
-        cell.planLabel.text = planList[indexPath.row]
+        if indexPath.row == 0 {
+            cell.planLabel.text = "이수체계도"
+        }
+        else if indexPath.row == ( planList.count + 1 ) {
+            cell.planLabel.text = "학기 추가"
+        }
+        else {
+            cell.planLabel.text = planList[indexPath.row-1]
+        }
         
         
         cell.planLabel.layer.borderWidth = 1
@@ -55,7 +62,13 @@ extension PlanDetailViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        selectedPlan = planList[indexPath.row]
+        if indexPath.row == ( planList.count + 1 ) || indexPath.row == 0 {
+            selectedPlan = "이수체계도"
+        }
+        else {
+            selectedPlan = planList[indexPath.row - 1]
+        }
+        
         if selectedPlan != "이수체계도" {
             
             majorLectures = [PlanLecture(name:"",category:"전공",credit:0,semester:"")]
@@ -78,19 +91,23 @@ extension PlanDetailViewController: UITableViewDataSource {
         if selectedPlan == "이수체계도" { return 1 }
         return 2
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if selectedPlan == "이수체계도" { return 1 }
         else if section == 0 { return majorLectures.count }
         else { return generalLectures.count }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if selectedPlan == "이수체계도" {
+            return 200
+        }
+        return 44
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if selectedPlan == "이수체계도" {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryLectureTableViewCell", for: indexPath) as! CategoryLectureTableViewCell
-            
-            cell.categoryName.text = "이수체계도"
-            
-            cell.colorRound.layer.cornerRadius = 7
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as! ImageTableViewCell
             
             return cell
         }

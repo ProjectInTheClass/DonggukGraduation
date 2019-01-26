@@ -13,6 +13,23 @@ class User {
         self.department = department
         self.admissionYear = admissionYear
     }
+    
+    init(dict: [String:Any]) {
+        
+    }
 }
 
 var myInfo: User = User(name: "육지수", college: "공과대학", department: "컴퓨터공학과", admissionYear: 13)
+
+func loadUserData() -> Bool{
+    
+    if let userPath = Bundle.main.path(forResource: "User", ofType:"plist") {
+        if let user = NSDictionary(contentsOfFile: userPath) {
+            if let userDict = user as? [String: Any] {
+                myInfo = User(dict:userDict)
+            }
+        }
+    }
+    
+    return true
+}

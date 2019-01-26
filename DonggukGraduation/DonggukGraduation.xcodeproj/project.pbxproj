@@ -29,6 +29,7 @@
 		3F0A2C6621FB05160038EDFB /* MyClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5921FB05160038EDFB /* MyClassTableViewController.swift */; };
 		3F0A2C6721FB05160038EDFB /* MyClassTableViewCell5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5A21FB05160038EDFB /* MyClassTableViewCell5.swift */; };
 		3F0A2C6821FB05160038EDFB /* MyPageTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C5B21FB05160038EDFB /* MyPageTableViewCell2.swift */; };
+		3F0FD08A21FC345E00262271 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0FD08921FC345E00262271 /* ImageTableViewCell.swift */; };
 		3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */; };
 		3F7E39EC21EC5C1B00496FDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E39EB21EC5C1B00496FDC /* ViewController.swift */; };
 		3F7E39EF21EC5C1B00496FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E39ED21EC5C1B00496FDC /* Main.storyboard */; };
@@ -103,6 +104,7 @@
 		3F0A2C5921FB05160038EDFB /* MyClassTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassTableViewController.swift; sourceTree = "<group>"; };
 		3F0A2C5A21FB05160038EDFB /* MyClassTableViewCell5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell5.swift; sourceTree = "<group>"; };
 		3F0A2C5B21FB05160038EDFB /* MyPageTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell2.swift; sourceTree = "<group>"; };
+		3F0FD08921FC345E00262271 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		3F7E39E621EC5C1B00496FDC /* DonggukGraduation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonggukGraduation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7E39EB21EC5C1B00496FDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				4A1FA06A21F45CA800D05246 /* DetailLectureTableViewCell.swift */,
 				4A1FA06C21F45F6B00D05246 /* CategoryLectureTableViewCell.swift */,
 				4A1FA07021F46BB900D05246 /* PlanCollectionViewCell.swift */,
+				3F0FD08921FC345E00262271 /* ImageTableViewCell.swift */,
 			);
 			path = MainGraduationPlanScene;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				3F0A2C6221FB05160038EDFB /* MyClassTableViewCell4.swift in Sources */,
 				3FD3EB5021F5A62400E9EB20 /* EditPlanCategoryTableViewCell.swift in Sources */,
 				3F0A2C4B21FAFECA0038EDFB /* EditTableViewController.swift in Sources */,
+				3F0FD08A21FC345E00262271 /* ImageTableViewCell.swift in Sources */,
 				3FD3EB5221F5A63200E9EB20 /* EditPlanLectureTableViewCell.swift in Sources */,
 				3FD95A1321F6DCBB00EE1800 /* EditKeywordSearchViewController.swift in Sources */,
 				3FD3EB4A21F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift in Sources */,
