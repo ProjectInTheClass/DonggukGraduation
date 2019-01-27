@@ -3,14 +3,14 @@ import Foundation
 
 var planList:[String] = [ ]
 
-var selectedPlan: String = "이수체계도"
+var selectedPlan: String = "ALL"
 
 var majorList:[PlanLecture] = []
 var generalList:[PlanLecture] = []
 
-let planFilePath = documentsPath + "/myPlan2.plist"
-let majorPlanFilePath = documentsPath + "/myMajorPlan2.plist"
-let generalPlanFilePath = documentsPath + "/myGeneralPlan2.plist"
+let planFilePath = documentsPath + "/myPlan4.plist"
+let majorPlanFilePath = documentsPath + "/myMajorPlan4.plist"
+let generalPlanFilePath = documentsPath + "/myGeneralPlan4.plist"
 
 func loadPlanData() -> Bool{
     
@@ -74,13 +74,27 @@ func loadPlanData() -> Bool{
         
     }
     
-    
     let planDicts:[[String:Any]] = planList.map{ ["semester" : $0] }
     let majorPlanDicts:[[String:Any]] = majorList.map{$0.toDict()}
     let generalPlanDicts:[[String:Any]] = generalList.map{$0.toDict()}
     
     if NSArray(array: planDicts).write(toFile: planFilePath, atomically: true), NSArray(array: majorPlanDicts).write(toFile: majorPlanFilePath, atomically: true), NSArray(array: generalPlanDicts).write(toFile: generalPlanFilePath, atomically: true){
         print("성공")
+        print(planList)
+        return true
+    }
+    else {
+        print("실패")
+        return false
+    }
+}
+
+func addSemester() -> Bool{
+    let planDicts:[[String:Any]] = planList.map{ ["semester" : $0] }
+    
+    if NSArray(array: planDicts).write(toFile: planFilePath, atomically: true){
+        print("성공")
+        print(planList)
         return true
     }
     else {

@@ -7,6 +7,7 @@ class PlanDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var selectView: UIView!
     
     var majorLectures:[PlanLecture] = []
     var generalLectures:[PlanLecture] = []
@@ -16,6 +17,12 @@ class PlanDetailViewController: UIViewController {
         title = "졸업계획"
         
         loadPlanData()
+        loadUserData()
+        
+        majorLectures = [PlanLecture(name:"",category:"전공",credit:0,semester:"")]
+        generalLectures = [PlanLecture(name:"",category:"교양",credit:0,semester:"")]
+        majorLectures += majorList
+        generalLectures += generalList
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -31,6 +38,7 @@ class PlanDetailViewController: UIViewController {
         collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .top)
         
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
     }
     
 }
@@ -44,7 +52,7 @@ extension PlanDetailViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlanCollectionViewCell", for: indexPath) as! PlanCollectionViewCell
         
         if indexPath.row == 0 {
-            cell.planLabel.text = "이수체계도"
+            cell.planLabel.text = "ALL"
         }
         else if indexPath.row == ( planList.count + 1 ) {
             cell.planLabel.text = "학기 추가"
@@ -62,20 +70,37 @@ extension PlanDetailViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if indexPath.row == ( planList.count + 1 ) || indexPath.row == 0 {
-            selectedPlan = "이수체계도"
+        if indexPath.row == 0 {
+            selectedPlan = "ALL"
+        }
+        else if indexPath.row == ( planList.count + 1 ){
+            let addQuestionAlert = UIAlertController(title: "학기 추가", message: "학기를 추가하겠습니까?", preferredStyle: UIAlertController.Style.alert)
+            
+            let yesAction = UIAlertAction(title: "네", style: UIAlertAction.Style.default) { ACTION in
+                let lastSemester = planList[planList.count - 1]
+            }
+            
+            let noAction = UIAlertAction(title: "아니요", style: UIAlertAction.Style.default, handler: nil)
+            
+            addQuestionAlert.addAction(yesAction)
+            addQuestionAlert.addAction(noAction)
+            
+            present(addQuestionAlert, animated: true, completion: nil)
         }
         else {
             selectedPlan = planList[indexPath.row - 1]
         }
         
-        if selectedPlan != "이수체계도" {
-            
-            majorLectures = [PlanLecture(name:"",category:"전공",credit:0,semester:"")]
+        majorLectures = [PlanLecture(name:"",category:"전공",credit:0,semester:"")]
+        generalLectures = [PlanLecture(name:"",category:"교양",credit:0,semester:"")]
+        
+        if selectedPlan != "ALL" {
             majorLectures += majorList.filter{ $0.semester == selectedPlan }
-            
-            generalLectures = [PlanLecture(name:"",category:"교양",credit:0,semester:"")]
             generalLectures += generalList.filter{ $0.semester == selectedPlan }
+        }
+        else {
+            majorLectures += majorList
+            generalLectures += generalList
         }
         tableView.reloadData()
     }
@@ -88,29 +113,19 @@ extension PlanDetailViewController: UICollectionViewDelegate {
 
 extension PlanDetailViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        if selectedPlan == "이수체계도" { return 1 }
         return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if selectedPlan == "이수체계도" { return 1 }
-        else if section == 0 { return majorLectures.count }
+        if section == 0 { return majorLectures.count }
         else { return generalLectures.count }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if selectedPlan == "이수체계도" {
-            return 200
-        }
         return 44
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if selectedPlan == "이수체계도" {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as! ImageTableViewCell
-            
-            return cell
-        }
         
         if indexPath.section == 0 {
             let lecture = majorLectures[indexPath.row]
