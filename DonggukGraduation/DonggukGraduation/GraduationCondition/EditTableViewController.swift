@@ -25,19 +25,14 @@ class EditTableViewController: UITableViewController {
                 // 내용길이에 따라 달라지게 바꾸기
             }
         }
-        else if indexPath.section == 2 {
-            if indexPath.row == 1
-            {
-                return 80
-            }
-        }
+
         return 50
     }
 
 
     override func numberOfSections(in tableView: UITableView) -> Int {
 
-        return 8
+        return 11
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,7 +41,7 @@ class EditTableViewController: UITableViewController {
             return 2
         }
         else if section == 1 {
-            if !majorexpanded {
+            if !allCredit_expanded {
                 return 1
             }
             else {
@@ -54,45 +49,78 @@ class EditTableViewController: UITableViewController {
             }
         }
         else if section == 2 {
-            if !cultureexpanded {
+            if !generalCommon_expanded {
                 return 1
             }
             else {
                 return 2
             }
         }
+            
         else if section == 3 {
-            if !subjectexpanded {
+            if !generalCulture_expanded {
                 return 1
             }
             else {
                 return 2
             }
         }
+            
         else if section == 4 {
-            if !langexpanded {
+            if !generalBasic_expanded {
                 return 1
             }
             else {
                 return 2
             }
         }
+            
         else if section == 5 {
-            if !thesisexpanded {
+            if !generalLiteracy_expanded {
                 return 1
             }
             else {
                 return 2
             }
         }
+            
         else if section == 6 {
+            if !englishLecture_expanded {
+                return 1
+            }
+            else {
+                return 2
+            }
+        }
+        else if section == 7 {
+            if !englishScore_expanded {
+                return 1
+            }
+            else {
+                return 2
+            }
+        }
+        else if section == 8 {
+            if !grauationPaper_expanded {
+                return 1
+            }
+            else {
+                return 2
+            }
+        }
+        else if section == 9 {
             return 1
         }
-        else if section == 7{
-            return 1
+        else if section == 10 {
+            if !project_expanded {
+                return 1
+            }
+            else {
+                return 2
+            }
         }
         
-        return 0
+        return 1
         
     }
     
@@ -148,23 +176,80 @@ class EditTableViewController: UITableViewController {
             if indexPath.row == 0
             {
                 let cell4 = tableView.dequeueReusableCell(withIdentifier: "CELL4", for: indexPath) as! InformationTableViewCell
-                cell4.subjectLabel.text = "교양영역"
+                cell4.subjectLabel.text = "공통교양"
                 cell4.subjectLabel.font.withSize(19)
-                cell4.pointLabel.text = "/75 학점"
+                cell4.pointLabel.text = "/14 학점"
                 cell4.pointLabel.font.withSize(19)
                 return cell4
             }
             else if indexPath.row == 1
             {
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL3", for: indexPath)
-                cell.textLabel?.text = "- 공통교양 12~14학점 - 기본소양 9학점 선택필수 : 기술과 사회, 공학경제, 공학법제, 기술창조와 특허, 지속가능한 발전과 인간 - MSC 28학점 (필수) [수학] 미적분학 및 연습1, 이산수학, 확률 및 통계학 [과학] 실험교과목 1과목 포함 최소 6학점 이수 [전산학] 전산학 교과목 인정 안 됨 "
+                cell.textLabel?.text = "- 공통교양 12~14학점"
+                cell.textLabel?.font = UIFont.italicSystemFont(ofSize: 14)
+                cell.backgroundColor = UIColor.groupTableViewBackground
+                return cell
+            }
+        }
+        else if indexPath.section == 3 {
+            if indexPath.row == 0
+            {
+                let cell4 = tableView.dequeueReusableCell(withIdentifier: "CELL4", for: indexPath) as! InformationTableViewCell
+                cell4.subjectLabel.text = "일반교양"
+                cell4.subjectLabel.font.withSize(19)
+                cell4.pointLabel.text = "/0 학점"
+                cell4.pointLabel.font.withSize(19)
+                return cell4
+            }
+            else if indexPath.row == 1
+            {
+                cell = tableView.dequeueReusableCell(withIdentifier: "CELL3", for: indexPath)
+                cell.textLabel?.text = "해당없음 "
+                cell.textLabel?.font = UIFont.italicSystemFont(ofSize: 14)
+                cell.backgroundColor = UIColor.groupTableViewBackground
+                return cell
+            }
+        }
+        else if indexPath.section == 4 {
+            if indexPath.row == 0
+            {
+                let cell4 = tableView.dequeueReusableCell(withIdentifier: "CELL4", for: indexPath) as! InformationTableViewCell
+                cell4.subjectLabel.text = "학문기초"
+                cell4.subjectLabel.font.withSize(19)
+                cell4.pointLabel.text = "/30 학점"
+                cell4.pointLabel.font.withSize(19)
+                return cell4
+            }
+            else if indexPath.row == 1
+            {
+                cell = tableView.dequeueReusableCell(withIdentifier: "CELL3", for: indexPath)
+                cell.textLabel?.text = " - MSC 28학점 (필수) [수학] 미적분학 및 연습1, 이산수학, 확률 및 통계학 [과학] 실험교과목 1과목 포함 최소 6학점 이수 [전산학] 전산학 교과목 인정 안 됨 "
+                cell.textLabel?.font = UIFont.italicSystemFont(ofSize: 14)
+                cell.backgroundColor = UIColor.groupTableViewBackground
+                return cell
+            }
+        }
+        else if indexPath.section == 5 {
+            if indexPath.row == 0
+            {
+                let cell4 = tableView.dequeueReusableCell(withIdentifier: "CELL4", for: indexPath) as! InformationTableViewCell
+                cell4.subjectLabel.text = "기본소양"
+                cell4.subjectLabel.font.withSize(19)
+                cell4.pointLabel.text = "/6 학점"
+                cell4.pointLabel.font.withSize(19)
+                return cell4
+            }
+            else if indexPath.row == 1
+            {
+                cell = tableView.dequeueReusableCell(withIdentifier: "CELL3", for: indexPath)
+                cell.textLabel?.text = " - 기본소양 9학점 선택필수 : 기술과 사회, 공학경제, 공학법제, 기술창조와 특허, 지속가능한 발전과 인간 "
                 cell.textLabel?.font = UIFont.italicSystemFont(ofSize: 14)
                 cell.backgroundColor = UIColor.groupTableViewBackground
                 return cell
             }
         }
             
-        else if indexPath.section == 3 {
+        else if indexPath.section == 6 {
             if indexPath.row == 0
             {
                 let cell4 = tableView.dequeueReusableCell(withIdentifier: "CELL4", for: indexPath) as! InformationTableViewCell
@@ -184,7 +269,7 @@ class EditTableViewController: UITableViewController {
             }
         }
         
-        else if indexPath.section == 4 {
+        else if indexPath.section == 7 {
             if indexPath.row == 0
             {
                 let cell4  = tableView.dequeueReusableCell(withIdentifier: "CELL5", for: indexPath) as! InformationTableViewCell
@@ -207,7 +292,7 @@ class EditTableViewController: UITableViewController {
 
         }
         
-        else if indexPath.section == 5 {
+        else if indexPath.section == 8 {
             if indexPath.row == 0
             {
                 let cell4  = tableView.dequeueReusableCell(withIdentifier: "CELL5", for: indexPath) as! InformationTableViewCell
@@ -226,27 +311,39 @@ class EditTableViewController: UITableViewController {
                 cell.backgroundColor = UIColor.groupTableViewBackground
                 return cell
             }
-            
- 
+        
         }
         
-        else if indexPath.section == 6 {
+        else if indexPath.section == 9 {
             if indexPath.row == 0
             {
                 let cell1 = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath) as! InformationTableViewCell
-                cell1.TimeLabel.text = "채운시간"
+                cell1.TimeLabel.text = "사회봉사"
                 cell1.TimeLabel.font.withSize(19)
-                cell1.TimeInputLabel.text = "/90 (시간)"
+                cell1.TimeInputLabel.text = "/1 학점"
                 cell1.TimeInputLabel.font.withSize(15)
             
                 return cell1
             }
         }
         
-        else if indexPath.section == 7 {
+        else if indexPath.section == 10 {
             if indexPath.row == 0
             {
-                cell = tableView.dequeueReusableCell(withIdentifier: "CELL6", for: indexPath)
+                let cell4  = tableView.dequeueReusableCell(withIdentifier: "CELL5", for: indexPath) as! InformationTableViewCell
+                cell4.subjectLabel.text = "산학협력프로젝트"
+                cell4.subjectLabel.font.withSize(19)
+                cell4.pointLabel.text = "이수필요"
+                cell4.pointLabel.font = UIFont.italicSystemFont(ofSize: 14)
+                cell4.pointLabel.textColor = UIColor.orange
+                return cell4
+            }
+            else if indexPath.row == 1
+            {
+                cell = tableView.dequeueReusableCell(withIdentifier: "CELL3", for: indexPath)
+                cell.textLabel?.text = "- 컴퓨터공학 종합설계 1, 2 순서대로 이수"
+                cell.textLabel?.font = UIFont.italicSystemFont(ofSize: 14)
+                cell.backgroundColor = UIColor.groupTableViewBackground
                 return cell
             }
         }
@@ -257,29 +354,36 @@ class EditTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 1 {
-            return "학점"
+            return "학점(전공영역)"
         }
-        else if section == 3 {
-            return "언어영역"
-        }
-        else if section == 5 {
-            return "졸업논문"
+        else if section == 2 {
+            return "학점(교양영역)"
         }
         else if section == 6 {
-            return "봉사시간"
+            return "언어영역"
         }
-        else if section == 7 {
-            return "추가 졸업요건사항"
+        else if section == 8 {
+            return "졸업논문"
+        }
+        else if section == 9 {
+            return "사회봉사"
+        }
+        else if section == 10 {
+            return "산학협력프로젝트"
         }
         
         return nil
     }
     
-    var majorexpanded = false
-    var cultureexpanded = false
-    var subjectexpanded = false
-    var langexpanded = false
-    var thesisexpanded = false
+    var allCredit_expanded = false
+    var generalCommon_expanded = false
+    var generalCulture_expanded = false
+    var generalBasic_expanded = false
+    var generalLiteracy_expanded = false
+    var englishLecture_expanded = false
+    var englishScore_expanded = false
+    var grauationPaper_expanded = false
+    var project_expanded = false
     
     
     //셀을 버튼처럼 선택하여 확장 및 축소한다.
@@ -288,36 +392,64 @@ class EditTableViewController: UITableViewController {
 
         if indexPath.section == 1 {
             if indexPath.row == 0 {
-                if majorexpanded { majorexpanded = false }
-                else { majorexpanded = true }
+                if allCredit_expanded { allCredit_expanded = false }
+                else { allCredit_expanded = true }
                 tableView.reloadData()
             }
         }
         else if indexPath.section == 2 {
             if indexPath.row == 0 {
-                if cultureexpanded { cultureexpanded = false }
-                else { cultureexpanded = true }
+                if generalCommon_expanded { generalCommon_expanded = false }
+                else { generalCommon_expanded = true }
                 tableView.reloadData()
             }
         }
         else if indexPath.section == 3 {
             if indexPath.row == 0 {
-                if subjectexpanded { subjectexpanded = false }
-                else { subjectexpanded = true }
+                if generalCulture_expanded { generalCulture_expanded = false }
+                else { generalCulture_expanded = true }
                 tableView.reloadData()
             }
         }
         else if indexPath.section == 4 {
             if indexPath.row == 0 {
-                if langexpanded { langexpanded = false }
-                else { langexpanded = true }
+                if generalBasic_expanded { generalBasic_expanded = false }
+                else { generalBasic_expanded = true }
                 tableView.reloadData()
             }
         }
         else if indexPath.section == 5 {
             if indexPath.row == 0 {
-                if thesisexpanded { thesisexpanded = false }
-                else { thesisexpanded = true }
+                if generalLiteracy_expanded { generalLiteracy_expanded = false }
+                else { generalLiteracy_expanded = true }
+                tableView.reloadData()
+            }
+        }
+        else if indexPath.section == 6 {
+            if indexPath.row == 0 {
+                if englishLecture_expanded { englishLecture_expanded = false }
+                else { englishLecture_expanded = true }
+                tableView.reloadData()
+            }
+        }
+        else if indexPath.section == 7 {
+            if indexPath.row == 0 {
+                if englishScore_expanded { englishScore_expanded = false }
+                else { englishScore_expanded = true }
+                tableView.reloadData()
+            }
+        }
+        else if indexPath.section == 8 {
+            if indexPath.row == 0 {
+                if grauationPaper_expanded { grauationPaper_expanded = false }
+                else { grauationPaper_expanded = true }
+                tableView.reloadData()
+            }
+        }
+        else if indexPath.section == 10 {
+            if indexPath.row == 0 {
+                if project_expanded { project_expanded = false }
+                else { project_expanded = true }
                 tableView.reloadData()
             }
         }

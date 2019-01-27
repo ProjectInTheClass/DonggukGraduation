@@ -25,7 +25,7 @@ class MainTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
 
-        return 4
+        return 5
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,8 +39,14 @@ class MainTableViewController: UITableViewController {
         else if section == 2 {
             return 1
         }
+        else if section == 3 {
+            return 1
+        }
+        else if section == 4 {
+            return 1
+        }
         else {
-            return 2
+            return 1
         }
         
     }
@@ -124,29 +130,32 @@ class MainTableViewController: UITableViewController {
             if indexPath.row == 0
             {
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
-                cell.textLabel?.text = "남은시간"
+                cell.textLabel?.text = "사회봉사"
                 cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 30)
-                cell.detailTextLabel?.text = "0/90(시간)"
+                cell.detailTextLabel?.text = "0/1 건"
                 cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 30)
                 
             return cell
             }
-            else if indexPath.row == 1
+        }
+        else if indexPath.section == 4 {
+            if indexPath.row == 0
             {
-                cell = tableView.dequeueReusableCell(withIdentifier: "CELL2", for: indexPath)
-                cell.textLabel?.text = "채운시간"
-                cell.textLabel?.textColor = UIColor.lightGray
-                cell.detailTextLabel?.text = "0/90(시간)"
-                cell.detailTextLabel?.font.withSize(15)
-                cell.detailTextLabel?.textColor = UIColor.lightGray
-                return cell
+                cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
+                cell.textLabel?.text = "산학협력프로젝트"
+                cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 30)
+                cell.detailTextLabel?.text = "이수여부"
+                cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 30)
                 
+                return cell
             }
         }
+        
         
        return UITableViewCell()
         
     }
+    
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
@@ -159,7 +168,10 @@ class MainTableViewController: UITableViewController {
             return "졸업논문"
         }
         else if section == 3 {
-            return "봉사시간"
+            return "사회봉사"
+        }
+        else if section == 4 {
+            return "산학협력프로젝트"
         }
         return nil
     }
@@ -221,3 +233,4 @@ class MainTableViewController: UITableViewController {
     */
 
 }
+
