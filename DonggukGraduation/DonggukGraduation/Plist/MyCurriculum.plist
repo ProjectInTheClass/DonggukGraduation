@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>englishLecture</key>
+	<integer>4</integer>
+	<key>englishScore</key>
+	<true/>
+	<key>serviceTime</key>
+	<integer>0</integer>
+	<key>allCredit</key>
+	<integer>140</integer>
+	<key>majorCredit</key>
+	<integer>84</integer>
+	<key>majorSpecialty</key>
+	<integer>42</integer>
+	<key>generalCommon</key>
+	<integer>14</integer>
+	<key>generelMain</key>
+	<integer>0</integer>
+	<key>generelBasic</key>
+	<integer>28</integer>
+	<key>generalLiteracy</key>
+	<integer>9</integer>
+	<key>graduationPaper</key>
+	<false/>
+</dict>
+</plist>

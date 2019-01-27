@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <dict>
+        <key>name</key>
+        <string>일반교양</string>
+    </dict>
+	<dict>
+		<key>name</key>
+		<string>공통교양</string>
+	</dict>
+    <dict>
+        <key>name</key>
+        <string>학문기초</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>핵심교양</string>
+    </dict>
+</array>
+</plist>
