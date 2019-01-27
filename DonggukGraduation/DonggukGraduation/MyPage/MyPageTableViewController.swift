@@ -25,13 +25,13 @@ class MyPageTableViewController: UITableViewController {
         else if indexPath.section == 1 {
             if indexPath.row == 0
             {
-                return 57
+                return 50
             }
         }
         else if indexPath.section == 2 {
             if indexPath.row == 0
             {
-                return 57
+                return 50
             }
         }
         else if indexPath.section == 5 {

@@ -18,9 +18,9 @@ class MyClassViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         picker.allowsEditing = true
         self.present(picker, animated: true, completion: nil)
     }
-    
-     var pickOption1 = [["경영대학","법학대학","사회과학대학"],["경영정보학과", "법학과", "컴퓨터공학과"] ]
-     var pickOption2 = ["12학번", "13학번", "14학번", "15학번", "16힉번", "17학번"]
+   
+    var pickOption1 = [["경영대학","법학대학","사회과학대학"],["경영정보학과", "경영학과", "회계학과"] ]
+    var pickOption2 = ["12학번", "13학번", "14학번", "15학번", "16힉번", "17학번"]
     
     
     override func viewDidLoad() {
@@ -31,16 +31,37 @@ class MyClassViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         pickerView1.delegate = self
         collegePickerTextField.inputView = pickerView1
         pickerView1.tag = 0
+       
+        pickerView1.showsSelectionIndicator = true
+       
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = .orange
+        toolBar.sizeToFit()
         
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action:  #selector(MyClassViewController.donePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(MyClassViewController.donePicker))
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        collegePickerTextField.inputAccessoryView = toolBar
         
         let pickerView2 = UIPickerView()
         pickerView2.delegate = self
         levelPickerTextField.inputView = pickerView2
         pickerView2.tag = 1
+        levelPickerTextField.inputAccessoryView = toolBar
     }
-   
-    
-    
+    @objc func donePicker() {
+        
+        collegePickerTextField.resignFirstResponder()
+    levelPickerTextField.resignFirstResponder()
+    }
+
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         if (pickerView.tag == 0) {
             return pickOption1.count
@@ -59,7 +80,7 @@ class MyClassViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if(pickerView.tag == 0) {
-            return pickOption1[component][row]
+          return pickOption1[component][row]
             
         } else if(pickerView.tag == 1) {
             return pickOption2[row]
@@ -69,13 +90,16 @@ class MyClassViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
+    
+        
+        
+        
+        
         if(pickerView.tag == 0) {
         
-        let color = pickOption1[0][pickerView.selectedRow(inComponent: 0)]
-       
-        let model = pickOption1[1][pickerView.selectedRow(inComponent: 1)]
-   
-            collegePickerTextField.text = color + " " + model}
+   let color = pickOption1[0][pickerView.selectedRow(inComponent: 0)]
+   let model = pickOption1[1][pickerView.selectedRow(inComponent: 1)]
+       collegePickerTextField.text = color + " " + model}
         else {levelPickerTextField.text = pickOption2[row] }
     }
 
