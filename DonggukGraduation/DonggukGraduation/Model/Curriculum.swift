@@ -1,9 +1,9 @@
 //import Foundation
 //
 //class Curriculum {
-////    var admissionYear: Int // 학번
-////
-////    var department: String // 학과
+//    var admissionYear: Int // 학번
+//
+//    var department: String // 학과
 //
 //    var englishScore: Int // 영어성적
 //    var englishLecture: Bool // 영어강의

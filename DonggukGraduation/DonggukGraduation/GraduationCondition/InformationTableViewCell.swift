@@ -19,18 +19,37 @@ class InformationTableViewCell: UITableViewCell {
     @IBAction func conditionCheckAction(_ sender: UISwitch) {
         UserDefaults.standard.set(conditionCheck.isOn, forKey: "switchState")
         
-        if conditionCheck.isOn {
-            pointLabel.text = "제출완료"
-            pointLabel.font = UIFont.italicSystemFont(ofSize: 14)
-            pointLabel.textColor = UIColor.orange
-            
+        if subjectLabel.text == "영어성적"{
+            if conditionCheck.isOn {
+                pointLabel.text = "제출완료"
+                pointLabel.font = UIFont.italicSystemFont(ofSize: 14)
+                pointLabel.textColor = UIColor.orange
+                
+            }
+            else {
+                pointLabel.text = "제출필요"
+                pointLabel.font = UIFont.italicSystemFont(ofSize: 14)
+                pointLabel.textColor = UIColor.orange
+                
+            }
         }
-        else {
-            pointLabel.text = "제출필요"
-            pointLabel.font = UIFont.italicSystemFont(ofSize: 14)
-            pointLabel.textColor = UIColor.orange
-            
+        else if subjectLabel.text == "산학협력프로젝트"{
+            if conditionCheck.isOn {
+                pointLabel.text = "이수완료"
+                pointLabel.font = UIFont.italicSystemFont(ofSize: 14)
+                pointLabel.textColor = UIColor.orange
+                
+            }
+            else {
+                pointLabel.text = "이수필요"
+                pointLabel.font = UIFont.italicSystemFont(ofSize: 14)
+                pointLabel.textColor = UIColor.orange
+                
+            }
         }
+   
+        
+
     }
     
 

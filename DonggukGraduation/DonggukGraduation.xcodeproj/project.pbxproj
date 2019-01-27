@@ -16,7 +16,8 @@
 		3F0A2C4B21FAFECA0038EDFB /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C4421FAFEB70038EDFB /* EditTableViewController.swift */; };
 		3F0A2C4C21FAFECA0038EDFB /* AllLectureListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C4521FAFEB70038EDFB /* AllLectureListTableViewController.swift */; };
 		3F0A2C4D21FAFECA0038EDFB /* LectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A2C4621FAFEB70038EDFB /* LectureTableViewCell.swift */; };
-		3F0FD08A21FC345E00262271 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0FD08921FC345E00262271 /* ImageTableViewCell.swift */; };
+		3F0C7F7F21FD916C0044CB04 /* ShowCurriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C7F7E21FD916C0044CB04 /* ShowCurriViewController.swift */; };
+		3F0C7F8121FD9B440044CB04 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C7F8021FD9B440044CB04 /* User.swift */; };
 		3F7E39EA21EC5C1B00496FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */; };
 		3F7E39EC21EC5C1B00496FDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E39EB21EC5C1B00496FDC /* ViewController.swift */; };
 		3F7E39EF21EC5C1B00496FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E39ED21EC5C1B00496FDC /* Main.storyboard */; };
@@ -94,7 +95,8 @@
 		3F0A2C4421FAFEB70038EDFB /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		3F0A2C4521FAFEB70038EDFB /* AllLectureListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllLectureListTableViewController.swift; sourceTree = "<group>"; };
 		3F0A2C4621FAFEB70038EDFB /* LectureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureTableViewCell.swift; sourceTree = "<group>"; };
-		3F0FD08921FC345E00262271 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		3F0C7F7E21FD916C0044CB04 /* ShowCurriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCurriViewController.swift; sourceTree = "<group>"; };
+		3F0C7F8021FD9B440044CB04 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3F7E39E621EC5C1B00496FDC /* DonggukGraduation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonggukGraduation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7E39E921EC5C1B00496FDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7E39EB21EC5C1B00496FDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				4A1FA06821F4571600D05246 /* PlanLecture.swift */,
 				4A35C2E921F9DC41006AEB80 /* Lecture.swift */,
 				4A35C2EB21FA312C006AEB80 /* Curriculum.swift */,
+				3F0C7F8021FD9B440044CB04 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,7 +343,7 @@
 				4A1FA06A21F45CA800D05246 /* DetailLectureTableViewCell.swift */,
 				4A1FA06C21F45F6B00D05246 /* CategoryLectureTableViewCell.swift */,
 				4A1FA07021F46BB900D05246 /* PlanCollectionViewCell.swift */,
-				3F0FD08921FC345E00262271 /* ImageTableViewCell.swift */,
+				3F0C7F7E21FD916C0044CB04 /* ShowCurriViewController.swift */,
 			);
 			path = MainGraduationPlanScene;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				4A541CD321FC55400017DF7C /* MyPageTableViewCell4.swift in Sources */,
 				3F7E3A1221EC5CD800496FDC /* CHTableViewControllers.swift in Sources */,
 				4A541CD021FC55400017DF7C /* EditProfilTableViewCell2.swift in Sources */,
+				3F0C7F8121FD9B440044CB04 /* User.swift in Sources */,
 				4A35C2FD21FA48C7006AEB80 /* CurriValue.swift in Sources */,
 				4A541CD121FC55400017DF7C /* MyClassViewController.swift in Sources */,
 				4A541CCD21FC55400017DF7C /* MyPageTableViewCell2.swift in Sources */,
@@ -473,6 +477,7 @@
 				4A1FA08321F4F03800D05246 /* DirectAddTableViewCell.swift in Sources */,
 				3FD95A1521F6DFCE00EE1800 /* EditKeywordSarchTableViewCell.swift in Sources */,
 				3F7E3A0E21EC5CD800496FDC /* CHViews.swift in Sources */,
+				3F0C7F7F21FD916C0044CB04 /* ShowCurriViewController.swift in Sources */,
 				3F0A2C4721FAFECA0038EDFB /* MainTableViewController.swift in Sources */,
 				3F7E3A1121EC5CD800496FDC /* FIlters.swift in Sources */,
 				4A1FA07121F46BB900D05246 /* PlanCollectionViewCell.swift in Sources */,
@@ -508,7 +513,6 @@
 				4A1FA06921F4571600D05246 /* PlanLecture.swift in Sources */,
 				3FD3EB5021F5A62400E9EB20 /* EditPlanCategoryTableViewCell.swift in Sources */,
 				3F0A2C4B21FAFECA0038EDFB /* EditTableViewController.swift in Sources */,
-				3F0FD08A21FC345E00262271 /* ImageTableViewCell.swift in Sources */,
 				3FD3EB5221F5A63200E9EB20 /* EditPlanLectureTableViewCell.swift in Sources */,
 				3FD95A1321F6DCBB00EE1800 /* EditKeywordSearchViewController.swift in Sources */,
 				3FD3EB4A21F58C5E00E9EB20 /* EditCategoryChoiceViewController.swift in Sources */,
