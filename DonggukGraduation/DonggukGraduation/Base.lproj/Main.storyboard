@@ -1661,75 +1661,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zBe-17-Qqc">
-                                <rect key="frame" x="83" y="250" width="263" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGU-yW-MhG">
-                                <rect key="frame" x="16" y="256" width="33" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6XQ-He-APe">
-                                <rect key="frame" x="75" y="318" width="263" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rNu-cq-ASw">
-                                <rect key="frame" x="75" y="384" width="263" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="전공" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcX-Rx-s69">
-                                <rect key="frame" x="16" y="324" width="33" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="학번" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGs-em-LTb">
-                                <rect key="frame" x="16" y="390" width="33" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bjR-lt-4vI">
-                                <rect key="frame" x="16" y="239" width="359" height="1.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jbe-Fw-5O7">
-                                <rect key="frame" x="75" y="356" width="284" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4F-7j-3td">
-                                <rect key="frame" x="75" y="422" width="284" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-person_male-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mx0-4U-Ky9">
-                                <rect key="frame" x="142" y="101" width="90" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-person_male-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mx0-4U-Ky9">
+                                <rect key="frame" x="112.5" y="70" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="JkO-J7-cE0"/>
+                                    <constraint firstAttribute="width" constant="150" id="ttL-eU-vbQ"/>
+                                </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9o0-I6-ExH">
-                                <rect key="frame" x="0.0" y="64" width="375" height="12.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92272506480000005" green="0.62683743790000002" blue="0.1117382006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iiv-9u-Y1Y">
-                                <rect key="frame" x="127" y="201" width="120" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iiv-9u-Y1Y">
+                                <rect key="frame" x="128.5" y="230" width="118" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="프로필 사진 입력">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1739,10 +1679,120 @@
                                     <action selector="openPhotoLibrary:" destination="bdu-LC-zdJ" eventType="touchUpInside" id="dJc-e4-hpe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uE-OA-QhB">
-                                <rect key="frame" x="62" y="531" width="267" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="0Tt-r7-hAM">
+                                <rect key="frame" x="30" y="344" width="315" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGU-yW-MhG">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Jb5-jQ-UCc"/>
+                                            <constraint firstAttribute="height" constant="40" id="vMd-nh-uCk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PmE-SI-bi5">
+                                        <rect key="frame" x="73" y="0.0" width="242" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zBe-17-Qqc">
+                                                <rect key="frame" x="0.0" y="0.0" width="242" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="MHu-3i-QTJ"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPV-8Q-VPY">
+                                                <rect key="frame" x="0.0" y="38" width="242" height="2"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="PWF-3Q-SKJ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="BkU-1Q-tz0">
+                                <rect key="frame" x="30" y="424" width="315" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전공" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcX-Rx-s69">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="uCt-dM-j3G"/>
+                                            <constraint firstAttribute="height" constant="40" id="yuI-VE-RMC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i5W-vH-eHt">
+                                        <rect key="frame" x="66" y="0.0" width="249" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6XQ-He-APe">
+                                                <rect key="frame" x="0.0" y="0.0" width="249" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="VNb-3X-AAJ"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jbe-Fw-5O7">
+                                                <rect key="frame" x="0.0" y="38" width="249" height="2"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="mJI-rN-yh5"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="Bfd-QC-Snn">
+                                <rect key="frame" x="30" y="504" width="315" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학번" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGs-em-LTb">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="kgF-Yk-Z1q"/>
+                                            <constraint firstAttribute="height" constant="40" id="tH2-Iv-fmY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ukf-Tj-I4c">
+                                        <rect key="frame" x="66" y="0.0" width="249" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rNu-cq-ASw">
+                                                <rect key="frame" x="0.0" y="0.0" width="249" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Q7F-3V-qaK"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4F-7j-3td">
+                                                <rect key="frame" x="0.0" y="38" width="249" height="2"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="ADA-Ds-reB"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uE-OA-QhB">
+                                <rect key="frame" x="87.5" y="604" width="200" height="52"/>
                                 <color key="backgroundColor" red="0.92272506480000005" green="0.62683743790000002" blue="0.1117382006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="r8V-Oc-4U9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="다음"/>
@@ -1750,18 +1800,25 @@
                                     <segue destination="QMR-FE-UY7" kind="show" id="HAV-KF-B9t"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPV-8Q-VPY">
-                                <rect key="frame" x="75" y="288" width="284" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VzD-gQ-x10">
-                                <rect key="frame" x="16" y="453" width="359" height="1.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Tt-r7-hAM" firstAttribute="leading" secondItem="aMJ-Qh-iEe" secondAttribute="leading" constant="30" id="5av-fE-7BX"/>
+                            <constraint firstItem="Bfd-QC-Snn" firstAttribute="leading" secondItem="aMJ-Qh-iEe" secondAttribute="leading" constant="30" id="5jH-pn-HaA"/>
+                            <constraint firstItem="6uE-OA-QhB" firstAttribute="top" secondItem="Bfd-QC-Snn" secondAttribute="bottom" constant="60" id="AWC-si-Q1n"/>
+                            <constraint firstItem="BkU-1Q-tz0" firstAttribute="leading" secondItem="aMJ-Qh-iEe" secondAttribute="leading" constant="30" id="Ael-N4-icE"/>
+                            <constraint firstItem="Iiv-9u-Y1Y" firstAttribute="centerX" secondItem="N2j-3X-9mD" secondAttribute="centerX" id="F6j-qt-1kx"/>
+                            <constraint firstItem="6uE-OA-QhB" firstAttribute="centerX" secondItem="N2j-3X-9mD" secondAttribute="centerX" id="NFI-QU-x03"/>
+                            <constraint firstItem="Iiv-9u-Y1Y" firstAttribute="top" secondItem="Mx0-4U-Ky9" secondAttribute="bottom" constant="10" id="U2R-0t-zu7"/>
+                            <constraint firstItem="aMJ-Qh-iEe" firstAttribute="trailing" secondItem="0Tt-r7-hAM" secondAttribute="trailing" constant="30" id="Ugt-l9-CYh"/>
+                            <constraint firstItem="Mx0-4U-Ky9" firstAttribute="centerX" secondItem="N2j-3X-9mD" secondAttribute="centerX" id="Vds-Sz-04G"/>
+                            <constraint firstItem="Bfd-QC-Snn" firstAttribute="top" secondItem="BkU-1Q-tz0" secondAttribute="bottom" constant="40" id="dQU-4a-FOy"/>
+                            <constraint firstItem="BkU-1Q-tz0" firstAttribute="top" secondItem="0Tt-r7-hAM" secondAttribute="bottom" constant="40" id="hUF-qW-d4b"/>
+                            <constraint firstItem="0Tt-r7-hAM" firstAttribute="top" secondItem="Iiv-9u-Y1Y" secondAttribute="bottom" constant="80" id="izK-n9-Czy"/>
+                            <constraint firstItem="aMJ-Qh-iEe" firstAttribute="trailing" secondItem="Bfd-QC-Snn" secondAttribute="trailing" constant="30" id="wPZ-EW-vEx"/>
+                            <constraint firstItem="aMJ-Qh-iEe" firstAttribute="trailing" secondItem="BkU-1Q-tz0" secondAttribute="trailing" constant="30" id="wR1-Rw-lqd"/>
+                            <constraint firstItem="Mx0-4U-Ky9" firstAttribute="top" secondItem="aMJ-Qh-iEe" secondAttribute="top" constant="50" id="yQ3-6B-Qcl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aMJ-Qh-iEe"/>
                     </view>
                     <navigationItem key="navigationItem" title="프로필 입력" id="dsT-HI-vJq"/>
@@ -2383,10 +2440,9 @@
         <!--Navigation Controller-->
         <scene sceneID="fEe-uv-bUf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vET-Ra-cuw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="vET-Ra-cuw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NcL-18-H4r">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2418,7 +2474,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1학년 이수체계도" width="261" height="517"/>
         <image name="icons8-education" width="60" height="60"/>
         <image name="icons8-expand2-1" width="25" height="25"/>
         <image name="icons8-expand2-2" width="60" height="60"/>

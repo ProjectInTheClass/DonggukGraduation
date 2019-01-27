@@ -26,6 +26,11 @@ class MyClassViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadPlanData()
+        loadUserData()
+        loadCollegeData()
+        loadDepartmentData()
+        loadDepartmentCurriData()
     
         let pickerView1 = UIPickerView()
         pickerView1.delegate = self

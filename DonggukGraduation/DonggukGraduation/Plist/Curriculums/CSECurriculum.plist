@@ -7,33 +7,33 @@
 		<integer>13</integer>
 		<key>englishLecture</key>
 		<integer>4</integer>
+		<key>englishLectureDetail</key>
+		<string>영어강의 상세설명</string>
 		<key>englishScore</key>
 		<integer>700</integer>
+		<key>englishScoreDetail</key>
+		<string>영어성적상세설명</string>
 		<key>serviceTime</key>
 		<integer>0</integer>
 		<key>allCredit</key>
 		<integer>140</integer>
 		<key>majorCredit</key>
 		<integer>84</integer>
-		<key>majorDetail</key>
+		<key>majorCreditDetail</key>
 		<string>전공 상세설명</string>
 		<key>majorSpecialty</key>
 		<integer>42</integer>
 		<key>generalCommon</key>
 		<integer>14</integer>
-		<key>commonDetail</key>
+		<key>generalCommonDetail</key>
 		<string>공통교양 상세설명</string>
-		<key>generelMain</key>
-		<integer>0</integer>
-		<key>mainDetail</key>
-		<string>핵심교양 상세설명</string>
-		<key>generelBasic</key>
+		<key>generalBasic</key>
 		<integer>28</integer>
-		<key>basicDetail</key>
+		<key>generalBasicDetail</key>
 		<string>학문기초 상세설명</string>
 		<key>generalLiteracy</key>
 		<integer>9</integer>
-		<key>literacyDetail</key>
+		<key>generalLiteracyDetail</key>
 		<string>기본소양 상세설명</string>
 		<key>graduationPaper</key>
 		<string>종합설계1, 2 이수</string>

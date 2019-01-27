@@ -83,6 +83,8 @@
 		4A541CD521FC55400017DF7C /* EditProfilTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CC521FC55400017DF7C /* EditProfilTableViewCell.swift */; };
 		4A541CD621FC55400017DF7C /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CC621FC55400017DF7C /* MyPageTableViewController.swift */; };
 		4A541CD721FC55400017DF7C /* MyClassTableViewCell4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CC721FC55400017DF7C /* MyClassTableViewCell4.swift */; };
+		4A541CD921FE35910017DF7C /* DepartmentValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CD821FE35910017DF7C /* DepartmentValue.swift */; };
+		4A541CDB21FE35A50017DF7C /* CollegeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CDA21FE35A50017DF7C /* CollegeValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +166,8 @@
 		4A541CC521FC55400017DF7C /* EditProfilTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfilTableViewCell.swift; sourceTree = "<group>"; };
 		4A541CC621FC55400017DF7C /* MyPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableViewController.swift; sourceTree = "<group>"; };
 		4A541CC721FC55400017DF7C /* MyClassTableViewCell4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell4.swift; sourceTree = "<group>"; };
+		4A541CD821FE35910017DF7C /* DepartmentValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentValue.swift; sourceTree = "<group>"; };
+		4A541CDA21FE35A50017DF7C /* CollegeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +265,8 @@
 				4A35C2FC21FA48C7006AEB80 /* CurriValue.swift */,
 				3F0A2C3B21FAD2E30038EDFB /* GlobalValue.swift */,
 				3F0A2C3D21FAD34E0038EDFB /* UserValue.swift */,
+				4A541CD821FE35910017DF7C /* DepartmentValue.swift */,
+				4A541CDA21FE35A50017DF7C /* CollegeValue.swift */,
 			);
 			path = DonggukGraduation;
 			sourceTree = "<group>";
@@ -477,6 +483,7 @@
 				4A1FA08321F4F03800D05246 /* DirectAddTableViewCell.swift in Sources */,
 				3FD95A1521F6DFCE00EE1800 /* EditKeywordSarchTableViewCell.swift in Sources */,
 				3F7E3A0E21EC5CD800496FDC /* CHViews.swift in Sources */,
+				4A541CD921FE35910017DF7C /* DepartmentValue.swift in Sources */,
 				3F0C7F7F21FD916C0044CB04 /* ShowCurriViewController.swift in Sources */,
 				3F0A2C4721FAFECA0038EDFB /* MainTableViewController.swift in Sources */,
 				3F7E3A1121EC5CD800496FDC /* FIlters.swift in Sources */,
@@ -499,6 +506,7 @@
 				4A541CC821FC55400017DF7C /* MyClassTableViewController.swift in Sources */,
 				4A541CD221FC55400017DF7C /* OrangeBarTableViewCell.swift in Sources */,
 				4A1FA06D21F45F6B00D05246 /* CategoryLectureTableViewCell.swift in Sources */,
+				4A541CDB21FE35A50017DF7C /* CollegeValue.swift in Sources */,
 				4A541CCE21FC55400017DF7C /* MyClassTableViewCell1.swift in Sources */,
 				3F0A2C3C21FAD2E30038EDFB /* GlobalValue.swift in Sources */,
 				4A1FA07D21F4D0CB00D05246 /* EditFirstChoiceViewController.swift in Sources */,

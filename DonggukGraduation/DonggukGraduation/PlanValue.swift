@@ -1,16 +1,16 @@
 
 import Foundation
 
+let planFilePath = documentsPath + "/myPlan4.plist"
+let majorPlanFilePath = documentsPath + "/myMajorPlan4.plist"
+let generalPlanFilePath = documentsPath + "/myGeneralPlan4.plist"
+
 var planList:[String] = [ ]
 
 var selectedPlan: String = "ALL"
 
 var majorList:[PlanLecture] = []
 var generalList:[PlanLecture] = []
-
-let planFilePath = documentsPath + "/myPlan4.plist"
-let majorPlanFilePath = documentsPath + "/myMajorPlan4.plist"
-let generalPlanFilePath = documentsPath + "/myGeneralPlan4.plist"
 
 func loadPlanData() -> Bool{
     

@@ -14,13 +14,11 @@ func loadUserData() -> Bool{
             }
         }
     }
-    print(myInfo)
     
     let userDicts:[String:Any] = (myInfo?.toDict())!
-    // let userDicts:[String:Any] = [ "name": myInfo?.name, "college": myInfo?.college, "department": myInfo?.department, "admissionYear": myInfo?.admissionYear ]
     
     if NSDictionary(dictionary: userDicts).write(toFile: userFilePath, atomically: true){
-        print("성공")
+        print(myInfo)
         return true
     }
     else {
