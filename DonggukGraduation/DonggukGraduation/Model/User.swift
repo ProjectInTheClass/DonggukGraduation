@@ -7,6 +7,13 @@ class User {
     var department: String
     var admissionYear: Int
     
+    init(name:String, college:String, department:String, admissionYear:Int){
+        self.name = name
+        self.college = college
+        self.department = department
+        self.admissionYear = admissionYear
+    }
+    
     init?(dict: [String:Any]) {
         guard let nameValue = dict["name"] as? String else { return nil }
         guard let collegeValue = dict["college"] as? String else { return nil }

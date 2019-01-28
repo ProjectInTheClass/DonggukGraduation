@@ -27,6 +27,7 @@ class PlanDetailViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        tableView.showsVerticalScrollIndicator = false
         tableView.layer.cornerRadius = 10
         tableView.layer.borderWidth = 1
         tableView.layer.borderColor = UIColor.groupTableViewBackground.cgColor

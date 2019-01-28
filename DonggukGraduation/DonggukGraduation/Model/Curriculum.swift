@@ -23,6 +23,7 @@ class Curriculum {
     var generalBasicDetail: String // 학문기초detail
     
     var graduationPaper: String // 졸업논문
+    var etc: String // 기타사항
     
     init?(dict: [String: Any]){
         guard let esValue = dict["englishScore"] as? Int else { return nil }
@@ -41,6 +42,7 @@ class Curriculum {
         guard let gbValue = dict["generalBasic"] as? Int else { return nil }
         guard let gbdValue = dict["generalBasicDetail"] as? String else { return nil }
         guard let gpValue = dict["graduationPaper"] as? String else { return nil }
+        guard let etcValue = dict["etc"] as? String else { return nil }
         
         englishScore = esValue
         englishScoreDetail = esdValue
@@ -58,6 +60,7 @@ class Curriculum {
         generalBasic = gbValue
         generalBasicDetail = gbdValue
         graduationPaper = gpValue
+        etc = etcValue
     }
     
     func toDict() -> [String: Any] {
@@ -76,41 +79,13 @@ class Curriculum {
         "generalLiteracyDetail": generalLiteracyDetail,
         "generalBasic": generalBasic,
         "generalBasicDetail": generalBasicDetail,
-        "graduationPaper": graduationPaper]
+        "graduationPaper": graduationPaper,
+        "etc": etc]
     }
 }
 
 extension Curriculum: CustomStringConvertible {
     var description: String {
-        return "<Department: \(englishScore), \(englishScoreDetail), \(englishLecture), \(englishLectureDetail), \(serviceTime), \(allCredit), \(majorCredit), \(majorCreditDetail), \(majorSpecialty), \(generalCommon), \(generalCommonDetail), \(generalLiteracy), \(generalLiteracyDetail), \(generalBasic), \(generalBasicDetail), \(graduationPaper)>"
+        return "<Department: \(englishScore), \(englishScoreDetail), \(englishLecture), \(englishLectureDetail), \(serviceTime), \(allCredit), \(majorCredit), \(majorCreditDetail), \(majorSpecialty), \(generalCommon), \(generalCommonDetail), \(generalLiteracy), \(generalLiteracyDetail), \(generalBasic), \(generalBasicDetail), \(graduationPaper), \(etc)>"
     }
 }
-
-//
-//class Curriculum {
-//
-//    var englishScore: Int // 영어성적
-//    var englishScoreDetail: String // 영어성적detail
-//
-//    var englishLecture: Bool // 영어강의
-//    var englishLectureDetail: Bool // 영어강의detail
-//
-//    var serviceTime: Int // 봉사시간
-//
-//    var allCredit: Int // 총학점
-//    var majorCredit: Int // 전공학점
-//    var majorCreditDetail: Int // 전공학점detail
-//    var majorSpecialty: Int // 전공전문
-//
-//    var generalNormal: Int // 일반교양
-//    var generalCommon: Int // 공통교양
-//    var generalMain: Int // 핵심교양
-//    var generalBasic: Int // 학문기초
-//
-//    var graduationPaper: String // 졸업논문
-//
-//    init?(){
-//
-//    }
-//}
-//

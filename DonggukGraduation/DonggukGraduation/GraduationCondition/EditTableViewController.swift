@@ -9,27 +9,6 @@ class EditTableViewController: UITableViewController {
 
     }
 
-    // MARK: - Table view data source
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            if indexPath.row == 0
-            {
-                return 57
-            }
-        }
-        else if indexPath.section == 1 {
-            if indexPath.row == 1
-            {
-                return 80
-                // 내용길이에 따라 달라지게 바꾸기
-            }
-        }
-
-        return 50
-    }
-
-
     override func numberOfSections(in tableView: UITableView) -> Int {
 
         return 11

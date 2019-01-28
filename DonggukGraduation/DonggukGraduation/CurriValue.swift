@@ -35,8 +35,3 @@ func loadDepartmentCurriData() -> Bool {
     }
     
 }
-
-
-func loadMyCurriData() -> Bool {
-    return true
-}

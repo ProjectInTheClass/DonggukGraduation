@@ -59,6 +59,10 @@ class MyClassViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         levelPickerTextField.inputView = pickerView2
         pickerView2.tag = 1
         levelPickerTextField.inputAccessoryView = toolBar
+        
+//        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "")
+//        (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController = viewController
+//        스토리보드에서 아이덴티파이어 설정
     }
     @objc func donePicker() {
         

@@ -37,6 +37,8 @@
 		<string>기본소양 상세설명</string>
 		<key>graduationPaper</key>
 		<string>종합설계1, 2 이수</string>
+		<key>etc</key>
+		<string>기타사항</string>
 	</dict>
 </array>
 </plist>
