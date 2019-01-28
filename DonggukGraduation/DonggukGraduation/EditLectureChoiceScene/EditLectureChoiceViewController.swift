@@ -5,12 +5,35 @@ class EditLectureChoiceViewController: UIViewController {
 
     @IBOutlet weak var lectureTable: UITableView!
     @IBOutlet weak var myPlanTable: UITableView!
+    @IBAction func addLecture() {
+        if selectNumber != 0 {
+            selectNumber -= 1
+            let lecture = filteredList[selectNumber]
+            if lecture.category == "전공" {
+                majorList.append(PlanLecture(name: lecture.name, category: lecture.category, categorySmall: lecture.categorySmall, credit: lecture.credit, semester: selectedPlan))
+            }
+            else {
+                generalList.append(PlanLecture(name: lecture.name, category: lecture.category, categorySmall: lecture.categorySmall, credit: lecture.credit, semester: selectedPlan))
+            }
+            print("추가완료")
+        }
+    }
     
-    var lectureList = [["자아와명상","교양",3], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2], ["불인","교양",2]]
-    var categoryColors:[UIColor] = [UIColor.red, UIColor.blue]
+    var selectNumber:Int = 0
+    
+    var filteredList = [
+        Lecture(name: "자아와 명상", category: "공통교양", categorySmall: "공통교양", credit: 1),
+        Lecture(name: "불교와 인간", category: "기본교양", categorySmall: "공통교양",credit: 3),
+        Lecture(name: "자아와 명상", category: "공통교양", categorySmall: "공통교양",credit: 1),
+        Lecture(name: "불교와 인간", category: "기본교양", categorySmall: "공통교양",credit: 3),
+        Lecture(name: "자아와 명상", category: "공통교양", categorySmall: "공통교양",credit: 1),
+        Lecture(name: "불교와 인간", category: "기본교양", categorySmall: "공통교양",credit: 3),
+        ]
+    
     var categoryList = ["전공", "교양"]
-    var majorList = [[],["운영체제",3], ["불인",3]]
-    var generelList = [[],["자아와명상",3], ["불인",2],["자아와명상",3], ["불인",2]]
+    var categoryColors = [ UIColor.red, UIColor.blue]
+    var majorLectures:[PlanLecture] = []
+    var generalLectures:[PlanLecture] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +49,24 @@ class EditLectureChoiceViewController: UIViewController {
         myPlanTable.layer.borderWidth = 1
         myPlanTable.layer.borderColor = UIColor.groupTableViewBackground.cgColor
         myPlanTable.showsVerticalScrollIndicator = false
+        
+        reloadTable()
+    }
+    
+    func reloadTable() {
+        majorLectures = [PlanLecture(name:"",category:"전공",categorySmall:"",credit:0,semester:"")]
+        generalLectures = [PlanLecture(name:"",category:"교양",categorySmall:"",credit:0,semester:"")]
+        
+        if selectedPlan != "ALL" {
+            majorLectures += majorList.filter{ $0.semester == selectedPlan }
+            generalLectures += generalList.filter{ $0.semester == selectedPlan }
+        }
+        else {
+            majorLectures += majorList
+            generalLectures += generalList
+        }
+        
+        myPlanTable.reloadData()
     }
     
 
@@ -48,10 +89,10 @@ extension EditLectureChoiceViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == lectureTable {
             if section == 0 { return 1 }
-            return lectureList.count
+            return filteredList.count
         } else {
-            if section == 0 { return majorList.count }
-            else { return generelList.count}
+            if section == 0 { return majorLectures.count }
+            else { return generalLectures.count}
         }
     }
     
@@ -60,6 +101,10 @@ extension EditLectureChoiceViewController: UITableViewDataSource {
             return 80
         }
         return 44
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == lectureTable { selectNumber = indexPath.row + 1 }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,9 +120,9 @@ extension EditLectureChoiceViewController: UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "EditLectureItemTableViewCell", for: indexPath) as! EditLectureItemTableViewCell
             
-            cell.nameLabel.text = lectureList[indexPath.row][0] as! String
-            cell.detailLabel.text = lectureList[indexPath.row][1] as! String
-            cell.creditLabel.text = "\(lectureList[indexPath.row][2])학점"
+            cell.nameLabel.text = filteredList[indexPath.row].name
+            cell.detailLabel.text = filteredList[indexPath.row].category
+            cell.creditLabel.text = "\(filteredList[indexPath.row].credit)학점"
             
             return cell
         } else {
@@ -92,8 +137,8 @@ extension EditLectureChoiceViewController: UITableViewDataSource {
             }
             else if indexPath.section == 0 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "EditPlanLectureTableViewCell", for: indexPath) as! EditPlanLectureTableViewCell
-                cell.nameLabel.text = majorList[indexPath.row][0] as! String
-                cell.creditLabel.text = "\(majorList[indexPath.row][1])학점"
+                cell.nameLabel.text = majorLectures[indexPath.row].name
+                cell.creditLabel.text = "\(majorLectures[indexPath.row].credit)학점"
                 
                 cell.barView.backgroundColor = categoryColors[indexPath.section]
                 
@@ -101,8 +146,8 @@ extension EditLectureChoiceViewController: UITableViewDataSource {
             }
             else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "EditPlanLectureTableViewCell", for: indexPath) as! EditPlanLectureTableViewCell
-                cell.nameLabel.text = generelList[indexPath.row][0] as! String
-                cell.creditLabel.text = "\(generelList[indexPath.row][1])학점"
+                cell.nameLabel.text = generalLectures[indexPath.row].name
+                cell.creditLabel.text = "\(generalLectures[indexPath.row].credit)학점"
                 
                 cell.barView.backgroundColor = categoryColors[indexPath.section]
                 

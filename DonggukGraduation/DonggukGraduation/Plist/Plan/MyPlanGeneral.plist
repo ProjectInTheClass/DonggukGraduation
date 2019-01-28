@@ -6,25 +6,61 @@
 		<key>semester</key>
 		<string>1학년 1학기</string>
 		<key>name</key>
-		<string>자아와 명상</string>
+		<string>자아와 명상1</string>
 		<key>credit</key>
 		<integer>1</integer>
+        <key>category</key>
+        <string>공통교양</string>
+        <key>categorySmall</key>
+        <string>자아성찰</string>
 	</dict>
 	<dict>
 		<key>semester</key>
 		<string>1학년 1학기</string>
 		<key>name</key>
-		<string>자아와 명상</string>
+		<string>공학법제</string>
 		<key>credit</key>
 		<integer>1</integer>
+        <key>category</key>
+        <string>기본소양</string>
+        <key>categorySmall</key>
+        <string>기본소양</string>
 	</dict>
-	<dict>
-		<key>semester</key>
-		<string>1학년 2학기</string>
-		<key>name</key>
-		<string>자아와 명상</string>
-		<key>credit</key>
-		<integer>1</integer>
-	</dict>
+    <dict>
+        <key>semester</key>
+        <string>1학년 1학기</string>
+        <key>name</key>
+        <string>화학개론</string>
+        <key>credit</key>
+        <integer>1</integer>
+        <key>category</key>
+        <string>학문기초</string>
+        <key>categorySmall</key>
+        <string>자연과학</string>
+    </dict>
+    <dict>
+        <key>semester</key>
+        <string>1학년 1학기</string>
+        <key>name</key>
+        <string>기술창조와특허</string>
+        <key>credit</key>
+        <integer>1</integer>
+        <key>category</key>
+        <string>일반교양</string>
+        <key>categorySmall</key>
+        <string>인문</string>
+    </dict>
+    <dict>
+        <key>semester</key>
+        <string>1학년 1학기</string>
+        <key>name</key>
+        <string>경찰학개론</string>
+        <key>credit</key>
+        <integer>1</integer>
+        <key>category</key>
+        <string>대학전공기초</string>
+        <key>categorySmall</key>
+        <string>대학전공기초</string>
+    </dict>
 </array>
 </plist>

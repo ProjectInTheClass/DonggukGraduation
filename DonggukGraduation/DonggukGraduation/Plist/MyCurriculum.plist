@@ -16,13 +16,19 @@
 	<integer>42</integer>
 	<key>generalCommon</key>
 	<integer>14</integer>
-	<key>generelCulture</key>
+	<key>generalCulture</key>
 	<integer>0</integer>
-	<key>generelBasic</key>
+	<key>generalBasic</key>
 	<integer>28</integer>
 	<key>generalLiteracy</key>
 	<integer>9</integer>
+	<key>generalMajorBasic</key>
+	<integer>0</integer>
+	<key>generalMain</key>
+	<integer>0</integer>
 	<key>graduationPaper</key>
+	<false/>
+	<key>etc</key>
 	<false/>
 </dict>
 </plist>

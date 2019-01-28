@@ -5,8 +5,8 @@ var departmentCurriFilePath = documentsPath + "/departmentCurri.plist"
 
 var departmentCurri:Curriculum?
 
-func loadDepartmentCurriData() -> Bool {
-    if let curriPath = Bundle.main.path(forResource: "CSECurriculum", ofType:"plist") {
+func loadDepartmentCurriData(department:String) -> Bool {
+    if let curriPath = Bundle.main.path(forResource: "\(department)Curriculum", ofType:"plist") {
         if let curris = NSArray(contentsOfFile: curriPath){
             
             for c in curris {

@@ -5,13 +5,29 @@ class EditKeywordSearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    @IBAction func addLecture() {
+        if selectNumber != 0 {
+            selectNumber -= 1
+            let lecture = filteredList[selectNumber]
+            if lecture.category == "전공" {
+                majorList.append(PlanLecture(name: lecture.name, category: lecture.category, categorySmall: lecture.categorySmall, credit: lecture.credit, semester: selectedPlan))
+            }
+            else {
+                generalList.append(PlanLecture(name: lecture.name, category: lecture.category, categorySmall: lecture.categorySmall, credit: lecture.credit, semester: selectedPlan))
+            }
+            print("추가완료")
+        }
+    }
+    
+    var selectNumber:Int = 0
+    
     var lectureList = [
-        Lecture(name: "자아와 명상", category: "공통교양", credit: 1),
-        Lecture(name: "불교와 인간", category: "기본교양", credit: 3),
-        Lecture(name: "자아와 명상", category: "공통교양", credit: 1),
-        Lecture(name: "불교와 인간", category: "기본교양", credit: 3),
-        Lecture(name: "자아와 명상", category: "공통교양", credit: 1),
-        Lecture(name: "불교와 인간", category: "기본교양", credit: 3),
+        Lecture(name: "자아와 명상", category: "공통교양", categorySmall: "공통교양", credit: 1),
+        Lecture(name: "불교와 인간", category: "기본교양", categorySmall: "공통교양",credit: 3),
+        Lecture(name: "자아와 명상", category: "공통교양", categorySmall: "공통교양",credit: 1),
+        Lecture(name: "불교와 인간", category: "기본교양", categorySmall: "공통교양",credit: 3),
+        Lecture(name: "자아와 명상", category: "공통교양", categorySmall: "공통교양",credit: 1),
+        Lecture(name: "불교와 인간", category: "기본교양", categorySmall: "공통교양",credit: 3),
     ]
     
     var filteredList: [Lecture] = []
@@ -54,6 +70,10 @@ extension EditKeywordSearchViewController: UITableViewDataSource {
         return filteredList.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EditKeywordSarchTableViewCell", for: indexPath) as! EditKeywordSarchTableViewCell
         
@@ -62,6 +82,10 @@ extension EditKeywordSearchViewController: UITableViewDataSource {
         cell.creditLabel.text = "\(filteredList[indexPath.row].credit)"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectNumber = indexPath.row + 1
     }
     
     

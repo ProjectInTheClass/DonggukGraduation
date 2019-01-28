@@ -8,19 +8,37 @@ class PlanDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var selectView: UIView!
+    @IBOutlet weak var addButton: UIBarButtonItem!
     
     var majorLectures:[PlanLecture] = []
     var generalLectures:[PlanLecture] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        if testV {
+//            testV = false
+//            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FirstStoryboard")
+//            
+//            (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController = viewController
+//            
+//            return
+//        }
+        
         title = "졸업계획"
         
-        loadPlanData()
-        loadUserData()
+        if !dataLoad {
+            if !loadUserData() { return }
+            if !loadDepartmentData() { return }
+            if !loadDepartmentCurriData(department: departmentList.filter{$0.name == (myInfo?.department)}[0].englishName) { return }
+            if !loadMyCurriData() { return }
+            if !loadPlanData() { return }
+            
+            dataLoad = true
+        }
         
-        majorLectures = [PlanLecture(name:"",category:"전공",credit:0,semester:"")]
-        generalLectures = [PlanLecture(name:"",category:"교양",credit:0,semester:"")]
+        majorLectures = [PlanLecture(name:"",category:"전공",categorySmall:"", credit:0,semester:"")]
+        generalLectures = [PlanLecture(name:"",category:"교양",categorySmall:"",credit:0,semester:"")]
         majorLectures += majorList
         generalLectures += generalList
         
@@ -40,6 +58,57 @@ class PlanDetailViewController: UIViewController {
         
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
+        addButton.target = self
+        addButton.action = #selector(goAdd)
+        
+    }
+    
+    @objc func goAdd() {
+        if selectedPlan == "ALL" {
+            print("알람")
+            let noticeAlert = UIAlertController(title: "학기선택", message: "학기를 선택해주세요", preferredStyle: UIAlertController.Style.alert)
+            
+            let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+            
+            noticeAlert.addAction(okAction)
+            present(noticeAlert, animated: true, completion: nil)
+            
+        }
+        else {
+            
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EFCVStoryboard")
+            
+            self.present(viewController, animated: true, completion: nil)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        print(majorLectures)
+        print(generalLectures)
+        
+        selectedPlan = "ALL"
+        collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .top)
+        
+        reloadTable()
+        tableView.reloadData()
+        
+    }
+    
+    func reloadTable() {
+        majorLectures = [PlanLecture(name:"",category:"전공",categorySmall:"",credit:0,semester:"")]
+        generalLectures = [PlanLecture(name:"",category:"교양",categorySmall:"",credit:0,semester:"")]
+        
+        if selectedPlan != "ALL" {
+            majorLectures += majorList.filter{ $0.semester == selectedPlan }
+            generalLectures += generalList.filter{ $0.semester == selectedPlan }
+        }
+        else {
+            majorLectures += majorList
+            generalLectures += generalList
+        }
+        
+        tableView.reloadData()
     }
     
 }
@@ -79,33 +148,41 @@ extension PlanDetailViewController: UICollectionViewDataSource {
             
             let yesAction = UIAlertAction(title: "네", style: UIAlertAction.Style.default) { ACTION in
                 let lastSemester = planList[planList.count - 1]
+                
+                let grade = String(lastSemester[lastSemester.startIndex])
+                let semester = String(lastSemester[lastSemester.index(lastSemester.startIndex, offsetBy: 4)])
+                
+                if semester == "2" { planList.append("\(Int(grade)!+1)학년 1학기") }
+                else { planList.append("\(grade)학년 2학기") }
+                
+                collectionView.reloadData()
+                collectionView.selectItem(at: IndexPath(item: planList.count, section: 0), animated: false, scrollPosition: .top)
+                
+                selectedPlan = planList[indexPath.row - 1]
+                self.reloadTable()
             }
             
-            let noAction = UIAlertAction(title: "아니요", style: UIAlertAction.Style.default, handler: nil)
-            
+            let noAction = UIAlertAction(title: "아니요", style: UIAlertAction.Style.default) { ACTION in
+                
+                selectedPlan = "ALL"
+                
+                collectionView.reloadData()
+                collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .top)
+                
+                self.reloadTable()
+            }
             addQuestionAlert.addAction(yesAction)
             addQuestionAlert.addAction(noAction)
-            
+
             present(addQuestionAlert, animated: true, completion: nil)
+            
         }
         else {
-            selectedPlan = planList[indexPath.row - 1]
+            selectedPlan = "\(planList[indexPath.row - 1])"
         }
         
-        majorLectures = [PlanLecture(name:"",category:"전공",credit:0,semester:"")]
-        generalLectures = [PlanLecture(name:"",category:"교양",credit:0,semester:"")]
-        
-        if selectedPlan != "ALL" {
-            majorLectures += majorList.filter{ $0.semester == selectedPlan }
-            generalLectures += generalList.filter{ $0.semester == selectedPlan }
-        }
-        else {
-            majorLectures += majorList
-            generalLectures += generalList
-        }
-        tableView.reloadData()
+        reloadTable()
     }
-    
 }
 
 extension PlanDetailViewController: UICollectionViewDelegate {
@@ -122,8 +199,32 @@ extension PlanDetailViewController: UITableViewDataSource {
         else { return generalLectures.count }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 { return }
+        
+        let addQuestionAlert = UIAlertController(title: "수업 삭제", message: "계획에서 수업을 삭제하겠습니까?", preferredStyle: UIAlertController.Style.alert)
+        
+        let yesAction = UIAlertAction(title: "네", style: UIAlertAction.Style.default) { ACTION in
+            
+            let lectureName = (tableView.cellForRow(at: indexPath) as! DetailLectureTableViewCell).nameLabel.text!
+            if indexPath.section == 0 {
+                majorList = majorList.filter { $0.name != lectureName}
+                self.majorLectures = self.majorLectures.filter { $0.name != lectureName}
+            }
+            else {
+                generalList = generalList.filter { $0.name != lectureName}
+                self.generalLectures = self.generalLectures.filter { $0.name != lectureName}
+            }
+            
+            tableView.reloadData()
+        }
+        
+        let noAction = UIAlertAction(title: "아니요", style: UIAlertAction.Style.default, handler: nil)
+        
+        addQuestionAlert.addAction(yesAction)
+        addQuestionAlert.addAction(noAction)
+        
+        present(addQuestionAlert, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

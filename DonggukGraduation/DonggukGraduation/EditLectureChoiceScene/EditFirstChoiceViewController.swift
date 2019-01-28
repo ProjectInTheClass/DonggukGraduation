@@ -11,6 +11,11 @@ import UIKit
 class EditFirstChoiceViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func goMain() {
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PDVCStoryboard")
+        
+        (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController = viewController
+    }
     
     var categoryList = ["전공","교양"]
     

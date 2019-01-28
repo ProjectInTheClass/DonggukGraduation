@@ -3,7 +3,7 @@ import UIKit
 
 class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    var colleges:[String] = ["1","2","3"]
+    var colleges:[String] = []
     var departments:[String] = []
     var years:[String] = ["13","14","15","16","17","18","19"]
     
@@ -24,16 +24,17 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
     }
     
     @IBAction func nextStep() {
-        if nameTextField.text != nil, collegeTextField.text != nil, departmentTextField.text != nil, yearTextField.text != nil {
-            
+//        if nameTextField.text != nil, collegeTextField.text != nil, departmentTextField.text != nil, yearTextField.text != nil {
+//            
             myInfo = User(name: nameTextField.text!, college: collegeTextField.text!, department: departmentTextField.text!, admissionYear: Int(yearTextField.text!)!)
             
-            if !saveUserData() { return }
-        }
+//            if !saveUserData() { return }
+//        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
 //        nameTextField.layer.cornerRadius = 7
         nameTextField.layer.borderWidth = 1

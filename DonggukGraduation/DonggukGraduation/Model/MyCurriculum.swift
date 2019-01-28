@@ -15,8 +15,29 @@ class MyCurriculum {
     var generalCulture: Int // 일반교양
     var generalLiteracy: Int // 기본소양
     var generalBasic: Int // 학문기초
+    var generalMajorBasic: Int // 학문기초
+    var generalMain: Int // 학문기초
     
     var graduationPaper: Bool // 졸업논문
+    var etc: Bool // 기타사항
+    
+    init(englishScore: Bool, englishLecture: Int, serviceTime: Int, allCredit: Int, majorCredit: Int, majorSpecialty: Int, generalCommon: Int, generalCulture: Int, generalLiteracy: Int, generalBasic: Int, generalMajorBasic: Int, generalMain: Int, graduationPaper: Bool, etc: Bool) {
+        self.englishScore = englishScore
+        self.englishLecture = englishLecture
+        self.serviceTime = serviceTime
+        self.allCredit = allCredit
+        self.majorCredit = majorCredit
+        self.majorSpecialty = majorSpecialty
+        self.generalCommon = generalCommon
+        self.generalCulture = generalCulture
+        self.generalLiteracy = generalLiteracy
+        self.generalBasic = generalBasic
+        self.generalMajorBasic = generalMajorBasic
+        self.generalMain = generalMain
+        self.graduationPaper = graduationPaper
+        self.etc = etc
+        
+    }
     
     init?(dict: [String: Any]){
         guard let esValue = dict["englishScore"] as? Bool else { return nil }
@@ -29,7 +50,10 @@ class MyCurriculum {
         guard let gctValue = dict["generalCulture"] as? Int else { return nil }
         guard let glValue = dict["generalLiteracy"] as? Int else { return nil }
         guard let gbValue = dict["generalBasic"] as? Int else { return nil }
+        guard let gmbValue = dict["generalMajorBasic"] as? Int else { return nil }
+        guard let gmValue = dict["generalMain"] as? Int else { return nil }
         guard let gpValue = dict["graduationPaper"] as? Bool else { return nil }
+        guard let etcValue = dict["etc"] as? Bool else { return nil }
         
         englishScore = esValue
         englishLecture = elValue
@@ -41,7 +65,10 @@ class MyCurriculum {
         generalCulture = gctValue
         generalLiteracy = glValue
         generalBasic = gbValue
+        generalMajorBasic = gmbValue
+        generalMain = gmValue
         graduationPaper = gpValue
+        etc = etcValue
     }
     
     func toDict() -> [String: Any] {
@@ -55,12 +82,16 @@ class MyCurriculum {
                 "generalCulture": generalCulture,
                 "generalLiteracy": generalLiteracy,
                 "generalBasic": generalBasic,
-                "graduationPaper": graduationPaper]
+                "generalMajorBasic": generalMajorBasic,
+                "generalMain": generalMain,
+                "graduationPaper": graduationPaper,
+                "etc": etc
+        ]
     }
 }
 
 extension MyCurriculum: CustomStringConvertible {
     var description: String {
-        return "<MyCurri: \(englishScore), \(englishLecture), \(serviceTime), \(allCredit), \(majorCredit), \(majorSpecialty), \(generalCommon), \(generalLiteracy), \(generalBasic),  \(graduationPaper)>"
+        return "<MyCurri: \(englishScore), \(englishLecture), \(serviceTime), \(allCredit), \(majorCredit), \(majorSpecialty), \(generalCommon), \(generalLiteracy), \(generalBasic), \(generalCulture), \(generalMain), \(generalMajorBasic), \(graduationPaper), \(etc)>"
     }
 }

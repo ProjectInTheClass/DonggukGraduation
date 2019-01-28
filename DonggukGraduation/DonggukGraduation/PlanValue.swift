@@ -1,9 +1,9 @@
 
 import Foundation
 
-let planFilePath = documentsPath + "/myPlan4.plist"
-let majorPlanFilePath = documentsPath + "/myMajorPlan4.plist"
-let generalPlanFilePath = documentsPath + "/myGeneralPlan4.plist"
+let planFilePath = documentsPath + "/myPlan5.plist"
+let majorPlanFilePath = documentsPath + "/myMajorPlan5.plist"
+let generalPlanFilePath = documentsPath + "/myGeneralPlan5.plist"
 
 var planList:[String] = [ ]
 
@@ -14,9 +14,68 @@ var generalList:[PlanLecture] = []
 
 func loadPlanData() -> Bool{
     
-    if FileManager.default.fileExists(atPath: planFilePath), FileManager.default.fileExists(atPath: majorPlanFilePath), FileManager.default.fileExists(atPath: generalPlanFilePath) {
-        //도큐먼트의 myPlan.plist에서 데이터를 읽는다
-        if let plans = NSArray(contentsOfFile: planFilePath), let majorLectures = NSArray(contentsOfFile: majorPlanFilePath), let generalLectures = NSArray(contentsOfFile: generalPlanFilePath){
+//    if FileManager.default.fileExists(atPath: planFilePath), FileManager.default.fileExists(atPath: majorPlanFilePath), FileManager.default.fileExists(atPath: generalPlanFilePath) {
+//        //도큐먼트의 myPlan.plist에서 데이터를 읽는다
+//        if let plans = NSArray(contentsOfFile: planFilePath), let majorLectures = NSArray(contentsOfFile: majorPlanFilePath), let generalLectures = NSArray(contentsOfFile: generalPlanFilePath){
+//
+//            for p in plans {
+//                if let planDict = p as? [String: Any] {
+//                    planList.append(planDict["semester"] as! String)
+//                }
+//            }
+//
+//            for m in majorLectures {
+//                if let majorDict = m as? [String: Any] {
+//                    if let major = PlanLecture(dict: majorDict, category: "전공") {
+//                        majorList.append(major)
+//                    }
+//                }
+//            }
+//
+//            for g in generalLectures {
+//                if let generalDict = g as? [String: Any] {
+//                    if let general = PlanLecture(dict: generalDict, category: "교양") {
+//                        generalList.append(general)
+//                    }
+//                }
+//            }
+//
+//        }
+//    }
+//    else {
+//        // 번들에서 데이터를 읽는다
+//        if let myPlanPath = Bundle.main.path(forResource: "MyPlan", ofType:"plist"), let myPlanMajorPath = Bundle.main.path(forResource: "MyPlanMajor", ofType:"plist"), let myPlanGeneralPath = Bundle.main.path(forResource: "MyPlanGeneral", ofType:"plist"){
+//            if let plans = NSArray(contentsOfFile: myPlanPath), let majorLectures = NSArray(contentsOfFile: myPlanMajorPath), let generalLectures = NSArray(contentsOfFile: myPlanGeneralPath){
+//
+//                for p in plans {
+//                    if let planDict = p as? [String: Any] {
+//                        planList.append(planDict["semester"] as! String)
+//                    }
+//                }
+//
+//                for m in majorLectures {
+//                    if let majorDict = m as? [String: Any] {
+//                        if let major = PlanLecture(dict: majorDict, category: "전공") {
+//                            majorList.append(major)
+//                        }
+//                    }
+//                }
+//
+//                for g in generalLectures {
+//                    if let generalDict = g as? [String: Any] {
+//                        if let general = PlanLecture(dict: generalDict, category: "교양") {
+//                            generalList.append(general)
+//                        }
+//                    }
+//                }
+//
+//            }
+//        }
+//
+//    }
+    
+    if let myPlanPath = Bundle.main.path(forResource: "MyPlan", ofType:"plist"), let myPlanMajorPath = Bundle.main.path(forResource: "MyPlanMajor", ofType:"plist"), let myPlanGeneralPath = Bundle.main.path(forResource: "MyPlanGeneral", ofType:"plist"){
+        if let plans = NSArray(contentsOfFile: myPlanPath), let majorLectures = NSArray(contentsOfFile: myPlanMajorPath), let generalLectures = NSArray(contentsOfFile: myPlanGeneralPath){
             
             for p in plans {
                 if let planDict = p as? [String: Any] {
@@ -26,7 +85,7 @@ func loadPlanData() -> Bool{
             
             for m in majorLectures {
                 if let majorDict = m as? [String: Any] {
-                    if let major = PlanLecture(dict: majorDict, category: "전공") {
+                    if let major = PlanLecture(dict: majorDict) {
                         majorList.append(major)
                     }
                 }
@@ -34,7 +93,7 @@ func loadPlanData() -> Bool{
             
             for g in generalLectures {
                 if let generalDict = g as? [String: Any] {
-                    if let general = PlanLecture(dict: generalDict, category: "교양") {
+                    if let general = PlanLecture(dict: generalDict) {
                         generalList.append(general)
                     }
                 }
@@ -42,37 +101,7 @@ func loadPlanData() -> Bool{
             
         }
     }
-    else {
-        // 번들에서 데이터를 읽는다
-        if let myPlanPath = Bundle.main.path(forResource: "MyPlan", ofType:"plist"), let myPlanMajorPath = Bundle.main.path(forResource: "MyPlanMajor", ofType:"plist"), let myPlanGeneralPath = Bundle.main.path(forResource: "MyPlanGeneral", ofType:"plist"){
-            if let plans = NSArray(contentsOfFile: myPlanPath), let majorLectures = NSArray(contentsOfFile: myPlanMajorPath), let generalLectures = NSArray(contentsOfFile: myPlanGeneralPath){
-                
-                for p in plans {
-                    if let planDict = p as? [String: Any] {
-                        planList.append(planDict["semester"] as! String)
-                    }
-                }
-                
-                for m in majorLectures {
-                    if let majorDict = m as? [String: Any] {
-                        if let major = PlanLecture(dict: majorDict, category: "전공") {
-                            majorList.append(major)
-                        }
-                    }
-                }
-                
-                for g in generalLectures {
-                    if let generalDict = g as? [String: Any] {
-                        if let general = PlanLecture(dict: generalDict, category: "교양") {
-                            generalList.append(general)
-                        }
-                    }
-                }
-                
-            }
-        }
-        
-    }
+
     
     let planDicts:[[String:Any]] = planList.map{ ["semester" : $0] }
     let majorPlanDicts:[[String:Any]] = majorList.map{$0.toDict()}

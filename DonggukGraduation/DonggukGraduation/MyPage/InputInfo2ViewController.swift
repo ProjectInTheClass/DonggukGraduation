@@ -4,8 +4,89 @@ class InputInfo2ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var bigCategorys = ["학점(전공영역)", "학점(교양영역)", "언어영역", "졸업논문"]
+    var generals:[[String:Int]] = []
+    
+    var generalName = ["generalMajorBasic": "대학전공기초", "generalCommon": "공통교양", "generalLiteracy": "기본소양", "generalBasic": "학문기초", "generalMain": "핵심교양", "generalCulture":"일반교양"]
+    
+    @IBAction func storeCurriData() {
+        var majorBasic: Int = 0
+        if let mb = (tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! InfoTextFieldTableViewCell).textField.text {
+            majorBasic = Int(mb)!
+        }
+        
+        var majorSpecialty: Int = 0
+        if let ms = (tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as! InfoTextFieldTableViewCell).textField.text {
+            majorSpecialty = Int(ms)!
+        }
+        
+        
+        var generalCommon: Int = 0 // 공통교양
+        var generalCulture: Int = 0// 일반교양
+        var generalLiteracy: Int = 0// 기본소양
+        var generalBasic: Int = 0// 학문기초
+        var generalMajorBasic: Int = 0// 학문기초
+        var generalMain: Int = 0// 학문기초
+        
+        for i in 0..<generals.count {
+            var creditValue: Int = 0
+            
+            if let value = (tableView.cellForRow(at: IndexPath(row: i, section: 1)) as! InfoTextFieldTableViewCell).textField.text {
+                creditValue = Int(value)!
+            }
+            
+            let value = generals[i].values.first!
+            let key = generals[i].keys.first
+            
+            if key == "generalCommon" { generalCommon = value }
+            else if key == "generalCulture" { generalCulture = value }
+            else if key == "generalLiteracy" { generalLiteracy = value }
+            else if key == "generalBasic" { generalCommon = value }
+            else if key == "generalMajorBasic" { generalMajorBasic = value }
+            else if key == "generalMain" { generalMain = value }
+        }
+        
+        var englishLecture: Int = 0
+        if let lecture = (tableView.cellForRow(at: IndexPath(row: 0, section: 2)) as! InfoTextFieldTableViewCell).textField.text {
+            englishLecture = Int(lecture)!
+        }
+        
+        let englishScore = (tableView.cellForRow(at: IndexPath(row: 1, section: 2)) as! InfoOnOffTableViewCell).oneSwitch.isOn
+        
+        let graduationPaper = (tableView.cellForRow(at: IndexPath(row: 0, section: 3)) as! InfoOnOffTableViewCell).oneSwitch.isOn
+        
+        var serviceTime: Int = 0// 봉사시간
+        var etc: Bool = false
+        if bigCategorys.count > 4 {
+            if let time = (tableView.cellForRow(at: IndexPath(row: 0, section: 4)) as! InfoTextFieldTableViewCell).textField.text {
+                serviceTime = Int(time)!
+            }
+        }
+        if bigCategorys.count > 5 {
+            etc = (tableView.cellForRow(at: IndexPath(row: 0, section: 5)) as! InfoOnOffTableViewCell).oneSwitch.isOn
+        }
+        
+        let allCredit: Int = majorBasic + majorSpecialty + generalMain + generalBasic + generalCommon + generalCulture + generalLiteracy + generalMajorBasic
+       
+        myCurri = MyCurriculum(englishScore: englishScore, englishLecture: englishLecture, serviceTime: serviceTime, allCredit: allCredit, majorCredit: (majorBasic+majorSpecialty), majorSpecialty: majorSpecialty, generalCommon: generalCommon, generalCulture: generalCulture, generalLiteracy: generalLiteracy, generalBasic: generalBasic, generalMajorBasic: generalMajorBasic, generalMain: generalMain, graduationPaper: graduationPaper, etc: etc)
+        
+        if !saveMyCurriData() { return }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if !loadDepartmentCurriData(department: departmentList.filter{$0.name == (myInfo?.department)}[0].englishName) { return }
+        
+        if departmentCurri?.serviceTime != 0 {
+            bigCategorys.append("사회봉사")
+        }
+        if departmentCurri?.etc != "x" {
+            bigCategorys.append((departmentCurri?.etc)!)
+        }
+        
+        generals = (departmentCurri?.toDict().filter { $0.0.hasPrefix("general") }.filter { !$0.0.hasSuffix("Detail") }.filter { ($0.1 as! String) != "0"}.map{ [$0.key: 0]})!
+        generals.append(["generalCulture":0])
         
         tableView.layer.cornerRadius = 10
         tableView.layer.borderWidth = 1
@@ -14,13 +95,14 @@ class InputInfo2ViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-
+        
     }
     
 
 }
 
 extension InputInfo2ViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
@@ -30,22 +112,16 @@ extension InputInfo2ViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return bigCategorys.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 { return "학점(전공영역)" }
-        else if section == 1 { return "학점(교양영역)" }
-        else if section == 2 { return "언어영역" }
-        else if section == 2 { return "졸업논문" }
-        else if section == 2 { return "사회봉사" }
-        else { return "기타사항" }
-        
+        return bigCategorys[section]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 { return 2 }
-        else if section == 1 { return 4 }
+        else if section == 1 { return generals.count }
         else if section == 2 { return 2 }
         
         return 1
@@ -63,10 +139,7 @@ extension InputInfo2ViewController: UITableViewDataSource {
             return textFieldCell
         }
         else if indexPath.section == 1 {
-            if indexPath.row == 0 { textFieldCell.textField.placeholder = "공통교양" }
-            else if indexPath.row == 1 { textFieldCell.textField.placeholder = "일반교양" }
-            else if indexPath.row == 2 { textFieldCell.textField.placeholder = "학문기초" }
-            else if indexPath.row == 3 { textFieldCell.textField.placeholder = "기본소양" }
+            textFieldCell.textField.placeholder = generalName[generals[indexPath.row].keys.first!]
             
             return textFieldCell
         }
@@ -89,7 +162,7 @@ extension InputInfo2ViewController: UITableViewDataSource {
             return textFieldCell
         }
         else {
-            switchCell.nameLabel.text = "기타사항"
+            switchCell.nameLabel.text = departmentCurri?.etcDetail
             
             return switchCell
         }
