@@ -5,10 +5,13 @@ class MainTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.isEditing = true
+
     }
     
+    @IBAction func editMyCurri() {
+        if self.tableView.isEditing { self.tableView.isEditing = false }
+        else { self.tableView.isEditing = true }
+    }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         
@@ -16,17 +19,20 @@ class MainTableViewController: UITableViewController {
     }
     
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DETAIL_LECTURE_SEGUE" {
-            if let allLectureVC = segue.destination as? AllLectureListTableViewController, let cell = sender as? UITableViewCell {
-                let indexPath = self.tableView.indexPath(for: cell)!
-                var category: String = ""
-                if indexPath.row == 1 { category = "전공영역" }
-                else { category = "교양영역" }
-                
-                allLectureVC.category = category
+            if let navController = segue.destination as? UINavigationController {
+                if let allLectureVC = navController.topViewController as? AllLectureListTableViewController, let cell = sender as? UITableViewCell {
+                    print("ok")
+                    let indexPath = self.tableView.indexPath(for: cell)!
+                    var category: String = ""
+                    if indexPath.row == 1 { category = "전공영역" }
+                    else { category = "교양영역" }
+                    
+                    allLectureVC.category = category
+                }
             }
+            
         }
     }
     

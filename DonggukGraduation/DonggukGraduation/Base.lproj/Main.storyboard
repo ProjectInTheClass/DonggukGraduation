@@ -1073,7 +1073,7 @@
                         <barButtonItem key="rightBarButtonItem" title="내 요건 변경" id="JDZ-bx-d16">
                             <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="4KD-nR-AUZ" kind="presentation" id="N5w-3T-z2K"/>
+                                <action selector="editMyCurri" destination="d5e-6E-HOR" id="OlT-U1-eHR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1698,7 +1698,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMi-xr-er2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14976.799999999999" y="818.14092953523243"/>
+            <point key="canvasLocation" x="15407" y="839"/>
         </scene>
         <!--Input Info1 View Controller-->
         <scene sceneID="qVY-8t-EOt">
@@ -2590,7 +2590,7 @@
         <image name="icons8-terms_and_conditions" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q35-CO-juA"/>
+        <segue reference="UJa-YN-MMY"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.92272506480000005" green="0.62683743790000002" blue="0.1117382006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
