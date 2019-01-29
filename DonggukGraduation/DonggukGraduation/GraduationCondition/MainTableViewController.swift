@@ -5,9 +5,18 @@ class MainTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        self.tableView.isEditing = true
     }
-
+    
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        
+        return UITableViewCell.EditingStyle.insert
+    }
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DETAIL_LECTURE_SEGUE" {
             if let allLectureVC = segue.destination as? AllLectureListTableViewController, let cell = sender as? UITableViewCell {
@@ -24,7 +33,6 @@ class MainTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-
         return 5
     }
     
@@ -58,10 +66,11 @@ class MainTableViewController: UITableViewController {
         if indexPath.section == 0 {
             if indexPath.row == 0
             {
+                
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
                 cell.textLabel?.text = "남은학점"
                 cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 30)
-                cell.detailTextLabel?.text = "0/160"
+                cell.detailTextLabel?.text = "\((myCurri?.allCredit)!) / \((departmentCurri?.allCredit)!)학점"
                 cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 30)
                 return cell
             }
@@ -72,7 +81,7 @@ class MainTableViewController: UITableViewController {
                 cell.textLabel?.text = "전공영역"
                 cell.textLabel?.font.withSize(15)
                 cell.textLabel?.textColor = UIColor.lightGray
-                cell.detailTextLabel?.text = "0/75"
+                cell.detailTextLabel?.text = "\((myCurri?.majorCredit)!) / \((departmentCurri?.majorCredit)!)학점"
                 cell.detailTextLabel?.font.withSize(15)
                 cell.detailTextLabel?.textColor = UIColor.lightGray
 
@@ -80,12 +89,17 @@ class MainTableViewController: UITableViewController {
             }
             else
             {
+                let generalCredit:Int = (myCurri?.generalMain)! + (myCurri?.generalBasic)! + (myCurri?.generalCommon)! + (myCurri?.generalLiteracy)! + (myCurri?.generalCulture)! + (myCurri?.generalMajorBasic)!
+                
+                let departmentGeneralCredit:Int = Int((departmentCurri?.generalMain)!)! + Int((departmentCurri?.generalBasic)!)! + Int((departmentCurri?.generalCommon)!)! + Int((departmentCurri?.generalLiteracy)!)! +  Int((departmentCurri?.generalMajorBasic)!)!
+                
+                
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL4", for: indexPath)
                 cell.accessoryType = .disclosureIndicator
                 cell.textLabel?.text = "교양영역"
                 cell.textLabel?.font.withSize(15)
                 cell.textLabel?.textColor = UIColor.lightGray
-                cell.detailTextLabel?.text = "0/75"
+                cell.detailTextLabel?.text = "\(generalCredit) / \(departmentGeneralCredit)학점"
                 cell.detailTextLabel?.font.withSize(15)
                 cell.detailTextLabel?.textColor = UIColor.lightGray
                 return cell
@@ -98,7 +112,7 @@ class MainTableViewController: UITableViewController {
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
                 cell.textLabel?.text = "영어강의"
                 cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 30)
-                cell.detailTextLabel?.text = "0/4(과목)"
+                cell.detailTextLabel?.text = "\((myCurri?.englishLecture)!) / \((departmentCurri?.englishLecture)!)과목"
                 cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 30)
                 
                 return cell
@@ -109,7 +123,9 @@ class MainTableViewController: UITableViewController {
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
                 cell.textLabel?.text = "영어성적"
                 cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 30)
-                cell.detailTextLabel?.text = "제출여부"
+                if (myCurri?.englishScore)! { cell.detailTextLabel?.text = "제출완료" }
+                else { cell.detailTextLabel?.text = "제출필요" }
+                
                 cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 30)
                 return cell
             }
@@ -121,7 +137,8 @@ class MainTableViewController: UITableViewController {
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
                 cell.textLabel?.text = "졸업논문"
                 cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 30)
-                cell.detailTextLabel?.text = "제출여부"
+                if (myCurri?.graduationPaper)! { cell.detailTextLabel?.text = "제출완료" }
+                else { cell.detailTextLabel?.text = "제출필요" }
                 cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 30)
                 return cell
             }
@@ -132,7 +149,7 @@ class MainTableViewController: UITableViewController {
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
                 cell.textLabel?.text = "사회봉사"
                 cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 30)
-                cell.detailTextLabel?.text = "0/1 건"
+                cell.detailTextLabel?.text = "\((myCurri?.serviceTime)!) / 1건"
                 cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 30)
                 
             return cell
@@ -144,7 +161,8 @@ class MainTableViewController: UITableViewController {
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
                 cell.textLabel?.text = "산학협력프로젝트"
                 cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 30)
-                cell.detailTextLabel?.text = "이수여부"
+                if (myCurri?.etc)! { cell.detailTextLabel?.text = "충족완료" }
+                else { cell.detailTextLabel?.text = "충족필요" }
                 cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 30)
                 
                 return cell
@@ -171,7 +189,7 @@ class MainTableViewController: UITableViewController {
             return "사회봉사"
         }
         else if section == 4 {
-            return "산학협력프로젝트"
+            return "기타사항"
         }
         return nil
     }
