@@ -16,6 +16,14 @@ class EditKeywordSearchViewController: UIViewController {
                 generalList.append(PlanLecture(name: lecture.name, category: lecture.category, categorySmall: lecture.categorySmall, credit: lecture.credit, semester: selectedPlan))
             }
             print("추가완료")
+            
+            let noticeAlert = UIAlertController(title: "추가완료", message: "수업이 추가되었습니다", preferredStyle: UIAlertController.Style.alert)
+            
+            let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+            
+            noticeAlert.addAction(okAction)
+            
+            present(noticeAlert, animated: true, completion: nil)
         }
     }
     
@@ -41,7 +49,7 @@ class EditKeywordSearchViewController: UIViewController {
         
         searchBar.delegate = self
         searchBar.placeholder = "수업명을 입력하세요."
-        
+        searchBar.barTintColor = UIColor.groupTableViewBackground
     }
     
 
@@ -70,9 +78,9 @@ extension EditKeywordSearchViewController: UITableViewDataSource {
         return filteredList.count
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 80
-//    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EditKeywordSarchTableViewCell", for: indexPath) as! EditKeywordSarchTableViewCell

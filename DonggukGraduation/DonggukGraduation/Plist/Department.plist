@@ -10,5 +10,29 @@
 		<key>englishName</key>
 		<string>CSE</string>
 	</dict>
+    <dict>
+        <key>college</key>
+        <string>경영대학</string>
+        <key>name</key>
+        <string>경영정보학과</string>
+        <key>englishName</key>
+        <string>MIS</string>
+    </dict>
+    <dict>
+        <key>college</key>
+        <string>경영대학</string>
+        <key>name</key>
+        <string>회계학과</string>
+        <key>englishName</key>
+        <string>ACC</string>
+    </dict>
+    <dict>
+        <key>college</key>
+        <string>경영대학</string>
+        <key>name</key>
+        <string>경영학과</string>
+        <key>englishName</key>
+        <string>MGT</string>
+    </dict>
 </array>
 </plist>

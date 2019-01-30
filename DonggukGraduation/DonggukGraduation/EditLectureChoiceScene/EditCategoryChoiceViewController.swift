@@ -5,23 +5,17 @@ class EditCategoryChoiceViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var firstCategory: String?
-    var majorList = ["공과대학", "경영대학"]
-    var generelList = ["대학생활탐구","자아성찰"]
-    var printList: [String] = []
+    
+    var categoryList: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let firstCategory = firstCategory {
             title = firstCategory
-            
-            if firstCategory == "전공" {
-                printList = majorList
-            }
-            else {
-                printList = generelList
-            }
         }
+        
+        categoryList = departmentList.filter { $0.college == firstCategory }.map { $0.name } + smallGeneralList.filter { $0.category == firstCategory }.map { $0.name }
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -29,13 +23,23 @@ class EditCategoryChoiceViewController: UIViewController {
 }
 
 extension EditCategoryChoiceViewController: UITableViewDataSource {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LAST_CHOICE_SEGUE" {
+            if let ELCVC = segue.destination as? EditLectureChoiceViewController, let cell = sender as? UITableViewCell {
+                let indexPath = tableView.indexPath(for: cell)!
+                let category = categoryList[indexPath.row]
+                ELCVC.category = category
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return printList.count
+        return categoryList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
-        cell.textLabel?.text = printList[indexPath.row]
+        cell.textLabel?.text = categoryList[indexPath.row]
         cell.detailTextLabel?.text = ""
         cell.accessoryType = .disclosureIndicator
         

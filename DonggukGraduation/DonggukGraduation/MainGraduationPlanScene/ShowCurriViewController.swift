@@ -12,13 +12,14 @@ class ShowCurriViewController: UIViewController {
         
         title = "이수체계도"
         
-//        imageView.frame = CGRect(x: 0, y: 100, width: scrollView.frame.width, height: scrollView.frame.height)
         imageView.contentMode = UIView.ContentMode.center
+        
         scrollView.addSubview(imageView)
         scrollView.contentSize = imageView.bounds.size
         scrollView.delegate = self
         scrollView.maximumZoomScale = 3.0
         scrollView.minimumZoomScale = 0.1
+        scrollView.showsHorizontalScrollIndicator = false
     }
     
 

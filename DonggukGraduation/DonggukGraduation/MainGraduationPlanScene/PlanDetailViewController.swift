@@ -8,7 +8,70 @@ class PlanDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var selectView: UIView!
-    @IBOutlet weak var addButton: UIBarButtonItem!
+    
+    @IBOutlet weak var leftBarButton: UIBarButtonItem!
+    @IBOutlet weak var rightBarButton: UIBarButtonItem!
+    
+    @IBAction func rightButtonAction() {
+        if tableView.isEditing {
+            let deleteQuestionAlert = UIAlertController(title: "학기 삭제", message: "마지막 학기를 삭제하겠습니까?", preferredStyle: UIAlertController.Style.alert)
+            
+            let yesAction = UIAlertAction(title: "네", style: UIAlertAction.Style.default) { ACTION in
+                planList.removeLast()
+                
+                self.collectionView.reloadData()
+                self.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .top)
+                
+                selectedPlan = "ALL"
+                self.reloadTable()
+            }
+            
+            let noAction = UIAlertAction(title: "아니요", style: UIAlertAction.Style.default) { ACTION in
+                
+                selectedPlan = "ALL"
+                
+                self.collectionView.reloadData()
+                
+                self.reloadTable()
+            }
+            
+            deleteQuestionAlert.addAction(yesAction)
+            deleteQuestionAlert.addAction(noAction)
+            
+            present(deleteQuestionAlert, animated: true, completion: nil)
+
+        }
+        else {
+            if selectedPlan == "ALL" {
+                let noticeAlert = UIAlertController(title: "학기선택", message: "학기를 선택해주세요", preferredStyle: UIAlertController.Style.alert)
+                
+                let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+                
+                noticeAlert.addAction(okAction)
+                present(noticeAlert, animated: true, completion: nil)
+                
+            }
+            else {
+                
+                let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EFCVStoryboard")
+                
+                self.present(viewController, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    @IBAction func editMyCurri() {
+        if tableView.isEditing {
+            leftBarButton.title = "편집"
+            rightBarButton.title = "수업추가"
+            tableView.isEditing = false
+        }
+        else {
+            leftBarButton.title = "완료"
+            rightBarButton.title = "학기삭제"
+            tableView.isEditing = true
+        }
+    }
     
     var majorLectures:[PlanLecture] = []
     var generalLectures:[PlanLecture] = []
@@ -16,23 +79,26 @@ class PlanDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if testV {
-//            testV = false
-//            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FirstStoryboard")
-//            
-//            (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController = viewController
-//            
-//            return
-//        }
+        if testV {
+            testV = false
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FirstStoryboard")
+            
+            (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController = viewController
+            
+            return
+        }
         
         title = "졸업계획"
         
         if !dataLoad {
             if !loadUserData() { return }
+            if !loadCollegeData() { return }
             if !loadDepartmentData() { return }
             if !loadDepartmentCurriData(department: departmentList.filter{$0.name == (myInfo?.department)}[0].englishName) { return }
             if !loadMyCurriData() { return }
             if !loadPlanData() { return }
+            if !loadBigGeneralData() { return }
+            if !loadSmallGeneralData() { return }
             
             dataLoad = true
         }
@@ -58,8 +124,8 @@ class PlanDetailViewController: UIViewController {
         
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        addButton.target = self
-        addButton.action = #selector(goAdd)
+//        addButton.target = self
+//        addButton.action = #selector(goAdd)
         
     }
     
@@ -190,7 +256,45 @@ extension PlanDetailViewController: UICollectionViewDelegate {
 }
 
 extension PlanDetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        
+        if indexPath.row != 0 { return UITableViewCell.EditingStyle.delete }
+        return UITableViewCell.EditingStyle.none
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let addQuestionAlert = UIAlertController(title: "수업 삭제", message: "계획에서 수업을 삭제하겠습니까?", preferredStyle: UIAlertController.Style.alert)
+        
+        let yesAction = UIAlertAction(title: "네", style: UIAlertAction.Style.default) { ACTION in
+            
+            let lectureName = (tableView.cellForRow(at: indexPath) as! DetailLectureTableViewCell).nameLabel.text!
+            if indexPath.section == 0 {
+                majorList = majorList.filter { $0.name != lectureName}
+                self.majorLectures = self.majorLectures.filter { $0.name != lectureName}
+            }
+            else {
+                generalList = generalList.filter { $0.name != lectureName}
+                self.generalLectures = self.generalLectures.filter { $0.name != lectureName}
+            }
+            
+            tableView.reloadData()
+        }
+        
+        let noAction = UIAlertAction(title: "아니요", style: UIAlertAction.Style.default, handler: nil)
+        
+        addQuestionAlert.addAction(yesAction)
+        addQuestionAlert.addAction(noAction)
+        
+        present(addQuestionAlert, animated: true, completion: nil)
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
+        if generalLectures.count == 1, majorLectures.count == 1 {
+            tableView.separatorStyle = .none
+            return 1
+        }
+        tableView.separatorStyle = .singleLine
         return 2
     }
     
@@ -228,8 +332,14 @@ extension PlanDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if indexPath.section == 0 {
+        if generalLectures.count == 1, majorLectures.count == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyTableViewCell", for: indexPath) as! EmptyTableViewCell
+            
+            cell.logoImage.image = UIImage(named: "logo_head.png")
+            
+            return cell
+        }
+        else if indexPath.section == 0 {
             let lecture = majorLectures[indexPath.row]
             if indexPath.row == 0 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryLectureTableViewCell", for: indexPath) as! CategoryLectureTableViewCell
@@ -245,7 +355,7 @@ extension PlanDetailViewController: UITableViewDataSource {
                 
                 cell.nameLabel.text = lecture.name
                 cell.creditLabel.text = "\(lecture.credit) 학점"
-                cell.colorBar.backgroundColor = .red
+                cell.colorBar.backgroundColor = planColors["\(lecture.categorySmall)"]
                 
                 return cell
             }
@@ -268,7 +378,7 @@ extension PlanDetailViewController: UITableViewDataSource {
                 
                 cell.nameLabel.text = lecture.name
                 cell.creditLabel.text = "\(lecture.credit) 학점"
-                cell.colorBar.backgroundColor = .blue
+                cell.colorBar.backgroundColor = planColors["\(lecture.category)"]
                 
                 return cell
             }

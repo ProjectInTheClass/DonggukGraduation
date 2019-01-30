@@ -16,6 +16,13 @@ class EditLectureChoiceViewController: UIViewController {
                 generalList.append(PlanLecture(name: lecture.name, category: lecture.category, categorySmall: lecture.categorySmall, credit: lecture.credit, semester: selectedPlan))
             }
             print("추가완료")
+            
+            let noticeAlert = UIAlertController(title: "추가완료", message: "수업이 추가되었습니다", preferredStyle: UIAlertController.Style.alert)
+            
+            let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+            
+            noticeAlert.addAction(okAction)
+            present(noticeAlert, animated: true, completion: nil)
         }
     }
     
@@ -30,15 +37,19 @@ class EditLectureChoiceViewController: UIViewController {
         Lecture(name: "불교와 인간", category: "기본교양", categorySmall: "공통교양",credit: 3),
         ]
     
+    var category: String?
+    
     var categoryList = ["전공", "교양"]
-    var categoryColors = [ UIColor.red, UIColor.blue]
+    var categoryColors = [ UIColor.red, UIColor.blue ]
     var majorLectures:[PlanLecture] = []
     var generalLectures:[PlanLecture] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "컴퓨터공학과"
+        if let category = category {
+            title = category
+        }
         
         lectureTable.dataSource = self
         lectureTable.delegate = self

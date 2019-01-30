@@ -11,16 +11,20 @@ import UIKit
 class EditFirstChoiceViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBAction func goMain() {
-        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PDVCStoryboard")
-        
-        (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController = viewController
+    
+    @IBAction func dismissModal(sender: AnyObject){
+        self.dismiss(animated: true, completion: { () -> Void in
+            
+        })
     }
     
-    var categoryList = ["전공","교양"]
+    var categoryList:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        categoryList = collegeList.map { $0.name } + bigGeneralList.map { $0.name }
+        print(categoryList)
         
         title = "계획수정"
         

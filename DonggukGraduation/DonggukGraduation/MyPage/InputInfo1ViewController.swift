@@ -4,7 +4,7 @@ import UIKit
 class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var colleges:[String] = []
-    var departments:[String] = []
+    var departments:[String] = ["단과대학을 선택해주세요"]
     var years:[String] = ["13","14","15","16","17","18","19"]
     
     var inputTitle = ["이름", "단과대학", "전공", "학번"]
@@ -24,31 +24,39 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
     }
     
     @IBAction func nextStep() {
-//        if nameTextField.text != nil, collegeTextField.text != nil, departmentTextField.text != nil, yearTextField.text != nil {
-//            
+        if nameTextField.text != "", collegeTextField.text != "", departmentTextField.text != "", yearTextField.text != "" {
+            
             myInfo = User(name: nameTextField.text!, college: collegeTextField.text!, department: departmentTextField.text!, admissionYear: Int(yearTextField.text!)!)
             
-//            if !saveUserData() { return }
-//        }
+            if !saveUserData() { return }
+            
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "I2Storyboard")
+            
+            self.present(viewController, animated: true, completion: nil)
+        }
+        else {
+            let noticeAlert = UIAlertController(title: "경고", message: "입력란을 모두 기입해주세요", preferredStyle: UIAlertController.Style.alert)
+            
+            let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+            
+            noticeAlert.addAction(okAction)
+            present(noticeAlert, animated: true, completion: nil)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-//        nameTextField.layer.cornerRadius = 7
         nameTextField.layer.borderWidth = 1
         nameTextField.layer.borderColor = UIColor.groupTableViewBackground.cgColor
         
-//        collegeTextField.layer.cornerRadius = 7
         collegeTextField.layer.borderWidth = 1
         collegeTextField.layer.borderColor = UIColor.groupTableViewBackground.cgColor
         
-//        departmentTextField.layer.cornerRadius = 7
         departmentTextField.layer.borderWidth = 1
         departmentTextField.layer.borderColor = UIColor.groupTableViewBackground.cgColor
         
-//        yearTextField.layer.cornerRadius = 7
         yearTextField.layer.borderWidth = 1
         yearTextField.layer.borderColor = UIColor.groupTableViewBackground.cgColor
         
@@ -57,7 +65,6 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
         if !loadDepartmentData() { return }
         
         colleges = collegeList.map{$0.name}
-        print(colleges)
         
         pickerSetting()
     }
@@ -131,6 +138,7 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 0 {
             collegeTextField.text = colleges[row]
+            departmentTextField.text = ""
             departments = departmentList.filter{$0.college == colleges[row]}.map{$0.name}
             print(departments)
         }

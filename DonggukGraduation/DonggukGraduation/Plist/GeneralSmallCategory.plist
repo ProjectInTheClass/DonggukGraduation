@@ -7,6 +7,8 @@
 		<string>공통교양</string>
 		<key>name</key>
 		<string>자아성찰</string>
+        <key>englishName</key>
+        <string>GC1</string>
 	</dict>
 </array>
 </plist>

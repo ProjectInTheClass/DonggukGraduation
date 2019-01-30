@@ -12,12 +12,16 @@ class InputInfo2ViewController: UIViewController {
     @IBAction func storeCurriData() {
         var majorBasic: Int = 0
         if let mb = (tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! InfoTextFieldTableViewCell).textField.text {
-            majorBasic = Int(mb)!
+            if let value = Int(mb) {
+                majorBasic = value
+            }
         }
         
         var majorSpecialty: Int = 0
         if let ms = (tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as! InfoTextFieldTableViewCell).textField.text {
-            majorSpecialty = Int(ms)!
+            if let value = Int(ms) {
+                majorSpecialty = value
+            }
         }
         
         
@@ -29,11 +33,12 @@ class InputInfo2ViewController: UIViewController {
         var generalMain: Int = 0// 학문기초
         
         for i in 0..<generals.count {
-            var creditValue: Int = 0
-            
-            if let value = (tableView.cellForRow(at: IndexPath(row: i, section: 1)) as! InfoTextFieldTableViewCell).textField.text {
-                creditValue = Int(value)!
-            }
+//            var creditValue: Int = 0
+//
+//            if let value = (tableView.cellForRow(at: IndexPath(row: i, section: 1)) as! InfoTextFieldTableViewCell).textField.text {
+//
+//                creditValue = Int(value)!
+//            }
             
             let value = generals[i].values.first!
             let key = generals[i].keys.first
@@ -48,7 +53,9 @@ class InputInfo2ViewController: UIViewController {
         
         var englishLecture: Int = 0
         if let lecture = (tableView.cellForRow(at: IndexPath(row: 0, section: 2)) as! InfoTextFieldTableViewCell).textField.text {
-            englishLecture = Int(lecture)!
+            if let value = Int(lecture) {
+                englishLecture = value
+            }
         }
         
         let englishScore = (tableView.cellForRow(at: IndexPath(row: 1, section: 2)) as! InfoOnOffTableViewCell).oneSwitch.isOn
@@ -56,14 +63,20 @@ class InputInfo2ViewController: UIViewController {
         let graduationPaper = (tableView.cellForRow(at: IndexPath(row: 0, section: 3)) as! InfoOnOffTableViewCell).oneSwitch.isOn
         
         var serviceTime: Int = 0// 봉사시간
+        
         var etc: Bool = false
+        
         if bigCategorys.count > 4 {
             if let time = (tableView.cellForRow(at: IndexPath(row: 0, section: 4)) as! InfoTextFieldTableViewCell).textField.text {
-                serviceTime = Int(time)!
+                if let value = Int(time) {
+                    serviceTime = value
+                }
             }
         }
         if bigCategorys.count > 5 {
-            etc = (tableView.cellForRow(at: IndexPath(row: 0, section: 5)) as! InfoOnOffTableViewCell).oneSwitch.isOn
+            if let value = tableView.cellForRow(at: IndexPath(row: 0, section: 5)) as? InfoOnOffTableViewCell {
+                etc = value.oneSwitch.isOn
+            }
         }
         
         let allCredit: Int = majorBasic + majorSpecialty + generalMain + generalBasic + generalCommon + generalCulture + generalLiteracy + generalMajorBasic
@@ -81,7 +94,7 @@ class InputInfo2ViewController: UIViewController {
         if departmentCurri?.serviceTime != 0 {
             bigCategorys.append("사회봉사")
         }
-        if departmentCurri?.etc != "x" {
+        if departmentCurri?.etc != "0" {
             bigCategorys.append((departmentCurri?.etc)!)
         }
         
@@ -162,7 +175,7 @@ extension InputInfo2ViewController: UITableViewDataSource {
             return textFieldCell
         }
         else {
-            switchCell.nameLabel.text = departmentCurri?.etcDetail
+            switchCell.nameLabel.text = departmentCurri?.etc
             
             return switchCell
         }
