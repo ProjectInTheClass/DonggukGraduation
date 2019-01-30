@@ -7,9 +7,9 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let time = DispatchTime.now() + .seconds(5)
+        let time = DispatchTime.now() + .seconds(2)
         DispatchQueue.main.asyncAfter(deadline: time) {
-            print("5초")
+            print("2초")
             if testV {
                 testV = false
                 let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FirstStoryboard")

@@ -29,6 +29,7 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
             myInfo = User(name: nameTextField.text!, college: collegeTextField.text!, department: departmentTextField.text!, admissionYear: Int(yearTextField.text!)!)
             
             if !saveUserData() { return }
+            if !loadDepartmentCurriData(department: departmentList.filter{$0.name == (myInfo?.department)}[0].englishName) { return }
             
             let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "I2Storyboard")
             
@@ -46,7 +47,25 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if !loadCollegeData() { return }
+        if !loadDepartmentData() { return }
+        if !loadBigGeneralData() { return }
+        if !loadSmallGeneralData() { return }
+        if !loadlectureData() { return }
+        
+        if loadUserData() {
+            if !loadDepartmentCurriData(department: departmentList.filter{$0.name == (myInfo?.department)}[0].englishName) { return }
+            if !loadMyCurriData() { return }
+            if !loadPlanData() { return }
+            
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PDVCStoryboard")
+            
+            (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController = viewController
+            
+            return
+            
+        }
         
         nameTextField.layer.borderWidth = 1
         nameTextField.layer.borderColor = UIColor.groupTableViewBackground.cgColor
@@ -59,10 +78,6 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
         
         yearTextField.layer.borderWidth = 1
         yearTextField.layer.borderColor = UIColor.groupTableViewBackground.cgColor
-        
-        
-        if !loadCollegeData() { return }
-        if !loadDepartmentData() { return }
         
         colleges = collegeList.map{$0.name}
         

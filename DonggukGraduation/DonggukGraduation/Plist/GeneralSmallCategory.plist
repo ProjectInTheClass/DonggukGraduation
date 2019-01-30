@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
+    <dict>
+        <key>category</key>
+        <string>일반교양</string>
+        <key>name</key>
+        <string>인문</string>
+        <key>englishName</key>
+        <string>GC1</string>
+    </dict>
 	<dict>
 		<key>category</key>
 		<string>공통교양</string>
@@ -10,5 +18,37 @@
         <key>englishName</key>
         <string>GC1</string>
 	</dict>
+    <dict>
+        <key>category</key>
+        <string>학문기초</string>
+        <key>name</key>
+        <string>제4영역:자연과학</string>
+        <key>englishName</key>
+        <string>GC1</string>
+    </dict>
+    <dict>
+        <key>category</key>
+        <string>핵심교양</string>
+        <key>name</key>
+        <string>실존가치인간</string>
+        <key>englishName</key>
+        <string>GC1</string>
+    </dict>
+    <dict>
+        <key>category</key>
+        <string>기본소양</string>
+        <key>name</key>
+        <string>기본소양</string>
+        <key>englishName</key>
+        <string>GC1</string>
+    </dict>
+    <dict>
+        <key>category</key>
+        <string>대학전공기초</string>
+        <key>name</key>
+        <string>전체</string>
+        <key>englishName</key>
+        <string>GC1</string>
+    </dict>
 </array>
 </plist>

@@ -69,8 +69,8 @@
 		4A35C2F021FA3D60006AEB80 /* College.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2EF21FA3D60006AEB80 /* College.plist */; };
 		4A35C2F221FA3E2E006AEB80 /* GeneralBigCategory.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2F121FA3E2E006AEB80 /* GeneralBigCategory.plist */; };
 		4A35C2F421FA3EAA006AEB80 /* GeneralSmallCategory.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2F321FA3EAA006AEB80 /* GeneralSmallCategory.plist */; };
-		4A35C2F621FA3FAA006AEB80 /* CE.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2F521FA3FAA006AEB80 /* CE.plist */; };
-		4A35C2F921FA454C006AEB80 /* CSECurriculum.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2F821FA454C006AEB80 /* CSECurriculum.plist */; };
+		4A35C2F621FA3FAA006AEB80 /* MajorLecture.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2F521FA3FAA006AEB80 /* MajorLecture.plist */; };
+		4A35C2F921FA454C006AEB80 /* Curriculum.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2F821FA454C006AEB80 /* Curriculum.plist */; };
 		4A35C2FD21FA48C7006AEB80 /* CurriValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35C2FC21FA48C7006AEB80 /* CurriValue.swift */; };
 		4A35C2FF21FA4964006AEB80 /* MyCurriculum.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A35C2FE21FA4964006AEB80 /* MyCurriculum.plist */; };
 		4A541CC821FC55400017DF7C /* MyClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A541CB821FC553F0017DF7C /* MyClassTableViewController.swift */; };
@@ -99,7 +99,7 @@
 		4AC0BA9F2200CB53001A784C /* SmallGeneralValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0BA9E2200CB53001A784C /* SmallGeneralValue.swift */; };
 		4AC0BAA1220103EC001A784C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0BAA0220103EC001A784C /* FirstViewController.swift */; };
 		4AC0BAA3220106B7001A784C /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0BAA2220106B7001A784C /* EmptyTableViewCell.swift */; };
-		4AC0BAA52201167D001A784C /* GeneralCommon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AC0BAA42201167D001A784C /* GeneralCommon.plist */; };
+		4AC0BAA52201167D001A784C /* GeneralLecture.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AC0BAA42201167D001A784C /* GeneralLecture.plist */; };
 		4AC0BAA7220134EC001A784C /* LectureValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0BAA6220134EC001A784C /* LectureValue.swift */; };
 /* End PBXBuildFile section */
 
@@ -168,8 +168,8 @@
 		4A35C2EF21FA3D60006AEB80 /* College.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = College.plist; sourceTree = "<group>"; };
 		4A35C2F121FA3E2E006AEB80 /* GeneralBigCategory.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeneralBigCategory.plist; sourceTree = "<group>"; };
 		4A35C2F321FA3EAA006AEB80 /* GeneralSmallCategory.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeneralSmallCategory.plist; sourceTree = "<group>"; };
-		4A35C2F521FA3FAA006AEB80 /* CE.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CE.plist; sourceTree = "<group>"; };
-		4A35C2F821FA454C006AEB80 /* CSECurriculum.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CSECurriculum.plist; sourceTree = "<group>"; };
+		4A35C2F521FA3FAA006AEB80 /* MajorLecture.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MajorLecture.plist; sourceTree = "<group>"; };
+		4A35C2F821FA454C006AEB80 /* Curriculum.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Curriculum.plist; sourceTree = "<group>"; };
 		4A35C2FC21FA48C7006AEB80 /* CurriValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriValue.swift; sourceTree = "<group>"; };
 		4A35C2FE21FA4964006AEB80 /* MyCurriculum.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyCurriculum.plist; sourceTree = "<group>"; };
 		4A541CB821FC553F0017DF7C /* MyClassTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassTableViewController.swift; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 		4AC0BA9E2200CB53001A784C /* SmallGeneralValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGeneralValue.swift; sourceTree = "<group>"; };
 		4AC0BAA0220103EC001A784C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		4AC0BAA2220106B7001A784C /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
-		4AC0BAA42201167D001A784C /* GeneralCommon.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeneralCommon.plist; sourceTree = "<group>"; };
+		4AC0BAA42201167D001A784C /* GeneralLecture.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeneralLecture.plist; sourceTree = "<group>"; };
 		4AC0BAA6220134EC001A784C /* LectureValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -374,10 +374,10 @@
 		4A1FA06521F437DC00D05246 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
+				4AC0BAA42201167D001A784C /* GeneralLecture.plist */,
+				4A35C2F521FA3FAA006AEB80 /* MajorLecture.plist */,
+				4A35C2F821FA454C006AEB80 /* Curriculum.plist */,
 				4A35C30021FA4BCF006AEB80 /* Plan */,
-				4A35C2FB21FA486D006AEB80 /* GeneralLectures */,
-				4A35C2FA21FA457D006AEB80 /* Curriculums */,
-				4A35C2F721FA41C5006AEB80 /* MajorLectures */,
 				4A08339B21F6340300F7512B /* User.plist */,
 				4A35C2ED21FA37DE006AEB80 /* Department.plist */,
 				4A35C2EF21FA3D60006AEB80 /* College.plist */,
@@ -399,30 +399,6 @@
 				4AC0BAA2220106B7001A784C /* EmptyTableViewCell.swift */,
 			);
 			path = MainGraduationPlanScene;
-			sourceTree = "<group>";
-		};
-		4A35C2F721FA41C5006AEB80 /* MajorLectures */ = {
-			isa = PBXGroup;
-			children = (
-				4A35C2F521FA3FAA006AEB80 /* CE.plist */,
-			);
-			path = MajorLectures;
-			sourceTree = "<group>";
-		};
-		4A35C2FA21FA457D006AEB80 /* Curriculums */ = {
-			isa = PBXGroup;
-			children = (
-				4A35C2F821FA454C006AEB80 /* CSECurriculum.plist */,
-			);
-			path = Curriculums;
-			sourceTree = "<group>";
-		};
-		4A35C2FB21FA486D006AEB80 /* GeneralLectures */ = {
-			isa = PBXGroup;
-			children = (
-				4AC0BAA42201167D001A784C /* GeneralCommon.plist */,
-			);
-			path = GeneralLectures;
 			sourceTree = "<group>";
 		};
 		4A35C30021FA4BCF006AEB80 /* Plan */ = {
@@ -494,16 +470,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7E39F421EC5C1D00496FDC /* LaunchScreen.storyboard in Resources */,
-				4A35C2F621FA3FAA006AEB80 /* CE.plist in Resources */,
+				4A35C2F621FA3FAA006AEB80 /* MajorLecture.plist in Resources */,
 				4A2D3E7C21F7492200756524 /* MyPlan.plist in Resources */,
-				4A35C2F921FA454C006AEB80 /* CSECurriculum.plist in Resources */,
+				4A35C2F921FA454C006AEB80 /* Curriculum.plist in Resources */,
 				4A35C2F021FA3D60006AEB80 /* College.plist in Resources */,
 				3F7E39F121EC5C1D00496FDC /* Assets.xcassets in Resources */,
 				4A35C2F221FA3E2E006AEB80 /* GeneralBigCategory.plist in Resources */,
 				4A35C2FF21FA4964006AEB80 /* MyCurriculum.plist in Resources */,
 				3F7E39EF21EC5C1B00496FDC /* Main.storyboard in Resources */,
 				4A2D3E8021F7494400756524 /* MyPlanGeneral.plist in Resources */,
-				4AC0BAA52201167D001A784C /* GeneralCommon.plist in Resources */,
+				4AC0BAA52201167D001A784C /* GeneralLecture.plist in Resources */,
 				4A08339C21F6340300F7512B /* User.plist in Resources */,
 				4A35C2EE21FA37DE006AEB80 /* Department.plist in Resources */,
 				4A2D3E7E21F7493300756524 /* MyPlanMajor.plist in Resources */,

@@ -9,13 +9,23 @@ class EditLectureChoiceViewController: UIViewController {
         if selectNumber != 0 {
             selectNumber -= 1
             let lecture = filteredList[selectNumber]
-            if lecture.category == "전공" {
-                majorList.append(PlanLecture(name: lecture.name, category: lecture.category, categorySmall: lecture.categorySmall, credit: lecture.credit, semester: selectedPlan))
+            
+            if (departmentList.filter { $0.name == lecture.bigCategory }.count) != 0 {
+                majorList.append(PlanLecture(name: lecture.name, category: "전공", categorySmall: lecture.smallCategory, credit: lecture.credit, semester: selectedPlan))
+                if lecture.smallCategory == "전문" { myCurri?.majorSpecialty += lecture.credit }
+                myCurri?.majorCredit += lecture.credit
+                myCurri?.allCredit += lecture.credit
             }
             else {
-                generalList.append(PlanLecture(name: lecture.name, category: lecture.category, categorySmall: lecture.categorySmall, credit: lecture.credit, semester: selectedPlan))
+                generalList.append(PlanLecture(name: lecture.name, category: lecture.bigCategory, categorySmall: lecture.smallCategory, credit: lecture.credit, semester: selectedPlan))
+                if lecture.bigCategory == "공통교양" { myCurri?.generalCommon += lecture.credit }
+                myCurri?.allCredit += lecture.credit
             }
             print("추가완료")
+            
+            if !savePlanData() { return }
+            if !saveMyCurriData() { return }
+            reloadTable()
             
             let noticeAlert = UIAlertController(title: "추가완료", message: "수업이 추가되었습니다", preferredStyle: UIAlertController.Style.alert)
             
@@ -28,14 +38,7 @@ class EditLectureChoiceViewController: UIViewController {
     
     var selectNumber:Int = 0
     
-    var filteredList = [
-        Lecture(name: "자아와 명상", category: "공통교양", categorySmall: "공통교양", credit: 1),
-        Lecture(name: "불교와 인간", category: "기본교양", categorySmall: "공통교양",credit: 3),
-        Lecture(name: "자아와 명상", category: "공통교양", categorySmall: "공통교양",credit: 1),
-        Lecture(name: "불교와 인간", category: "기본교양", categorySmall: "공통교양",credit: 3),
-        Lecture(name: "자아와 명상", category: "공통교양", categorySmall: "공통교양",credit: 1),
-        Lecture(name: "불교와 인간", category: "기본교양", categorySmall: "공통교양",credit: 3),
-        ]
+    var filteredList:[Lecture] = []
     
     var category: String?
     
@@ -50,6 +53,14 @@ class EditLectureChoiceViewController: UIViewController {
         if let category = category {
             title = category
         }
+        
+        if (departmentList.filter { $0.name == category }.count) != 0 {
+            filteredList = majorLectureList
+        }
+        else {
+            filteredList = generalLectureList
+        }
+
         
         lectureTable.dataSource = self
         lectureTable.delegate = self
@@ -132,7 +143,7 @@ extension EditLectureChoiceViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "EditLectureItemTableViewCell", for: indexPath) as! EditLectureItemTableViewCell
             
             cell.nameLabel.text = filteredList[indexPath.row].name
-            cell.detailLabel.text = filteredList[indexPath.row].category
+            cell.detailLabel.text = filteredList[indexPath.row].bigCategory
             cell.creditLabel.text = "\(filteredList[indexPath.row].credit)학점"
             
             return cell

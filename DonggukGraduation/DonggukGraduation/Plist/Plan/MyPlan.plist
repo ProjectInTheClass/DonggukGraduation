@@ -13,7 +13,7 @@
 	<dict>
 		<key>semester</key>
 		<string>2학년 1학기</string>
-    </dict>
+	</dict>
 	<dict>
 		<key>semester</key>
 		<string>2학년 2학기</string>
@@ -34,9 +34,5 @@
 		<key>semester</key>
 		<string>4학년 2학기</string>
 	</dict>
-    <dict>
-        <key>semester</key>
-        <string>5학년 1학기</string>
-    </dict>
 </array>
 </plist>

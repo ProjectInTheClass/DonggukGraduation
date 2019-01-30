@@ -9,28 +9,28 @@
 import UIKit
 
 class EditFirstChoiceViewController: UIViewController {
-    
+
     @IBOutlet weak var tableView: UITableView!
-    
+
     @IBAction func dismissModal(sender: AnyObject){
         self.dismiss(animated: true, completion: { () -> Void in
-            
+
         })
     }
-    
+
     var categoryList:[String] = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         categoryList = collegeList.map { $0.name } + bigGeneralList.map { $0.name }
         print(categoryList)
-        
+
         title = "계획수정"
-        
+
         tableView.dataSource = self
         tableView.delegate = self
-        
+
     }
 }
 
@@ -44,11 +44,11 @@ extension EditFirstChoiceViewController: UITableViewDataSource {
             }
         }
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 { return 2 }
         else { return categoryList.count }
@@ -67,25 +67,25 @@ extension EditFirstChoiceViewController: UITableViewDataSource {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "DirectAddCell", for: indexPath)
                 cell.detailTextLabel?.text = ""
                 cell.accessoryType = .disclosureIndicator
-                
+
                 return cell
-                
+
             }
         }
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CategorySearchCell", for: indexPath)
-            
+
             cell.textLabel?.text = categoryList[indexPath.row]
-            
+
             cell.detailTextLabel?.text = ""
             cell.accessoryType = .disclosureIndicator
-            
+
             return cell
         }
     }
-    
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
+
         if section == 1 { return "분류에서 선택" }
         return nil
     }

@@ -6,14 +6,16 @@ var departmentCurriFilePath = documentsPath + "/departmentCurri.plist"
 var departmentCurri:Curriculum?
 
 func loadDepartmentCurriData(department:String) -> Bool {
-    if let curriPath = Bundle.main.path(forResource: "\(department)Curriculum", ofType:"plist") {
+    if let curriPath = Bundle.main.path(forResource: "Curriculum", ofType:"plist") {
         if let curris = NSArray(contentsOfFile: curriPath){
             
             for c in curris {
                 if let curriDict = c as? [String: Any] {
                     guard let year = curriDict["admissionYear"] as? Int else { return false }
-
+                    
+                    print(myInfo?.admissionYear)
                     if year == myInfo?.admissionYear {
+                        print("ok")
                         departmentCurri = Curriculum(dict:curriDict)
                     }
                     

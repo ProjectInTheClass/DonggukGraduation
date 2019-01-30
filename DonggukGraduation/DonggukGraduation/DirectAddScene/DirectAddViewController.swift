@@ -40,6 +40,7 @@ class DirectAddViewController: UIViewController {
                 generalList.append(PlanLecture(name: name!, category: categorySmall, categorySmall: categorySmall, credit: credit, semester: selectedPlan))
             }
             print("추가완료")
+            if !savePlanData() { return }
             
             let noticeAlert = UIAlertController(title: "추가완료", message: "수업이 추가되었습니다", preferredStyle: UIAlertController.Style.alert)
             

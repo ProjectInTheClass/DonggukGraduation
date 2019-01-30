@@ -118,10 +118,38 @@ func loadPlanData() -> Bool{
     }
 }
 
-func addSemester() -> Bool{
+func loadPlanListData() -> Bool {
+    if let myPlanPath = Bundle.main.path(forResource: "MyPlan", ofType:"plist"){
+        if let plans = NSArray(contentsOfFile: myPlanPath){
+            for p in plans {
+                if let planDict = p as? [String: Any] {
+                    planList.append(planDict["semester"] as! String)
+                }
+            }
+            
+        }
+    }
+    
+    
     let planDicts:[[String:Any]] = planList.map{ ["semester" : $0] }
     
     if NSArray(array: planDicts).write(toFile: planFilePath, atomically: true){
+        print("성공")
+        print(planList)
+        return true
+    }
+    else {
+        print("실패")
+        return false
+    }
+}
+
+func savePlanData() -> Bool {
+    let planDicts:[[String:Any]] = planList.map{ ["semester" : $0] }
+    let majorPlanDicts:[[String:Any]] = majorList.map{$0.toDict()}
+    let generalPlanDicts:[[String:Any]] = generalList.map{$0.toDict()}
+    
+    if NSArray(array: planDicts).write(toFile: planFilePath, atomically: true), NSArray(array: majorPlanDicts).write(toFile: majorPlanFilePath, atomically: true), NSArray(array: generalPlanDicts).write(toFile: generalPlanFilePath, atomically: true){
         print("성공")
         print(planList)
         return true

@@ -7,23 +7,27 @@ class InputInfo2ViewController: UIViewController {
     var bigCategorys = ["학점(전공영역)", "학점(교양영역)", "언어영역", "졸업논문"]
     var generals:[[String:Int]] = []
     
-    var generalName = ["generalMajorBasic": "대학전공기초", "generalCommon": "공통교양", "generalLiteracy": "기본소양", "generalBasic": "학문기초", "generalMain": "핵심교양", "generalCulture":"일반교양"]
+    var generalName = ["generalMajorBasic": "대학전공기초", "generalCommon": "공통교양", "generalLiteracy": "기본소양", "generalBasic": "학문기초", "generalMain": "핵심교양", "generalCulture": "일반교양"]
     
     @IBAction func storeCurriData() {
         var majorBasic: Int = 0
-        if let mb = (tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! InfoTextFieldTableViewCell).textField.text {
-            if let value = Int(mb) {
-                majorBasic = value
+        if let vc = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) {
+            if let mb = (vc as! InfoTextFieldTableViewCell).textField.text {
+                if let value = Int(mb) {
+                    majorBasic = value
+                }
             }
         }
+        
         
         var majorSpecialty: Int = 0
-        if let ms = (tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as! InfoTextFieldTableViewCell).textField.text {
-            if let value = Int(ms) {
-                majorSpecialty = value
+        if let vc = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) {
+            if let ms = (vc as! InfoTextFieldTableViewCell).textField.text {
+                if let value = Int(ms) {
+                    majorSpecialty = value
+                }
             }
         }
-        
         
         var generalCommon: Int = 0 // 공통교양
         var generalCulture: Int = 0// 일반교양
@@ -52,24 +56,35 @@ class InputInfo2ViewController: UIViewController {
         }
         
         var englishLecture: Int = 0
-        if let lecture = (tableView.cellForRow(at: IndexPath(row: 0, section: 2)) as! InfoTextFieldTableViewCell).textField.text {
-            if let value = Int(lecture) {
-                englishLecture = value
+        if let vc = tableView.cellForRow(at: IndexPath(row: 0, section: 2)) {
+            if let tf = (vc as! InfoTextFieldTableViewCell).textField.text {
+                if let value = Int(tf) {
+                    englishLecture = value
+                }
             }
         }
         
-        let englishScore = (tableView.cellForRow(at: IndexPath(row: 1, section: 2)) as! InfoOnOffTableViewCell).oneSwitch.isOn
+        var englishScore:Bool = false
+        if let value = tableView.cellForRow(at: IndexPath(row: 1, section: 2)) as? InfoOnOffTableViewCell {
+            englishScore = value.oneSwitch.isOn
+        }
         
-        let graduationPaper = (tableView.cellForRow(at: IndexPath(row: 0, section: 3)) as! InfoOnOffTableViewCell).oneSwitch.isOn
+        
+        var graduationPaper: Bool = false
+        if let value = tableView.cellForRow(at: IndexPath(row: 0, section: 3)) as? InfoOnOffTableViewCell {
+            graduationPaper = value.oneSwitch.isOn
+        }
         
         var serviceTime: Int = 0// 봉사시간
         
         var etc: Bool = false
         
         if bigCategorys.count > 4 {
-            if let time = (tableView.cellForRow(at: IndexPath(row: 0, section: 4)) as! InfoTextFieldTableViewCell).textField.text {
-                if let value = Int(time) {
-                    serviceTime = value
+            if let vc = tableView.cellForRow(at: IndexPath(row: 0, section: 4)) {
+                if let tf = (vc as! InfoTextFieldTableViewCell).textField.text {
+                    if let value = Int(tf) {
+                        serviceTime = value
+                    }
                 }
             }
         }
@@ -84,6 +99,7 @@ class InputInfo2ViewController: UIViewController {
         myCurri = MyCurriculum(englishScore: englishScore, englishLecture: englishLecture, serviceTime: serviceTime, allCredit: allCredit, majorCredit: (majorBasic+majorSpecialty), majorSpecialty: majorSpecialty, generalCommon: generalCommon, generalCulture: generalCulture, generalLiteracy: generalLiteracy, generalBasic: generalBasic, generalMajorBasic: generalMajorBasic, generalMain: generalMain, graduationPaper: graduationPaper, etc: etc)
         
         if !saveMyCurriData() { return }
+        if !loadPlanListData() { return }
     }
     
     override func viewDidLoad() {

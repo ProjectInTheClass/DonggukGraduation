@@ -6,14 +6,14 @@ class Lecture {
     var credit: Int
     var bigCategory: String
     var smallCategory: String
-    var department: String
+//    var etc: String
     
-    init(name: String, bigCategory: String, smallCategory: String, credit: Int, department: String){
+    init(name: String, bigCategory: String, smallCategory: String, credit: Int){
         self.name = name
         self.bigCategory = bigCategory
         self.smallCategory = smallCategory
         self.credit = credit
-        self.department = department
+//        self.etc = etc
     }
     
     init?(dict: [String: Any]){
@@ -21,22 +21,22 @@ class Lecture {
         guard let creditValue = dict["credit"] as? Int else { return nil }
         guard let cValue = dict["bigCategory"] as? String else { return nil }
         guard let csValue = dict["smallCategory"] as? String else { return nil }
-        guard let deValue = dict["department"] as? String else { return nil }
+//        guard let deValue = dict["etc"] as? String else { return nil }
         
         name = nameValue
         bigCategory = cValue
         smallCategory = csValue
         credit = creditValue
-        department = deValue
+//        etc = deValue
     }
     
     func toDict() -> [String: Any] {
-        return ["name": name, "credit": credit, "category": bigCategory, "categorySmall":smallCategory, "department":department]
+        return ["name": name, "credit": credit, "category": bigCategory, "categorySmall":smallCategory]
     }
 }
 
 extension Lecture: CustomStringConvertible {
     var description: String {
-        return "<Lecture: \(name), \(bigCategory), \(smallCategory), \(credit), \(department)>"
+        return "<Lecture: \(name), \(bigCategory), \(smallCategory), \(credit)>"
     }
 }
