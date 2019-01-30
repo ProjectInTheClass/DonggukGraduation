@@ -7,19 +7,27 @@ class InputInfo2ViewController: UIViewController {
     var bigCategorys = ["학점(전공영역)", "학점(교양영역)", "언어영역", "졸업논문"]
     var generals:[[String:Int]] = []
     
-    var generalName = ["generalMajorBasic": "대학전공기초", "generalCommon": "공통교양", "generalLiteracy": "기본소양", "generalBasic": "학문기초", "generalMain": "핵심교양", "generalCulture":"일반교양"]
+    var generalName = ["generalMajorBasic": "대학전공기초", "generalCommon": "공통교양", "generalLiteracy": "기본소양", "generalBasic": "학문기초", "generalMain": "핵심교양", "generalCulture": "일반교양"]
     
     @IBAction func storeCurriData() {
         var majorBasic: Int = 0
-        if let mb = (tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! InfoTextFieldTableViewCell).textField.text {
-            majorBasic = Int(mb)!
+        if let vc = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) {
+            if let mb = (vc as! InfoTextFieldTableViewCell).textField.text {
+                if let value = Int(mb) {
+                    majorBasic = value
+                }
+            }
         }
+        
         
         var majorSpecialty: Int = 0
-        if let ms = (tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as! InfoTextFieldTableViewCell).textField.text {
-            majorSpecialty = Int(ms)!
+        if let vc = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) {
+            if let ms = (vc as! InfoTextFieldTableViewCell).textField.text {
+                if let value = Int(ms) {
+                    majorSpecialty = value
+                }
+            }
         }
-        
         
         var generalCommon: Int = 0 // 공통교양
         var generalCulture: Int = 0// 일반교양
@@ -29,11 +37,12 @@ class InputInfo2ViewController: UIViewController {
         var generalMain: Int = 0// 학문기초
         
         for i in 0..<generals.count {
-            var creditValue: Int = 0
-            
-            if let value = (tableView.cellForRow(at: IndexPath(row: i, section: 1)) as! InfoTextFieldTableViewCell).textField.text {
-                creditValue = Int(value)!
-            }
+//            var creditValue: Int = 0
+//
+//            if let value = (tableView.cellForRow(at: IndexPath(row: i, section: 1)) as! InfoTextFieldTableViewCell).textField.text {
+//
+//                creditValue = Int(value)!
+//            }
             
             let value = generals[i].values.first!
             let key = generals[i].keys.first
@@ -47,23 +56,42 @@ class InputInfo2ViewController: UIViewController {
         }
         
         var englishLecture: Int = 0
-        if let lecture = (tableView.cellForRow(at: IndexPath(row: 0, section: 2)) as! InfoTextFieldTableViewCell).textField.text {
-            englishLecture = Int(lecture)!
+        if let vc = tableView.cellForRow(at: IndexPath(row: 0, section: 2)) {
+            if let tf = (vc as! InfoTextFieldTableViewCell).textField.text {
+                if let value = Int(tf) {
+                    englishLecture = value
+                }
+            }
         }
         
-        let englishScore = (tableView.cellForRow(at: IndexPath(row: 1, section: 2)) as! InfoOnOffTableViewCell).oneSwitch.isOn
+        var englishScore:Bool = false
+        if let value = tableView.cellForRow(at: IndexPath(row: 1, section: 2)) as? InfoOnOffTableViewCell {
+            englishScore = value.oneSwitch.isOn
+        }
         
-        let graduationPaper = (tableView.cellForRow(at: IndexPath(row: 0, section: 3)) as! InfoOnOffTableViewCell).oneSwitch.isOn
+        
+        var graduationPaper: Bool = false
+        if let value = tableView.cellForRow(at: IndexPath(row: 0, section: 3)) as? InfoOnOffTableViewCell {
+            graduationPaper = value.oneSwitch.isOn
+        }
         
         var serviceTime: Int = 0// 봉사시간
+        
         var etc: Bool = false
+        
         if bigCategorys.count > 4 {
-            if let time = (tableView.cellForRow(at: IndexPath(row: 0, section: 4)) as! InfoTextFieldTableViewCell).textField.text {
-                serviceTime = Int(time)!
+            if let vc = tableView.cellForRow(at: IndexPath(row: 0, section: 4)) {
+                if let tf = (vc as! InfoTextFieldTableViewCell).textField.text {
+                    if let value = Int(tf) {
+                        serviceTime = value
+                    }
+                }
             }
         }
         if bigCategorys.count > 5 {
-            etc = (tableView.cellForRow(at: IndexPath(row: 0, section: 5)) as! InfoOnOffTableViewCell).oneSwitch.isOn
+            if let value = tableView.cellForRow(at: IndexPath(row: 0, section: 5)) as? InfoOnOffTableViewCell {
+                etc = value.oneSwitch.isOn
+            }
         }
         
         let allCredit: Int = majorBasic + majorSpecialty + generalMain + generalBasic + generalCommon + generalCulture + generalLiteracy + generalMajorBasic
@@ -71,6 +99,7 @@ class InputInfo2ViewController: UIViewController {
         myCurri = MyCurriculum(englishScore: englishScore, englishLecture: englishLecture, serviceTime: serviceTime, allCredit: allCredit, majorCredit: (majorBasic+majorSpecialty), majorSpecialty: majorSpecialty, generalCommon: generalCommon, generalCulture: generalCulture, generalLiteracy: generalLiteracy, generalBasic: generalBasic, generalMajorBasic: generalMajorBasic, generalMain: generalMain, graduationPaper: graduationPaper, etc: etc)
         
         if !saveMyCurriData() { return }
+        if !loadPlanListData() { return }
     }
     
     override func viewDidLoad() {
@@ -81,7 +110,7 @@ class InputInfo2ViewController: UIViewController {
         if departmentCurri?.serviceTime != 0 {
             bigCategorys.append("사회봉사")
         }
-        if departmentCurri?.etc != "x" {
+        if departmentCurri?.etc != "0" {
             bigCategorys.append((departmentCurri?.etc)!)
         }
         
@@ -162,7 +191,7 @@ extension InputInfo2ViewController: UITableViewDataSource {
             return textFieldCell
         }
         else {
-            switchCell.nameLabel.text = departmentCurri?.etcDetail
+            switchCell.nameLabel.text = departmentCurri?.etc
             
             return switchCell
         }

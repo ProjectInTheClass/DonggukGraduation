@@ -8,7 +8,80 @@ class PlanDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var selectView: UIView!
-    @IBOutlet weak var addButton: UIBarButtonItem!
+    
+    @IBOutlet weak var leftBarButton: UIBarButtonItem!
+    @IBOutlet weak var rightBarButton: UIBarButtonItem!
+    
+    @IBAction func rightButtonAction() {
+        if tableView.isEditing {
+            let deleteQuestionAlert = UIAlertController(title: "학기 삭제", message: "마지막 학기를 삭제하겠습니까?", preferredStyle: UIAlertController.Style.alert)
+            
+            let yesAction = UIAlertAction(title: "네", style: UIAlertAction.Style.default) { ACTION in
+                planList.removeLast()
+                
+                if !savePlanData() { return }
+                
+                self.collectionView.reloadData()
+                self.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .top)
+                
+                selectedPlan = "ALL"
+                self.reloadTable()
+            }
+            
+            let noAction = UIAlertAction(title: "아니요", style: UIAlertAction.Style.default) { ACTION in
+                
+                selectedPlan = "ALL"
+                
+                self.collectionView.reloadData()
+                
+                self.reloadTable()
+            }
+            
+            deleteQuestionAlert.addAction(yesAction)
+            deleteQuestionAlert.addAction(noAction)
+            
+            present(deleteQuestionAlert, animated: true, completion: nil)
+
+        }
+        else {
+            if selectedPlan == "ALL" {
+                let noticeAlert = UIAlertController(title: "학기선택", message: "학기를 선택해주세요", preferredStyle: UIAlertController.Style.alert)
+                
+                let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+                
+                noticeAlert.addAction(okAction)
+                present(noticeAlert, animated: true, completion: nil)
+                
+            }
+            else {
+                
+                let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EFCVStoryboard")
+                
+                self.present(viewController, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    @IBAction func editMyCurri() {
+        if generalLectures.count == 1, majorLectures.count == 1 {
+            let noticeAlert = UIAlertController(title: "편집", message: "수업이 존재하지 않습니다", preferredStyle: UIAlertController.Style.alert)
+            
+            let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+            
+            noticeAlert.addAction(okAction)
+            present(noticeAlert, animated: true, completion: nil)
+        }
+        else if tableView.isEditing {
+            leftBarButton.title = "편집"
+            rightBarButton.title = "수업추가"
+            tableView.isEditing = false
+        }
+        else {
+            leftBarButton.title = "완료"
+            rightBarButton.title = "학기삭제"
+            tableView.isEditing = true
+        }
+    }
     
     var majorLectures:[PlanLecture] = []
     var generalLectures:[PlanLecture] = []
@@ -16,26 +89,7 @@ class PlanDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if testV {
-//            testV = false
-//            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FirstStoryboard")
-//            
-//            (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController = viewController
-//            
-//            return
-//        }
-        
         title = "졸업계획"
-        
-        if !dataLoad {
-            if !loadUserData() { return }
-            if !loadDepartmentData() { return }
-            if !loadDepartmentCurriData(department: departmentList.filter{$0.name == (myInfo?.department)}[0].englishName) { return }
-            if !loadMyCurriData() { return }
-            if !loadPlanData() { return }
-            
-            dataLoad = true
-        }
         
         majorLectures = [PlanLecture(name:"",category:"전공",categorySmall:"", credit:0,semester:"")]
         generalLectures = [PlanLecture(name:"",category:"교양",categorySmall:"",credit:0,semester:"")]
@@ -58,8 +112,8 @@ class PlanDetailViewController: UIViewController {
         
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        addButton.target = self
-        addButton.action = #selector(goAdd)
+//        addButton.target = self
+//        addButton.action = #selector(goAdd)
         
     }
     
@@ -155,6 +209,8 @@ extension PlanDetailViewController: UICollectionViewDataSource {
                 if semester == "2" { planList.append("\(Int(grade)!+1)학년 1학기") }
                 else { planList.append("\(grade)학년 2학기") }
                 
+                if !savePlanData() { return }
+                
                 collectionView.reloadData()
                 collectionView.selectItem(at: IndexPath(item: planList.count, section: 0), animated: false, scrollPosition: .top)
                 
@@ -190,17 +246,13 @@ extension PlanDetailViewController: UICollectionViewDelegate {
 }
 
 extension PlanDetailViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        
+        if indexPath.row != 0 { return UITableViewCell.EditingStyle.delete }
+        return UITableViewCell.EditingStyle.none
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 { return majorLectures.count }
-        else { return generalLectures.count }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 { return }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         let addQuestionAlert = UIAlertController(title: "수업 삭제", message: "계획에서 수업을 삭제하겠습니까?", preferredStyle: UIAlertController.Style.alert)
         
@@ -216,6 +268,8 @@ extension PlanDetailViewController: UITableViewDataSource {
                 self.generalLectures = self.generalLectures.filter { $0.name != lectureName}
             }
             
+            if !savePlanData() { return }
+            
             tableView.reloadData()
         }
         
@@ -227,9 +281,29 @@ extension PlanDetailViewController: UITableViewDataSource {
         present(addQuestionAlert, animated: true, completion: nil)
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if generalLectures.count == 1, majorLectures.count == 1 {
+            tableView.separatorStyle = .none
+            return 1
+        }
+        tableView.separatorStyle = .singleLine
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 { return majorLectures.count }
+        else { return generalLectures.count }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if indexPath.section == 0 {
+        if generalLectures.count == 1, majorLectures.count == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyTableViewCell", for: indexPath) as! EmptyTableViewCell
+            
+            cell.logoImage.image = UIImage(named: "logo_head.png")
+            
+            return cell
+        }
+        else if indexPath.section == 0 {
             let lecture = majorLectures[indexPath.row]
             if indexPath.row == 0 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryLectureTableViewCell", for: indexPath) as! CategoryLectureTableViewCell
@@ -245,7 +319,7 @@ extension PlanDetailViewController: UITableViewDataSource {
                 
                 cell.nameLabel.text = lecture.name
                 cell.creditLabel.text = "\(lecture.credit) 학점"
-                cell.colorBar.backgroundColor = .red
+                cell.colorBar.backgroundColor = planColors["\(lecture.categorySmall)"]
                 
                 return cell
             }
@@ -268,7 +342,7 @@ extension PlanDetailViewController: UITableViewDataSource {
                 
                 cell.nameLabel.text = lecture.name
                 cell.creditLabel.text = "\(lecture.credit) 학점"
-                cell.colorBar.backgroundColor = .blue
+                cell.colorBar.backgroundColor = planColors["\(lecture.category)"]
                 
                 return cell
             }

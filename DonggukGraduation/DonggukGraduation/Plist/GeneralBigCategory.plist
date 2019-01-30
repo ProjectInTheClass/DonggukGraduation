@@ -18,5 +18,13 @@
         <key>name</key>
         <string>핵심교양</string>
     </dict>
+    <dict>
+        <key>name</key>
+        <string>기본소양</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>대학전공기초</string>
+    </dict>
 </array>
 </plist>

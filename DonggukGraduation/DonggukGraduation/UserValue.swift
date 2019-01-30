@@ -15,14 +15,21 @@ func loadUserData() -> Bool{
         }
     }
     
-    if saveUserData() {
-        print("user data 불러오기 성공")
-        return true
+    if myInfo != nil {
+        if saveUserData() {
+            print("user data 불러오기 성공")
+            return true
+        }
+        else {
+            print("user data 불러오기 실패")
+            return false
+        }
     }
     else {
         print("user data 불러오기 실패")
         return false
     }
+    
 }
 
 func saveUserData() -> Bool {

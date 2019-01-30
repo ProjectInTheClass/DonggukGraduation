@@ -4,17 +4,13 @@
 <array>
 	<dict>
 		<key>name</key>
-		<string>운영체제</string>
-		<key>necessary</key>
-		<false/>
-		<key>specialty</key>
-		<true/>
+		<string>자아와명상</string>
 		<key>credit</key>
-		<integer>3</integer>
-		<key>grade</key>
-		<integer>3</integer>
-		<key>semester</key>
 		<integer>1</integer>
+		<key>bigCategory</key>
+		<string>공통교양</string>
+		<key>smallCategory</key>
+		<string>자아성찰</string>
 	</dict>
 </array>
 </plist>

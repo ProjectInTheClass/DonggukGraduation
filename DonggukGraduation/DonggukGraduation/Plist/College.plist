@@ -4,7 +4,55 @@
 <array>
 	<dict>
 		<key>name</key>
-		<string>공과대학</string>
+		<string>경영대학</string>
 	</dict>
+    <dict>
+        <key>name</key>
+        <string>공과대학</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>예술대학</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>사회과학대학</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>연계전공</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>바이오시스템대학</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>불교대학</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>미래융합대학</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>이과대학</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>문과대학</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>경찰사법대학</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>법과대학</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>약학대학</string>
+    </dict>
 </array>
 </plist>

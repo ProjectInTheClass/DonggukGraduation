@@ -4,29 +4,81 @@ import UIKit
 class DirectAddViewController: UIViewController {
     
     var inputList = ["이름", "학점"]
-    var categoryList = ["교양", "전공기초", "전공전문"]
+    var categoryList:[String] = []
     var selectedRow = -1
     
     @IBOutlet weak var tableView: UITableView!
     @IBAction func addLecture() {
         if selectedRow != -1 {
             let name = (tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! DirectInputTableViewCell).textField.text
+            if name == "" {
+                nameAlert()
+                return
+            }
+            
             let categorySmall = categoryList[selectedRow]
             
             var credit: Int = 0
             if let c = (tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as! DirectInputTableViewCell).textField.text {
-                credit = Int(c)!
+                if let value = Int(c) {
+                    credit = value
+                }
+                else {
+                    numAlert()
+                    return
+                }
             }
             
             
-            if categorySmall != "교양" {
-                majorList.append(PlanLecture(name: name!, category: "전공", categorySmall: categorySmall, credit: credit, semester: selectedPlan))
+            if categorySmall.hasPrefix("전공") {
+                var temp = "전문"
+                if categorySmall == "전공기초" { temp = "기초" }
+                
+                majorList.append(PlanLecture(name: name!, category: "전공", categorySmall: temp, credit: credit, semester: selectedPlan))
             }
             else {
-                generalList.append(PlanLecture(name: name!, category: "일반교양", categorySmall: "일반교양", credit: credit, semester: selectedPlan))
+                generalList.append(PlanLecture(name: name!, category: categorySmall, categorySmall: categorySmall, credit: credit, semester: selectedPlan))
             }
             print("추가완료")
+            if !savePlanData() { return }
+            
+            let noticeAlert = UIAlertController(title: "추가완료", message: "수업이 추가되었습니다", preferredStyle: UIAlertController.Style.alert)
+            
+            let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+            
+            noticeAlert.addAction(okAction)
+            present(noticeAlert, animated: true, completion: nil)
         }
+        else {
+            choiceAlert()
+        }
+    }
+    
+    func numAlert() {
+        let noticeAlert = UIAlertController(title: "잘못된 입력", message: "학점 입력란에는 숫자만 써주세요", preferredStyle: UIAlertController.Style.alert)
+        
+        let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+        
+        noticeAlert.addAction(okAction)
+        present(noticeAlert, animated: true, completion: nil)
+    }
+    
+    func nameAlert() {
+        let noticeAlert = UIAlertController(title: "잘못된 입력", message: "수업 이름을 써주세요", preferredStyle: UIAlertController.Style.alert)
+        
+        let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+        
+        noticeAlert.addAction(okAction)
+        present(noticeAlert, animated: true, completion: nil)
+    }
+    
+    func choiceAlert() {
+        let noticeAlert = UIAlertController(title: "잘못된 입력", message: "이수구분을 선택해주세요", preferredStyle: UIAlertController.Style.alert)
+        
+        let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+        
+        noticeAlert.addAction(okAction)
+        present(noticeAlert, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -34,6 +86,7 @@ class DirectAddViewController: UIViewController {
         
         title = "과목 직접 추가"
         
+        categoryList = ["전공기초", "전공전문"] + bigGeneralList.map { $0.name }
         
         tableView.dataSource = self
         tableView.delegate = self

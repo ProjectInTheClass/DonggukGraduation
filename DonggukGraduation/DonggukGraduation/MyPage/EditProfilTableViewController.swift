@@ -54,7 +54,7 @@ class EditProfilTableViewController: UITableViewController{
             
             cell.LevelTextField.text = "13학번"
             cell.ClassTextField.text = "공과대학 컴퓨터공학과"
-            cell.NameTextField.text = "홍길동"
+            cell.NameTextField.text = (myInfo?.name)!
             return cell
         }
         
