@@ -30,25 +30,24 @@ class DirectAddViewController: UIViewController {
             }
             
             
-            
             if categorySmall.hasPrefix("전공") {
                 var temp = "전문"
                 if categorySmall == "전공기초" { temp = "기초" }
                 
                 majorList.append(PlanLecture(name: name!, category: "전공", categorySmall: temp, credit: credit, semester: selectedPlan))
-//                if lecture.smallCategory == "전문" { myCurri?.majorSpecialty += lecture.credit }
-//                myCurri?.majorCredit += lecture.credit
-//                myCurri?.allCredit += lecture.credit
+                if temp == "전문" { myCurri?.majorSpecialty += credit }
+                myCurri?.majorCredit += credit
+                myCurri?.allCredit += credit
             }
             else {
                 generalList.append(PlanLecture(name: name!, category: categorySmall, categorySmall: categorySmall, credit: credit, semester: selectedPlan))
-//                if lecture.bigCategory == "공통교양" { myCurri?.generalCommon += lecture.credit }
-//                else if lecture.bigCategory == "일반교양" { myCurri?.generalCulture += lecture.credit }
-//                else if lecture.bigCategory == "핵심교양" { myCurri?.generalMain += lecture.credit }
-//                else if lecture.bigCategory == "기본소양" { myCurri?.generalLiteracy += lecture.credit }
-//                else if lecture.bigCategory == "대학전공기초" { myCurri?.generalMajorBasic += lecture.credit }
-//                else if lecture.bigCategory == "학문기초" { myCurri?.generalBasic += lecture.credit }
-//                myCurri?.allCredit += lecture.credit
+                if categorySmall == "공통교양" { myCurri?.generalCommon += credit }
+                else if categorySmall == "일반교양" { myCurri?.generalCulture += credit }
+                else if categorySmall == "핵심교양" { myCurri?.generalMain += credit }
+                else if categorySmall == "기본소양" { myCurri?.generalLiteracy += credit }
+                else if categorySmall == "대학전공기초" { myCurri?.generalMajorBasic += credit }
+                else if categorySmall == "학문기초" { myCurri?.generalBasic += credit }
+                myCurri?.allCredit += credit
             }
             print("추가완료")
             if !savePlanData() { return }
