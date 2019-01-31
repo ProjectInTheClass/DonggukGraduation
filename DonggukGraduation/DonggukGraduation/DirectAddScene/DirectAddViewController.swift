@@ -36,7 +36,7 @@ class DirectAddViewController: UIViewController {
                 if categorySmall == "전공기초" { temp = "기초" }
                 
                 majorList.append(PlanLecture(name: name!, category: "전공", categorySmall: temp, credit: credit, semester: selectedPlan))
-                if lecture.smallCategory == "전문" { myCurri?.majorSpecialty += lecture.credit }
+//                if lecture.smallCategory == "전문" { myCurri?.majorSpecialty += lecture.credit }
 //                myCurri?.majorCredit += lecture.credit
 //                myCurri?.allCredit += lecture.credit
             }
