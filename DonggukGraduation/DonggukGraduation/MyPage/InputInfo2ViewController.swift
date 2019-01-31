@@ -118,6 +118,9 @@ class InputInfo2ViewController: UIViewController {
             bigCategorys.append((departmentCurri?.etc)!)
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
+        
         generals = (departmentCurri?.toDict().filter { $0.0.hasPrefix("general") }.filter { !$0.0.hasSuffix("Detail") }.filter { ($0.1 as! String) != "0"}.map{ [$0.key: 0]})!
         generals.append(["generalCulture":0])
         
@@ -131,6 +134,21 @@ class InputInfo2ViewController: UIViewController {
         
     }
     
+    @objc func keyboardWillShow(notification:NSNotification){
+        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = tableView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        tableView.contentInset = contentInset
+    }
+    
+    @objc func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        tableView.contentInset = contentInset
+    }
 
 }
 

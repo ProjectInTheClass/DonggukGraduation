@@ -99,6 +99,7 @@ class DirectAddViewController: UIViewController {
         
         categoryList = ["전공기초", "전공전문"] + bigGeneralList.map { $0.name }
         
+        
         tableView.dataSource = self
         tableView.delegate = self
 

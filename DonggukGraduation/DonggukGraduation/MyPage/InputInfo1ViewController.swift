@@ -116,9 +116,9 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
         toolBar.tintColor = .orange
         toolBar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action:  #selector(InputInfo1ViewController.donePicker))
+        let doneButton = UIBarButtonItem(title: "선택", style: UIBarButtonItem.Style.plain, target: self, action:  #selector(InputInfo1ViewController.donePicker))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(InputInfo1ViewController.donePicker))
+        let cancelButton = UIBarButtonItem(title: "닫기", style: UIBarButtonItem.Style.plain, target: self, action: #selector(InputInfo1ViewController.donePicker))
         
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
