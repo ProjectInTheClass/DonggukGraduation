@@ -9,6 +9,7 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     var inputTitle = ["이름", "단과대학", "전공", "학번"]
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var photoView: UIImageView!
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -67,6 +68,9 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
             
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
+        
         nameTextField.layer.borderWidth = 1
         nameTextField.layer.borderColor = UIColor.groupTableViewBackground.cgColor
         
@@ -82,6 +86,27 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
         colleges = collegeList.map{$0.name}
         
         pickerSetting()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    @objc func keyboardWillShow(notification:NSNotification){
+        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        scrollView.contentInset = contentInset
+    }
+    
+    @objc func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
     }
     
     func pickerSetting() {

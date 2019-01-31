@@ -37,22 +37,26 @@ class InputInfo2ViewController: UIViewController {
         var generalMain: Int = 0// 학문기초
         
         for i in 0..<generals.count {
-//            var creditValue: Int = 0
-//
-//            if let value = (tableView.cellForRow(at: IndexPath(row: i, section: 1)) as! InfoTextFieldTableViewCell).textField.text {
-//
-//                creditValue = Int(value)!
-//            }
+            var creditValue: Int = 0
+
+            if let value = tableView.cellForRow(at: IndexPath(row: i, section: 1)) {
+                if let t = (value as! InfoTextFieldTableViewCell).textField.text {
+                    if let v = Int(t) {
+                        creditValue = v
+                    }
+                }
+            }
             
-            let value = generals[i].values.first!
+            
+//            let value = generals[i].values.first!
             let key = generals[i].keys.first
             
-            if key == "generalCommon" { generalCommon = value }
-            else if key == "generalCulture" { generalCulture = value }
-            else if key == "generalLiteracy" { generalLiteracy = value }
-            else if key == "generalBasic" { generalCommon = value }
-            else if key == "generalMajorBasic" { generalMajorBasic = value }
-            else if key == "generalMain" { generalMain = value }
+            if key == "generalCommon" { generalCommon = creditValue }
+            else if key == "generalCulture" { generalCulture = creditValue }
+            else if key == "generalLiteracy" { generalLiteracy = creditValue }
+            else if key == "generalBasic" { generalBasic = creditValue }
+            else if key == "generalMajorBasic" { generalMajorBasic = creditValue }
+            else if key == "generalMain" { generalMain = creditValue }
         }
         
         var englishLecture: Int = 0

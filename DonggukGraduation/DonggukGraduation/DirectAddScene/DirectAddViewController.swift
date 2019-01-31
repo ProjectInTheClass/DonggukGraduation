@@ -30,17 +30,29 @@ class DirectAddViewController: UIViewController {
             }
             
             
+            
             if categorySmall.hasPrefix("전공") {
                 var temp = "전문"
                 if categorySmall == "전공기초" { temp = "기초" }
                 
                 majorList.append(PlanLecture(name: name!, category: "전공", categorySmall: temp, credit: credit, semester: selectedPlan))
+                if lecture.smallCategory == "전문" { myCurri?.majorSpecialty += lecture.credit }
+//                myCurri?.majorCredit += lecture.credit
+//                myCurri?.allCredit += lecture.credit
             }
             else {
                 generalList.append(PlanLecture(name: name!, category: categorySmall, categorySmall: categorySmall, credit: credit, semester: selectedPlan))
+//                if lecture.bigCategory == "공통교양" { myCurri?.generalCommon += lecture.credit }
+//                else if lecture.bigCategory == "일반교양" { myCurri?.generalCulture += lecture.credit }
+//                else if lecture.bigCategory == "핵심교양" { myCurri?.generalMain += lecture.credit }
+//                else if lecture.bigCategory == "기본소양" { myCurri?.generalLiteracy += lecture.credit }
+//                else if lecture.bigCategory == "대학전공기초" { myCurri?.generalMajorBasic += lecture.credit }
+//                else if lecture.bigCategory == "학문기초" { myCurri?.generalBasic += lecture.credit }
+//                myCurri?.allCredit += lecture.credit
             }
             print("추가완료")
             if !savePlanData() { return }
+            if !saveMyCurriData() { return }
             
             let noticeAlert = UIAlertController(title: "추가완료", message: "수업이 추가되었습니다", preferredStyle: UIAlertController.Style.alert)
             

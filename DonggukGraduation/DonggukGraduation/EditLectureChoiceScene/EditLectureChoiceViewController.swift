@@ -18,7 +18,13 @@ class EditLectureChoiceViewController: UIViewController {
             }
             else {
                 generalList.append(PlanLecture(name: lecture.name, category: lecture.bigCategory, categorySmall: lecture.smallCategory, credit: lecture.credit, semester: selectedPlan))
+                
                 if lecture.bigCategory == "공통교양" { myCurri?.generalCommon += lecture.credit }
+                else if lecture.bigCategory == "일반교양" { myCurri?.generalCulture += lecture.credit }
+                else if lecture.bigCategory == "핵심교양" { myCurri?.generalMain += lecture.credit }
+                else if lecture.bigCategory == "기본소양" { myCurri?.generalLiteracy += lecture.credit }
+                else if lecture.bigCategory == "대학전공기초" { myCurri?.generalMajorBasic += lecture.credit }
+                else if lecture.bigCategory == "학문기초" { myCurri?.generalBasic += lecture.credit }
                 myCurri?.allCredit += lecture.credit
             }
             print("추가완료")
