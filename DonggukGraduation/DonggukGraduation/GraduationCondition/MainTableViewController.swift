@@ -149,8 +149,15 @@ class MainTableViewController: UITableViewController {
             {
                 let generalCredit:Int = (myCurri?.generalMain)! + (myCurri?.generalBasic)! + (myCurri?.generalCommon)! + (myCurri?.generalLiteracy)! + (myCurri?.generalCulture)! + (myCurri?.generalMajorBasic)!
                 
-                let departmentGeneralCredit:Int = Int((departmentCurri?.generalMain)!)! + Int((departmentCurri?.generalBasic)!)! + Int((departmentCurri?.generalCommon)!)! + Int((departmentCurri?.generalLiteracy)!)! +  Int((departmentCurri?.generalMajorBasic)!)!
-                
+                print(departmentCurri?.generalMain)
+                print(departmentCurri?.generalBasic)
+                print(departmentCurri?.generalMajorBasic)
+                print(departmentCurri?.generalCommon)
+                print(departmentCurri?.generalLiteracy)
+//                let departmentGeneralCredit:Int = Int((departmentCurri?.generalMain)!)! + Int((departmentCurri?.generalBasic)!)! + Int((departmentCurri?.generalCommon)!)! + Int((departmentCurri?.generalLiteracy)!)! +  Int((departmentCurri?.generalMajorBasic)!)!
+
+                let departmentGeneralCredit:Int = 0
+
                 
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
                 cell.accessoryType = .disclosureIndicator

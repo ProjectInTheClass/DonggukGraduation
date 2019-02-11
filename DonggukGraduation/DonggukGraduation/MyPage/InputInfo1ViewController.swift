@@ -78,27 +78,7 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
         
         colleges = collegeList.map{$0.name}
         
-        addKeyboardButton()
-        
         pickerSetting()
-    }
-    
-    func addKeyboardButton() {
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        
-        let doneButton = UIBarButtonItem(title: "닫기", style: .done, target: self, action: #selector(self.doneClicked))
-        doneButton.tintColor = UIColor.orange
-        
-        toolbar.setItems([flexibleSpace, doneButton], animated: false)
-        
-        nameTextField.inputAccessoryView = toolbar
-    }
-    
-    @objc func doneClicked() {
-        view.endEditing(true)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
