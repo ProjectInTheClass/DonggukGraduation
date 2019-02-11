@@ -60,9 +60,46 @@ class EditKeywordSearchViewController: UIViewController {
         searchBar.delegate = self
         searchBar.placeholder = "수업명을 입력하세요."
         searchBar.barTintColor = UIColor.groupTableViewBackground
+        
+        addKeyboardButton()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification:NSNotification){
+        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.tableView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        tableView.contentInset = contentInset
+    }
+    
+    @objc func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        tableView.contentInset = contentInset
     }
 
+    func addKeyboardButton() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        
+        let doneButton = UIBarButtonItem(title: "닫기", style: .done, target: self, action: #selector(self.doneClicked))
+        doneButton.tintColor = UIColor.orange
+        
+        toolbar.setItems([flexibleSpace, doneButton], animated: false)
+        
+        searchBar.inputAccessoryView = toolbar
+    }
 
+    @objc func doneClicked() {
+        view.endEditing(true)
+    }
 }
 
 extension EditKeywordSearchViewController: UISearchBarDelegate {

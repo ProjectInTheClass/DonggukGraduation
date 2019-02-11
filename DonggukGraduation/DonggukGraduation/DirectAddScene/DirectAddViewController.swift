@@ -102,7 +102,25 @@ class DirectAddViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification:NSNotification){
+        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.tableView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        tableView.contentInset = contentInset
+    }
+    
+    @objc func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        tableView.contentInset = contentInset
     }
 
 }
@@ -129,6 +147,7 @@ extension DirectAddViewController: UITableViewDataSource {
             
             cell.textField.placeholder = inputList[indexPath.row]
             cell.textField.textColor = UIColor.black
+            if indexPath.row == 1 { cell.textField.keyboardType = .numberPad }
             
             return cell
         }

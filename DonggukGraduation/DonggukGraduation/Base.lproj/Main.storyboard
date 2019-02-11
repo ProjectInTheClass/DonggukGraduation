@@ -498,7 +498,7 @@
                                                             </constraints>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         </textField>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 140학점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOd-QF-CYY">
                                                             <rect key="frame" x="267" y="0.0" width="68" height="30"/>
@@ -935,7 +935,7 @@
                                 <action selector="editMyCurri" destination="4OL-Ph-ECB" id="csj-9f-Xff"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="수업 추가" id="Mxx-Je-l2Q">
+                        <barButtonItem key="rightBarButtonItem" title="계획 추가" id="Mxx-Je-l2Q">
                             <connections>
                                 <action selector="rightButtonAction" destination="4OL-Ph-ECB" id="THW-hn-0Za"/>
                             </connections>
@@ -1919,7 +1919,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMi-xr-er2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15407" y="839"/>
+            <point key="canvasLocation" x="15428" y="901"/>
         </scene>
         <!--Input Info2 View Controller-->
         <scene sceneID="fsH-EG-E1b">
@@ -1946,7 +1946,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6NY-0H-OO2">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6NY-0H-OO2">
                                                     <rect key="frame" x="20" y="12.5" width="325" height="19"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2062,7 +2062,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ads-FX-Qhs">
                                             <rect key="frame" x="32.5" y="25" width="310" height="100"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-person_male-1" translatesAutoresizingMaskIntoConstraints="NO" id="806-PN-DW0" customClass="CirclarMaskImageView" customModule="DonggukGraduation" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_head" translatesAutoresizingMaskIntoConstraints="NO" id="806-PN-DW0" customClass="CirclarMaskImageView" customModule="DonggukGraduation" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="Ya4-uR-naw"/>
@@ -2780,7 +2780,6 @@
                                     <constraint firstAttribute="bottom" secondItem="T8s-dN-fWn" secondAttribute="bottom" constant="111" id="9Jf-41-Tz0"/>
                                     <constraint firstItem="T8s-dN-fWn" firstAttribute="centerY" secondItem="IOt-Ni-ygF" secondAttribute="centerY" id="lzh-MU-6Au"/>
                                     <constraint firstItem="T8s-dN-fWn" firstAttribute="centerX" secondItem="IOt-Ni-ygF" secondAttribute="centerX" id="tFK-jK-xAH"/>
-                                    <constraint firstAttribute="height" constant="667" id="wpM-i7-zlQ"/>
                                     <constraint firstAttribute="trailing" secondItem="T8s-dN-fWn" secondAttribute="trailing" constant="33" id="zrP-Vl-rTC"/>
                                 </constraints>
                             </scrollView>
@@ -2818,7 +2817,7 @@
         <image name="logo_head" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UJa-YN-MMY"/>
+        <segue reference="q35-CO-juA"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.92272506480000005" green="0.62683743790000002" blue="0.1117382006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

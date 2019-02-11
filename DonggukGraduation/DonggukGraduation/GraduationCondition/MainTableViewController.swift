@@ -125,7 +125,7 @@ class MainTableViewController: UITableViewController {
             {
                 
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
-                cell.textLabel?.text = "남은학점"
+                cell.textLabel?.text = "총 학점"
                 cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 25)
                 cell.detailTextLabel?.text = "\((myCurri?.allCredit)!) / \((departmentCurri?.allCredit)!)학점"
                 cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 17)
@@ -181,8 +181,8 @@ class MainTableViewController: UITableViewController {
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
                 cell.textLabel?.text = "영어성적"
                 cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 25)
-                if (myCurri?.englishScore)! { cell.detailTextLabel?.text = "제출완료" }
-                else { cell.detailTextLabel?.text = "제출필요" }
+                if (myCurri?.englishScore)! { cell.detailTextLabel?.text = "충족완료" }
+                else { cell.detailTextLabel?.text = "충족필요" }
                 
                 cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 17)
                 return cell
@@ -195,8 +195,8 @@ class MainTableViewController: UITableViewController {
                 cell = tableView.dequeueReusableCell(withIdentifier: "CELL1", for: indexPath)
                 cell.textLabel?.text = "졸업논문"
                 cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 25)
-                if (myCurri?.graduationPaper)! { cell.detailTextLabel?.text = "제출완료" }
-                else { cell.detailTextLabel?.text = "제출필요" }
+                if (myCurri?.graduationPaper)! { cell.detailTextLabel?.text = "충족완료" }
+//                else { cell.detailTextLabel?.text = "충족필요" }
                 cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 17)
                 return cell
             }

@@ -17,20 +17,13 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
     @IBOutlet weak var departmentTextField: UITextField!
     @IBOutlet weak var yearTextField: UITextField!
     
-    @IBAction func photoEdit(_ sender: Any) {
-        let picker = UIImagePickerController()
-        picker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
-        picker.allowsEditing = true
-        self.present(picker, animated: true, completion: nil)
-    }
-    
     @IBAction func nextStep() {
         if nameTextField.text != "", collegeTextField.text != "", departmentTextField.text != "", yearTextField.text != "" {
             
             myInfo = User(name: nameTextField.text!, college: collegeTextField.text!, department: departmentTextField.text!, admissionYear: Int(yearTextField.text!)!)
             
             if !saveUserData() { return }
-            if !loadDepartmentCurriData(department: departmentList.filter{$0.name == (myInfo?.department)}[0].englishName) { return }
+            if !loadDepartmentCurriData() { return }
             
             let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "I2Storyboard")
             
@@ -56,7 +49,7 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
         if !loadlectureData() { return }
         
         if loadUserData() {
-            if !loadDepartmentCurriData(department: departmentList.filter{$0.name == (myInfo?.department)}[0].englishName) { return }
+            if !loadDepartmentCurriData() { return }
             if !loadMyCurriData() { return }
             if !loadPlanData() { return }
             
@@ -85,7 +78,27 @@ class InputInfo1ViewController: UIViewController, UIPickerViewDataSource, UIPick
         
         colleges = collegeList.map{$0.name}
         
+        addKeyboardButton()
+        
         pickerSetting()
+    }
+    
+    func addKeyboardButton() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        
+        let doneButton = UIBarButtonItem(title: "닫기", style: .done, target: self, action: #selector(self.doneClicked))
+        doneButton.tintColor = UIColor.orange
+        
+        toolbar.setItems([flexibleSpace, doneButton], animated: false)
+        
+        nameTextField.inputAccessoryView = toolbar
+    }
+    
+    @objc func doneClicked() {
+        view.endEditing(true)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

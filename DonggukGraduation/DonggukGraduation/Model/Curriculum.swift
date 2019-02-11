@@ -32,6 +32,7 @@ class Curriculum {
     var etcDetail: String // 기타사항
     
     init?(dict: [String: Any]){
+        print(dict)
         guard let esValue = dict["englishScore"] as? Int else { return nil }
         guard let esdValue = dict["englishScoreDetail"] as? String else { return nil }
         guard let elValue = dict["englishLecture"] as? Int else { return nil }
@@ -77,6 +78,8 @@ class Curriculum {
         graduationPaper = gpValue
         etc = etcValue
         etcDetail = etcdValue
+        
+        print(self.description)
     }
     
     func toDict() -> [String: Any] {

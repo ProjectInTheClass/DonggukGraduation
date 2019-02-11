@@ -109,7 +109,8 @@ class InputInfo2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if !loadDepartmentCurriData(department: departmentList.filter{$0.name == (myInfo?.department)}[0].englishName) { return }
+        
+        if !loadDepartmentCurriData() { return }
         
         if departmentCurri?.serviceTime != 0 {
             bigCategorys.append("사회봉사")
